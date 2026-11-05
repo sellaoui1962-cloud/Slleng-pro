@@ -1026,7 +1026,7 @@ class LocalAgentExecutor {
         ? provider.effectiveContextWindow
         : ContractModel.defaultWindowTokens;
     effectiveWindowSource =
-        provider.effectiveContextWindow > 0 ? '服务端上报' : '按契约默认值';
+        provider.effectiveContextWindow > 0 ? 's0176'.tr() : '按契约默认值';
 
     // ---- 轮次上限 ----
     // `settings.maxTurns == 0` 的语义是"按后端自动"（UI 的 `kMaxTurnsOptions`）。
@@ -2373,7 +2373,7 @@ class LocalAgentExecutor {
   /// 从用户请求里取一个会话标题（取首行、截断）。
   String _titleOf(String request) {
     final firstLine = request.split('\n').first.trim();
-    if (firstLine.isEmpty) return '新会话';
+    if (firstLine.isEmpty) return 's0084'.tr();
     return firstLine.length <= 24 ? firstLine : '${firstLine.substring(0, 24)}…';
   }
 

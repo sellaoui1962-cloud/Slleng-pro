@@ -903,7 +903,7 @@ enum ApprovalDecision { deny, once, always, stop }
 ///
 /// 关闭审批**就是**一次决定（按拒绝处理），必须说出来 ——
 /// 用户报的正是"弹层一关，模型就把这件事拒了，而我根本不知道"。
-const String kApprovalDismissedToast = 'approval_treated_denied'.tr();
+final String kApprovalDismissedToast = 'approval_treated_denied'.tr();
 
 /// 审批请求弹窗：拒绝 / 允许一次 / 始终允许（可带「停止任务」）。
 ///
@@ -1611,7 +1611,7 @@ class AskSheetResult {
 }
 
 /// 收起提问后的轻提示文案（2026-10-30 P0：不再按"未回答"回传，只是收起）。
-const String kAskCollapsedToast = 'approval_collapsed'.tr();
+final String kAskCollapsedToast = 'approval_collapsed'.tr();
 
 /// 返回：题目 id → 答案列表；`answers == null` = 弹层被**收起**（不提交，带草稿）。
 Future<AskSheetResult?> showAskGateSheet(

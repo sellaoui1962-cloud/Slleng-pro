@@ -89,7 +89,7 @@ class _ArchivedSessionsScreenState extends State<ArchivedSessionsScreen> {
     return Scaffold(
       backgroundColor: h.bg,
       appBar: AppBar(
-        title: const Text('已归档对话'),
+        title:  Text('s0090'.tr()),
         leading: IconButton(
           icon: const Icon(AppIcons.back, size: 21),
           onPressed: () => Navigator.of(context).pop(),
@@ -105,11 +105,11 @@ class _ArchivedSessionsScreenState extends State<ArchivedSessionsScreen> {
                     Icon(CupertinoIcons.archivebox,
                         size: 40, color: h.textFaint),
                     const SizedBox(height: HSpace.md),
-                    Text('没有已归档的对话',
+                    Text('s0091'.tr(),
                         style: TextStyle(fontSize: 15, color: h.text)),
                     const SizedBox(height: HSpace.sm),
                     Text(
-                      '在抽屉里长按会话可以归档，\n归档后到这里找回或清理。',
+                      's0092'.tr(),
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 12.5, height: 1.6, color: h.textFaint),
@@ -172,7 +172,7 @@ class _ArchivedSessionsScreenState extends State<ArchivedSessionsScreen> {
             BwActionCard(
               h: h,
               icon: CupertinoIcons.chat_bubble_fill,
-              label: '打开',
+              label: 's0093'.tr(),
               onTap: () {
                 Navigator.of(ctx).pop();
                 widget.onOpen(w.id, s.id);
@@ -182,7 +182,7 @@ class _ArchivedSessionsScreenState extends State<ArchivedSessionsScreen> {
             BwActionCard(
               h: h,
               icon: CupertinoIcons.archivebox,
-              label: '取消归档',
+              label: 's0094'.tr(),
               onTap: () {
                 Navigator.of(ctx).pop();
                 _unarchive(w, s);
@@ -192,7 +192,7 @@ class _ArchivedSessionsScreenState extends State<ArchivedSessionsScreen> {
             BwActionCard(
               h: h,
               icon: CupertinoIcons.trash_fill,
-              label: '删除',
+              label: 's0095'.tr(),
               danger: true,
               onTap: () async {
                 Navigator.of(ctx).pop();
@@ -314,7 +314,7 @@ class _ArchivedRow extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12, vertical: 6),
-                      child: Text('回档',
+                      child: Text('s0097'.tr(),
                           style: TextStyle(fontSize: 12, color: h.text)),
                     ),
                   ),

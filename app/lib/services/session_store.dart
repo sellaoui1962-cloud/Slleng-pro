@@ -1251,7 +1251,7 @@ class SessionStore {
   /// @return 新会话 id（建索引 / 写消息失败返回 `null`，原因在 [lastError]）
   Future<String?> seedBranch(
     List<Map<String, dynamic>> entries, {
-    String title = '分支',
+    String title = 's0187'.tr(),
     String? sessionId,
   }) async {
     lastError = null;
@@ -1499,7 +1499,7 @@ bool? _boolOf(Object? v) {  if (v is bool) return v;
 /// 标题兜底：空标题一律落到「新会话」。
 String _titleOf(Object? v) {
   final t = v is String ? v.trim() : '';
-  return t.isEmpty ? '新会话' : t;
+  return t.isEmpty ? 's0084'.tr() : t;
 }
 
 /// 异常 → 短人话（与能力层同口径：堆栈对模型没用）。

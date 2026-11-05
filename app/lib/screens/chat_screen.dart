@@ -169,7 +169,7 @@ class _ChatScreenState extends State<ChatScreen> {
       if (!mounted) return;
       setState(() {
         _githubAccount =
-            user?.login ?? (cached.isNotEmpty ? cached : '已连接');
+            user?.login ?? (cached.isNotEmpty ? cached : 's0116'.tr());
       });
       return;
     }
@@ -180,7 +180,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (!mounted) return;
     if (path.isEmpty) {
       // 不弹气泡（2026-10-28 用户要求）；极端情况，留日志排查
-      debugPrint('GITHUB| 拿不到工作区路径');
+      debugPrint('s0117'.tr());
       return;
     }
     final choice =
@@ -288,7 +288,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final wsRoot = (ws?['path'] as String?) ?? '';
     if (!mounted) return;
     if (wsRoot.isEmpty) {
-      debugPrint('GIT| 拿不到工作区路径');
+      debugPrint('s0118'.tr());
       return;
     }
     _wsRootCached = wsRoot;
@@ -367,14 +367,14 @@ class _ChatScreenState extends State<ChatScreen> {
       } catch (_) {}
       if (!mounted) return;
       if (!local2) {
-        showIosToast(context, '这个仓库还没下载到手机');
+        showIosToast(context, 's0119'.tr());
         return;
       }
       final name = await showBwTextInputSheet(
         context,
-        title: '新建分支',
-        placeholder: '分支名，例如 feature/login',
-        confirmLabel: '创建并切换',
+        title: 's0120'.tr(),
+        placeholder: 's0121'.tr(),
+        confirmLabel: 's0122'.tr(),
       );
       if (name == null || name.trim().isEmpty || !mounted) return;
       final r2 = await git.checkout(target, branch: name.trim(), create: true);
@@ -920,7 +920,7 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TopMetricLine(
-              label: '上下文',
+              label: 's0125'.tr(),
               valueText:
                   cRatio == null ? '—' : '${(cRatio * 100).round()}%',
               ratio: cRatio,
@@ -930,7 +930,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             const SizedBox(height: 6),
             TopMetricLine(
-              label: '命中',
+              label: 's0126'.tr(),
               valueText: hit == null ? '—' : '${(hit * 100).round()}%',
               ratio: hit,
               color: hit == null ? h.textFaint : hitStatusColor(h, hit),
@@ -963,11 +963,11 @@ class _ChatScreenState extends State<ChatScreen> {
     final source = _jev.config.source;
     final (statusText, ready) = switch (source) {
       JevSource.cloud => !_jev.config.cloudReady
-          ? ('未配置', false)
+          ? ('s0127'.tr(), false)
           : !_jev.cloudKeyPresent
-              ? ('待填密钥', false)
-              : ('就绪', true),
-      JevSource.local08 || JevSource.local2b => ('未接入', false),
+              ? ('s0128'.tr(), false)
+              : ('s0129'.tr(), true),
+      JevSource.local08 || JevSource.local2b => ('s0130'.tr(), false),
     };
     return Container(
       width: 108,
@@ -977,14 +977,14 @@ class _ChatScreenState extends State<ChatScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TopMetricLine(
-            label: '引擎',
+            label: 's0131'.tr(),
             valueText: source.shortLabel,
             ratio: null,
             color: h.textFaint,
           ),
           const SizedBox(height: 6),
           TopMetricLine(
-            label: '状态',
+            label: 's0132'.tr(),
             valueText: statusText,
             ratio: ready ? 1.0 : null,
             color: ready ? const Color(0xFF16A34A) : h.textFaint,
@@ -1406,7 +1406,7 @@ class _ChatScreenState extends State<ChatScreen> {
   /// GitHub 连接是另一个槽位。混在一起用户会以为"工作区被换掉了"。
   ///
   /// 仓库名显示在**底部信息条的第二格（GitHub）**，那里才是它的位置。
-  String get _workspaceName => _activeWorkspace?.name ?? '未选择工作区';
+  String get _workspaceName => _activeWorkspace?.name ?? 's0134'.tr();
 
   // ------------------------------------------------------------ 工作区操作
 
@@ -1457,7 +1457,7 @@ class _ChatScreenState extends State<ChatScreen> {
       final ws = await _bridge.pickWorkspace();
       if (!mounted) return;
       if (ws == null) {
-        setState(() => _error = '未选择文件夹（或这个位置无法读写，请换一个）');
+        setState(() => _error = 's0135'.tr());
         return;
       }
       // ★★ 2026-10-23：设备组新契约 —— 受限目录/网盘不再回 null 装没事，
@@ -1491,13 +1491,13 @@ class _ChatScreenState extends State<ChatScreen> {
         'suggest': [
           {
             'action': 'pick_subfolder',
-            'title': '重试选择文件夹',
-            'detail': '再打开一次系统选择器。若仍被系统回收，改用「默认工作区」最稳。',
+            'title': 's0136'.tr(),
+            'detail': 's0137'.tr(),
           },
           {
             'action': 'use_app_workspace',
-            'title': '使用「默认工作区」',
-            'detail': 'App 自带目录，不经过系统选择器，不会再被回收。',
+            'title': 's0138'.tr(),
+            'detail': 's0139'.tr(),
           },
         ],
       });
@@ -1534,10 +1534,10 @@ class _ChatScreenState extends State<ChatScreen> {
     final reason = (ws['reasonCode'] as String?)?.trim() ?? '';
     // 标题按原因分：网盘（无本地路径）、系统受限、选择结果没回来，是三回事。
     final title = switch (reason) {
-      'no_local_path' => '这个位置没有本地文件夹',
+      'no_local_path' => 's0140'.tr(),
       // 超时/桥接失败：不是"文件夹不行"，而是"根本没拿到文件夹"
-      'pick_failed' => '没能收到选择结果',
-      _ => '这个文件夹不能用作工作区',
+      'pick_failed' => 's0141'.tr(),
+      _ => 's0142'.tr(),
     };
 
     // Kotlin 给的出路；老版本/`no_local_path` 分支没带 ⇒ 用同样的两条兜底。
@@ -1556,16 +1556,16 @@ class _ChatScreenState extends State<ChatScreen> {
       }
     }
     if (suggestions.isEmpty) {
-      suggestions.addAll(const [
+      suggestions.addAll( [
         (
           action: 'pick_subfolder',
-          title: '改选子文件夹',
-          detail: '点进去选一个具体的项目文件夹（子文件夹可以正常授权）。',
+          title: 's0143'.tr(),
+          detail: 's0144'.tr(),
         ),
         (
           action: 'use_app_workspace',
-          title: '使用「默认工作区」',
-          detail: 'App 自带的目录，不受这个限制，创建后可以直接开始干活。',
+          title: 's0138'.tr(),
+          detail: 's0145'.tr(),
         ),
       ]);
     }
@@ -1624,7 +1624,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     constraints: BoxConstraints(maxHeight: available * 0.35),
                     child: SingleChildScrollView(
                       child: Text(
-                        error.isEmpty ? '这个位置不能用作工作区。' : error,
+                        error.isEmpty ? 's0146'.tr() : error,
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontSize: 14.5,
@@ -1690,7 +1690,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: HSpace.lg, vertical: 6),
                       onPressed: () => Navigator.of(dlgCtx).pop(),
-                      child: Text('取消',
+                      child: Text('s0105'.tr(),
                           style: TextStyle(fontSize: 15, color: h.textDim)),
                     ),
                   ),
@@ -1761,7 +1761,7 @@ class _ChatScreenState extends State<ChatScreen> {
       final path = (ws?['path'] as String?) ?? '';
       if (path.isEmpty) {
         // 建不出来就如实报 —— 不假装成功、不留一个点不动的空工作区
-        setState(() => _error = '无法创建默认工作区');
+        setState(() => _error = 's0147'.tr());
         return;
       }
       final treeUri = (ws?['treeUri'] as String?) ?? '';
@@ -1770,7 +1770,7 @@ class _ChatScreenState extends State<ChatScreen> {
       //   否则上一个工作区某会话的结果会串进新工作区的列表（同 [_pickWorkspace]）。
       _switchContext();
 
-      final id = await _bridge.createSession(path, '新会话', treeUri: treeUri);
+      final id = await _bridge.createSession(path, 's0084'.tr(), treeUri: treeUri);
       if (!mounted) return;
       setState(() {
         _activeSessionId = id;
@@ -1838,7 +1838,7 @@ class _ChatScreenState extends State<ChatScreen> {
     _switchContext();
     final ws = _workspaces.firstWhere((w) => w.id == workspaceId,
         orElse: () => _workspaces.first);
-    final id = await _bridge.createSession(workspaceId, '新会话', treeUri: ws.treeUri);
+    final id = await _bridge.createSession(workspaceId, 's0084'.tr(), treeUri: ws.treeUri);
     if (!mounted) return;
     setState(() {
       _activeSessionId = id;
@@ -1957,7 +1957,7 @@ class _ChatScreenState extends State<ChatScreen> {
         setState(() {
           final id = _progressId ?? _nextId();
           _progressId = id;
-          _upsertProgress(id, '正在运行…（等待模型输出）');
+          _upsertProgress(id, 's0148'.tr());
         });
       }
 
@@ -2061,14 +2061,14 @@ class _ChatScreenState extends State<ChatScreen> {
                       ? res
                       // 老记录没存原因 —— 给一句**不与标题重复**的话，
                       // 否则标题与正文都写"已拦截，未执行"，看起来像 bug
-                      : '本轮请求未被执行（原因未记录）'),
+                      : 's0150'.tr()),
               tool: m['tool'] as String?,
               args: args.isEmpty ? null : args,
             ));
           } else {
             out.add(HToolCall(
               id: id,
-              tool: (m['tool'] as String?) ?? '未知工具',
+              tool: (m['tool'] as String?) ?? 's0151'.tr(),
               args: args,
               result: m['result'] as String?,
               status: state != null
@@ -2200,10 +2200,10 @@ class _ChatScreenState extends State<ChatScreen> {
     // 2026-10-25：居中弹窗改上拉输入抽屉（与全 App 弹层语言统一）
     final name = await showBwTextInputSheet(
       context,
-      title: '重命名会话',
+      title: 's0152'.tr(),
       initial: s?.title ?? '',
-      placeholder: '会话名称',
-      confirmLabel: '保存',
+      placeholder: 's0153'.tr(),
+      confirmLabel: 's0106'.tr(),
     );
     if (name == null || name.isEmpty) return;
     await _bridge.renameSession(workspaceId, sessionId, name,
@@ -2220,9 +2220,9 @@ class _ChatScreenState extends State<ChatScreen> {
     // 2026-10-25：居中弹窗改上拉确认抽屉
     final ok = await showBwConfirmSheet(
       context,
-      title: '删除会话',
-      message: '这会删除该会话的记录。\n工作区里的文件不会被删除。',
-      confirmLabel: '删除',
+      title: 's0154'.tr(),
+      message: 's0155'.tr(),
+      confirmLabel: 's0095'.tr(),
       destructive: true,
     );
     if (!ok) return false;
@@ -2314,8 +2314,8 @@ class _ChatScreenState extends State<ChatScreen> {
     final ok = await showBwConfirmSheet(
       context,
       title: '删除 ${items.length} 个会话',
-      message: '这会删除所选会话的记录。\n工作区里的文件不会被删除。',
-      confirmLabel: '删除',
+      message: 's0157'.tr(),
+      confirmLabel: 's0095'.tr(),
       destructive: true,
     );
     if (!ok) return;
@@ -2369,7 +2369,7 @@ class _ChatScreenState extends State<ChatScreen> {
     for (final m in rows) {
       if (m['_synthetic'] == 'paging') continue;
       final text = (m['text'] as String?) ?? '';
-      if (m['role'] == 'system' && text.endsWith('后面的消息没有显示。')) {
+      if (m['role'] == 'system' && text.endsWith('s0158'.tr())) {
         continue;
       }
       n++;
@@ -2535,22 +2535,22 @@ class _ChatScreenState extends State<ChatScreen> {
                 _sheetPickRow(
                   h,
                   icon: AppIcons.camera,
-                  label: '相机',
-                  subtitle: '拍照',
+                  label: 's0159'.tr(),
+                  subtitle: 's0160'.tr(),
                   onTap: () => Navigator.of(ctx).pop('camera'),
                 ),
                 _sheetPickRow(
                   h,
                   icon: AppIcons.image,
-                  label: '照片',
-                  subtitle: '截图、图片',
+                  label: 's0161'.tr(),
+                  subtitle: 's0162'.tr(),
                   onTap: () => Navigator.of(ctx).pop('image'),
                 ),
                 _sheetPickRow(
                   h,
                   icon: AppIcons.folder,
-                  label: '文件',
-                  subtitle: '代码、文本、文档',
+                  label: 's0163'.tr(),
+                  subtitle: 's0164'.tr(),
                   onTap: () => Navigator.of(ctx).pop('file'),
                 ),
               ],
@@ -2574,7 +2574,7 @@ class _ChatScreenState extends State<ChatScreen> {
         if (perms['camera'] != 'granted') {
           await _bridge.requestPermission('camera');
           if (!mounted) return;
-          setState(() => _error = '请先允许相机权限，再点一次拍照');
+          setState(() => _error = 's0165'.tr());
           return;
         }
         final shot = await _bridge.takePhoto();
@@ -2751,7 +2751,7 @@ class _ChatScreenState extends State<ChatScreen> {
     _messages.add(HStepStream(
       id: id,
       stepId: stepId,
-      title: title ?? (index != null ? '正在生成…（第 $index 轮）' : '正在生成…'),
+      title: title ?? (index != null ? '正在生成…（第 $index 轮）' : 's0170'.tr()),
     ));
     return id;
   }
@@ -3104,7 +3104,7 @@ class _ChatScreenState extends State<ChatScreen> {
         setState(() {
           final id = _progressId ?? _nextId();
           _progressId = id;
-          _upsertProgress(id, '正在生成…（第 ${e.index ?? '?'} 轮）');
+          _upsertProgress(id, '正在生成…（第 ${e.index ?? '?'s0172'.tr());
         });
 
       // ---- 模型原始输出 ----
@@ -3189,7 +3189,7 @@ class _ChatScreenState extends State<ChatScreen> {
           _appendPendingRaw(e.index ?? -1);
           _messages.add(HBlocked(
             id: _nextId(),
-            reason: e.reason ?? '已拦截',
+            reason: e.reason ?? 's0173'.tr(),
             // ★ tool 可能为 null（Unparseable 分支）
             tool: e.tool,
             args: e.args,
@@ -3479,7 +3479,7 @@ class _ChatScreenState extends State<ChatScreen> {
         // 那既不影响结果、也不影响他能做的事。
         // ignore: avoid_print
         print('HERC-EVENT 未知事件类型「${e.type}」已忽略'
-            '（Dart 侧比 Kotlin 侧旧，请更新前端；不影响运行结果）');
+            's0175'.tr());
         break;
     }
   }
@@ -3812,8 +3812,8 @@ class _ChatScreenState extends State<ChatScreen> {
       // ★ 2026-10-18（ADR-035 S4）：原先还有第三条 `isLocal ? '本地实测
       //   （llama.cpp -c 参数）'` —— 本地后端已删，那条来源不存在了。
       _contextLimitSource = fromServer != null
-          ? '服务端上报'
-          : '⚠️ 未从服务端获取，按保守值估算';
+          ? 's0176'.tr()
+          : 's0177'.tr();
       _frozenTokens = frozen;
       _contextBreakdown = breakdown;
     });
@@ -4138,7 +4138,7 @@ class _ChatScreenState extends State<ChatScreen> {
       // ★ 2026-10-30 P0：先给可见状态 —— 旧实现静默等停止完成，
       //   用户以为发送没生效。注意与 ↑ 的"插队"区分：那是轮间插话，
       //   这里是真的**停掉当前任务**再发新任务。
-      showIosToast(context, '正在停止当前任务并发送…');
+      showIosToast(context, 's0178'.tr());
       unawaited(() async {
         await _stopRun();
         if (!mounted) return;
@@ -4161,7 +4161,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
     // ★ 2026-10-29：用户报「不能排队」很可能就是**没反馈** ——
     //   排队条在输入框上方，视线还在输入框时容易以为没发出去。
-    showIosToast(context, '已排队，当前任务结束后自动发送');
+    showIosToast(context, 's0179'.tr());
   }
 
   /// 当前运行结束后，把队首发出去（在 `_runAgent` 的 finally 里调）。
@@ -4207,14 +4207,14 @@ class _ChatScreenState extends State<ChatScreen> {
         if (accepted) {
           // ★ 2026-10-30 P0：后端已收下（轮间注入，`8e6d496` 起真生效）——
           //   必须明确告诉用户：这句**不是现在就跑**，而是本轮结束时模型才会看到。
-          showIosToast(context, '已插队，模型将在本轮结束时看到');
+          showIosToast(context, 's0180'.tr());
           return;
         }
         // ★ 2026-10-30 P0：不接受（插话队列满 / 任务刚好收尾 / 空文本）——
         //   **绝不许静默重排队**。旧实现只 `insert(0)` 不吭声，
         //   用户看到的就是"点了没用"。
         setState(() => _queue.insert(0, item));
-        showIosToast(context, '插话未成功（队列已满或任务刚结束），已保留在排队');
+        showIosToast(context, 's0181'.tr());
         return;
       }
       // 没在跑：正常发送（把附件放回，走 _runAgent 全路径）
@@ -4288,7 +4288,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '编辑排队消息',
+                    's0182'.tr(),
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -4297,7 +4297,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    '保存后替换这条排队内容；附件与队列位置不变。',
+                    's0183'.tr(),
                     style: TextStyle(
                       fontSize: 12,
                       height: 1.5,
@@ -4337,7 +4337,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         padding: const EdgeInsets.symmetric(
                             horizontal: HSpace.md, vertical: 4),
                         onPressed: () => Navigator.of(dlgCtx).pop(),
-                        child: Text('取消',
+                        child: Text('s0105'.tr(),
                             style: TextStyle(fontSize: 15, color: h.textDim)),
                       ),
                       CupertinoButton(
@@ -4346,7 +4346,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         onPressed: () =>
                             Navigator.of(dlgCtx).pop(ctrl.text.trim()),
                         child: Text(
-                          '保存',
+                          's0106'.tr(),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -4476,7 +4476,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                 ),
                                 const SizedBox(height: 2),
                                 Text(
-                                  '点一条可编辑；跑完当前任务会自动发出',
+                                  's0185'.tr(),
                                   style: TextStyle(
                                       fontSize: 11.5, color: h.textFaint),
                                 ),
@@ -4629,7 +4629,7 @@ class _ChatScreenState extends State<ChatScreen> {
       return t.length <= 24 ? t : '${t.substring(0, 24)}…';
     }
     final f = attachments.isNotEmpty ? attachments.first.name : '';
-    return f.isNotEmpty ? '关于 $f' : '新会话';
+    return f.isNotEmpty ? '关于 $f' : 's0084'.tr();
   }
 
   /// 取一条回答的时间（没有就返回 null —— 操作行会省略时间）。
@@ -4659,7 +4659,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final title = prefix
         .whereType<HUserMessage>()
         .map((e) => e.text)
-        .firstOrNull ?? '分支';
+        .firstOrNull ?? 's0187'.tr();
 
     try {
       final newId = await _bridge.seedBranch(
@@ -4749,14 +4749,14 @@ class _ChatScreenState extends State<ChatScreen> {
     final ws = _activeWorkspace;
     final sid = _activeSessionId;
     if (ws == null) {
-      setState(() => _error = '请先选择一个工作区');
+      setState(() => _error = 's0189'.tr());
       return;
     }
     if (sid == null || sid.isEmpty) {
       setState(() {
         _messages.add(HAssistantMessage(
           id: _nextId(),
-          text: '当前还没有会话（先发一条消息创建），无需压缩。',
+          text: 's0190'.tr(),
         ));
       });
       _followBottomIfNeeded();
@@ -4820,12 +4820,12 @@ class _ChatScreenState extends State<ChatScreen> {
     final ws = _activeWorkspace;
     if (ws == null) {
       setState(() {
-        _error = '请先选择一个工作区';
+        _error = 's0189'.tr();
         _messages.add(HAssistantMessage(
           id: _nextId(),
-          text: '还没有工作区。\n\n'
-              '工作区就是你让智能体操作的那个项目文件夹。'
-              '点左上角菜单 → ⊕ 选择工作区。',
+          text: 's0192'.tr()
+              's0193'.tr()
+              's0194'.tr(),
         ));
       });
       _followBottomIfNeeded();
@@ -4869,7 +4869,7 @@ class _ChatScreenState extends State<ChatScreen> {
     //
     // Kotlin 侧**有** `deriveTitle(request, attachments)`（取前 24 字），
     // 但它只在 `handleRunAgent` 的"**没有 sessionId ⇒ 自动建会话**"那条路上生效。
-    // 而 UI 走的是另一条路：`_newSession()` 先 `createSession(path, '新会话')` 建好会话，
+    // 而 UI 走的是另一条路：`_newSession()` 先 `createSession(path, 's0084'.tr())` 建好会话，
     // 再带着 sessionId 发消息 ⇒ **`deriveTitle` 永远不会被调用**，
     // 标题就一直是硬编码的「新会话」。
     //
@@ -4881,9 +4881,9 @@ class _ChatScreenState extends State<ChatScreen> {
     final sid0 = _activeSessionId;
     if (sid0 != null) {
       final cur = _sessionTitleOf(ws, sid0);
-      if (cur == null || cur.isEmpty || cur == '新会话') {
+      if (cur == null || cur.isEmpty || cur == 's0084'.tr()) {
         final newTitle = _deriveTitle(request, snapshot);
-        if (newTitle.isNotEmpty && newTitle != '新会话') {
+        if (newTitle.isNotEmpty && newTitle != 's0084'.tr()) {
           unawaited(_bridge
               .renameSession(ws.id, sid0, newTitle, treeUri: ws.treeUri)
               .then((_) {
@@ -4993,7 +4993,7 @@ class _ChatScreenState extends State<ChatScreen> {
               id: _nextId(),
               // ★ 2026-10-29 用户要求：明确写出**是用户选择停止**的 ——
               //   只写「已停止」会让人以为是运行自己挂了（故障感）。
-              text: '用户选择停止。你可以继续发消息。',
+              text: 's0195'.tr(),
               bare: true,
             ));
           });
@@ -5219,11 +5219,11 @@ class _ChatScreenState extends State<ChatScreen> {
   void _logDroppedRun(_RunOrigin origin) {
     // ignore: avoid_print
     print(
-      'HERC-GUARD 已切换会话，丢弃运行结果'
+      's0196'.tr()
       '（发起时 session=${origin.sessionId ?? '(自动新建)'} / '
       'ws=${origin.workspaceId} / gen=${origin.ctxGen}；'
       '当前 session=$_activeSessionId / gen=$_ctxGen）'
-      '—— 数据已由 Kotlin 落盘，切回原会话可见',
+      's0199'.tr(),
     );
   }
 
@@ -6767,7 +6767,7 @@ class _QueueManageRow extends StatelessWidget {
               ),
               _QueueIconButton(
                 icon: AppIcons.trash,
-                label: '删除',
+                label: 's0095'.tr(),
                 color: h.textDim,
                 onTap: onRemove,
               ),

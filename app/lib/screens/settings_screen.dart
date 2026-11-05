@@ -463,7 +463,7 @@ class _DevicePermissionPageState extends State<DevicePermissionPage>
       ('shizuku', 'Shizuku', '执行系统级命令与设备操作'),
       ('allFiles', '所有文件访问', '按设计不申请，文件经授权目录访问'),
       ('media', '图片与视频', '读取相册，用于发送图片、视频附件'),
-      ('camera', '相机', '拍照后直接作为附件发送'),
+      ('camera', 's0159'.tr(), '拍照后直接作为附件发送'),
       ('microphone', '麦克风', '语音输入，把说的话转成文字'),
       ('notifications', '通知', '任务完成与审批请求提醒'),
       ('calendar', '日历', '后续自动化任务可能需要读写日历'),
@@ -547,7 +547,7 @@ class _DevicePermissionPageState extends State<DevicePermissionPage>
         case ('media', _):
           return runtimePerm('图片与视频');
         case ('camera', _):
-          return runtimePerm('相机');
+          return runtimePerm('s0159'.tr());
         case ('microphone', _):
           return runtimePerm('麦克风');
         case ('calendar', _):
@@ -1179,7 +1179,7 @@ class _ArchivedEntryState extends State<_ArchivedEntry> {
   @override
   Widget build(BuildContext context) {
     return _HomeRow(
-      title: '已归档对话',
+      title: 's0090'.tr(),
       subtitle: _badge ?? '…',
       onTap: () async {
         await widget.onOpen();
@@ -1730,7 +1730,7 @@ class _GlobalMemoryPageState extends State<GlobalMemoryPage> {
       context,
       title: '删除这条记忆？',
       message: e.text.length > 80 ? '${e.text.substring(0, 80)}…' : e.text,
-      confirmLabel: '删除',
+      confirmLabel: 's0095'.tr(),
       destructive: true,
     );
     if (!ok || !mounted) return;
@@ -2388,7 +2388,7 @@ class _MemoryEditorSheetState extends State<_MemoryEditorSheet> {
                               ? const Color(0xFF0A0A0B)
                               : Colors.white)
                       : Text(
-                          '保存',
+                          's0106'.tr(),
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -2721,7 +2721,7 @@ class _ProviderCard extends StatelessWidget {
                 BwActionCard(
                   h: h,
                   icon: CupertinoIcons.trash_fill,
-                  label: '删除',
+                  label: 's0095'.tr(),
                   subtitle: '同时清除已保存的 API Key',
                   danger: true,
                   onTap: () => Navigator.of(sheetCtx).pop(true),
@@ -2740,7 +2740,7 @@ class _ProviderCard extends StatelessWidget {
         title: '删除这个提供商？',
         message: '「${provider.name.isEmpty ? "(未命名)" : provider.name}」的配置'
             '与已保存的 API Key 都会被清除，无法恢复。',
-        confirmLabel: '删除',
+        confirmLabel: 's0095'.tr(),
         destructive: true,
       );
       if (ok && context.mounted) onDelete?.call();
@@ -2920,7 +2920,7 @@ class _JevCardState extends State<_JevCard> {
               status = '未配置接口地址';
             } else if (!_jev.cloudKeyPresent) {
               ready = false;
-              status = '待填密钥';
+              status = 's0128'.tr();
             } else {
               ready = true;
               status = '已配置';
@@ -3183,7 +3183,7 @@ class _ProviderEditPageState extends State<ProviderEditPage> {
     }
     final p = widget.provider.copyWith(
       name: _name.text.trim().isEmpty
-          ? (_model.text.trim().isEmpty ? '未命名' : _model.text.trim())
+          ? (_model.text.trim().isEmpty ? 's0113'.tr() : _model.text.trim())
           : _name.text.trim(),
       baseUrl: _baseUrl.text.trim(),
       model: _model.text.trim(),
@@ -3231,7 +3231,7 @@ class _ProviderEditPageState extends State<ProviderEditPage> {
             minimumSize: const Size(0, 44),
             padding: const EdgeInsets.symmetric(horizontal: HSpace.sm),
             foregroundColor: h.accent,
-            child: const Text('保存'),
+            child:  Text('s0106'.tr()),
           ),
           const SizedBox(width: HSpace.sm),
         ],
@@ -4811,7 +4811,7 @@ double _nearestFontStop(double v) {
 }
 
 String _fontStopLabel(double v) =>
-    v <= 13.0 ? '小' : (v >= 18.0 ? '大' : '标准');
+    v <= 13.0 ? '小' : (v >= 18.0 ? '大' : 's0052'.tr());
 
 class _SectionLabel extends StatelessWidget {
   const _SectionLabel(this.text);

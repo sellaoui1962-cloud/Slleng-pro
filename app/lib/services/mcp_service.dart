@@ -637,5 +637,5 @@ class McpService {
 
   @override
   String toString() =>
-      'McpService(connector: ${connector == null ? '未接入' : '已注入'})';
+      'McpService(connector: ${connector == null ? 's0130'.tr() : '已注入'})';
 }

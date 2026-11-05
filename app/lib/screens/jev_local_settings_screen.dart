@@ -244,7 +244,7 @@ class JevLocalSettingsScreen extends StatelessWidget {
     if (state.phase == JevDownloadPhase.downloading) {
       return _pillButton(
         h,
-        label: '取消',
+        label: 's0105'.tr(),
         filled: false,
         onTap: () => jev.cancelDownload(spec.source),
       );
@@ -252,7 +252,7 @@ class JevLocalSettingsScreen extends StatelessWidget {
     if (jev.isDownloaded(spec.source)) {
       return _pillButton(
         h,
-        label: '删除',
+        label: 's0095'.tr(),
         filled: false,
         onTap: () => unawaited(jev.deleteModel(spec)),
       );

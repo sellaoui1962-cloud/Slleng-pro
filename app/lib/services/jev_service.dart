@@ -1411,7 +1411,7 @@ class JevController extends ChangeNotifier {
           lastDiagnostics = r.diagnostics;
           yesProb = r.yesProb;
           thought = r.thought;
-          engineLabel = r.model.isEmpty ? '云端' : '云端 · ${r.model}';
+          engineLabel = r.model.isEmpty ? 's0012'.tr() : '云端 · ${r.model}';
         case JevSource.local08 || JevSource.local2b:
           final spec = jevSpecFor(config.source)!;
           final dir = modelDirFor(spec) ?? '';

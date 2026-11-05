@@ -133,7 +133,7 @@ Widget _readDocument(Hue h, HToolCall call) {
   final sheets = RegExp(r'表数：\s*(\d+)').firstMatch(result)?.group(1);
   final failed = _failed(call);
   return _box(h, [
-    if (name.isNotEmpty) _row(h, '文件', name, key: const Key('v04-doc-name')),
+    if (name.isNotEmpty) _row(h, 's0163'.tr(), name, key: const Key('v04-doc-name')),
     if (type != null) _row(h, '类型', type, key: const Key('v04-doc-type')),
     if (pages != null) _row(h, '页数', pages, key: const Key('v04-doc-pages')),
     if (sheets != null)
@@ -153,7 +153,7 @@ Widget _notifyUser(Hue h, HToolCall call) {
   final body = (call.args['body'] ?? call.args['message'] ?? '').trim();
   final failed = _failed(call);
   return _box(h, [
-    if (title.isNotEmpty) _row(h, '标题', title, key: const Key('v04-notify-title')),
+    if (title.isNotEmpty) _row(h, 's0100'.tr(), title, key: const Key('v04-notify-title')),
     if (body.isNotEmpty) _row(h, '正文', body, key: const Key('v04-notify-body')),
     _row(
       h,

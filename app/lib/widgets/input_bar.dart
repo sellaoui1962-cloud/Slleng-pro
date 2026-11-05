@@ -1734,7 +1734,7 @@ class _FlowBorderPainter extends CustomPainter {
 ///
 /// ⚠️ 措辞要求（用户原话）：**不许说"已生效"** —— 档位在 run 开始时就快照了，
 /// 这一轮用的还是旧档位，只有下一轮才是新档位。
-const String kRunTierNoticeText = 'level_applies_next_run'.tr();
+final String kRunTierNoticeText = 'level_applies_next_run'.tr();
 
 /// 运行中切档**要不要提示**（纯函数，便于单测）。
 ///

@@ -69,7 +69,7 @@ class _McpScreenState extends State<McpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('未配置',
+                Text('s0127'.tr(),
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -152,7 +152,7 @@ class _McpScreenState extends State<McpScreen> {
           FilledButton(
             key: const Key('mcp-save'),
             onPressed: _submit,
-            child: const Text('保存'),
+            child:  Text('s0106'.tr()),
           ),
         ],
       ),

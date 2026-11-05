@@ -263,7 +263,7 @@ class _GitBranchSheetState extends State<_GitBranchSheet> {
                   child: _blackButton(
                     h,
                     icon: CupertinoIcons.add,
-                    label: '新建分支',
+                    label: 's0120'.tr(),
                     onTap: () =>
                         Navigator.of(context).pop(gitBranchSheetCreate),
                   ),

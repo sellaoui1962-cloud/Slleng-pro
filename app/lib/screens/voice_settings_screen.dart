@@ -483,7 +483,7 @@ class _VoiceSettingsScreenState extends State<VoiceSettingsScreen> {
     if (state.phase == VoiceModelPhase.downloading) {
       return _pillButton(
         h,
-        label: '取消',
+        label: 's0105'.tr(),
         filled: false,
         onTap: _voice.cancelDownload,
       );
@@ -491,7 +491,7 @@ class _VoiceSettingsScreenState extends State<VoiceSettingsScreen> {
     if (_voice.installed) {
       return _pillButton(
         h,
-        label: '删除',
+        label: 's0095'.tr(),
         filled: false,
         onTap: () => unawaited(_confirmDelete()),
       );
@@ -675,7 +675,7 @@ class _VoiceSettingsScreenState extends State<VoiceSettingsScreen> {
       context,
       title: '删除语音模型？',
       message: '删除 SenseVoice 后仍可用内置流式识别；需要时可重新下载。',
-      confirmLabel: '删除',
+      confirmLabel: 's0095'.tr(),
       destructive: true,
     );
     if (ok) await _voice.deleteModel();

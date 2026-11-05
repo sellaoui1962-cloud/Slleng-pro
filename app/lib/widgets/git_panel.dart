@@ -362,7 +362,7 @@ class _GitPanelState extends State<_GitPanel> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text('新建分支',
+                Text('s0120'.tr(),
                     style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w700,
@@ -372,7 +372,7 @@ class _GitPanelState extends State<_GitPanel> {
                   controller: ctrl,
                   autofocus: true,
                   decoration: InputDecoration(
-                    hintText: '分支名，例如 feature/login',
+                    hintText: 's0121'.tr(),
                     hintStyle: TextStyle(
                         fontSize: 14, color: widget.h.textFaint),
                     filled: true,
@@ -393,11 +393,11 @@ class _GitPanelState extends State<_GitPanel> {
                 const SizedBox(height: HSpace.md),
                 FilledButton(
                   onPressed: () => Navigator.of(sheetCtx).pop(true),
-                  child: const Text('创建并切换'),
+                  child:  Text('s0122'.tr()),
                 ),
                 TextButton(
                   onPressed: () => Navigator.of(sheetCtx).pop(false),
-                  child: Text('取消',
+                  child: Text('s0105'.tr(),
                       style: TextStyle(
                           color: widget.h.textDim, fontSize: 14)),
                 ),
@@ -626,7 +626,7 @@ class _GitPanelState extends State<_GitPanel> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            '这个仓库还没下载到手机',
+            's0119'.tr(),
             style: TextStyle(
                 fontSize: 14, fontWeight: FontWeight.w600, color: h.text),
           ),
@@ -868,7 +868,7 @@ class _GitPanelState extends State<_GitPanel> {
                         Icon(CupertinoIcons.add,
                             size: 15, color: h.accent),
                         const SizedBox(width: HSpace.sm),
-                        Text('新建分支',
+                        Text('s0120'.tr(),
                             style: TextStyle(fontSize: 14, color: h.accent)),
                       ],
                     ),

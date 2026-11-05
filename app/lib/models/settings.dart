@@ -9,15 +9,15 @@ library;
 /// **行为落点**：工具执行前的判定。危险操作是否需要用户确认。
 enum PermissionMode {
   /// 手动审批：每个会修改状态的操作都要确认
-  manual('手动审批', '每次修改都要你确认'),
+  manual('s0032'.tr(), 's0033'.tr()),
 
   /// 自动审批：工作区内自动放行，越界仍要确认
-  workspaceAuto('工作区内修改', '工作区内的改动自动执行，越界仍会询问'),
+  workspaceAuto('s0034'.tr(), 's0035'.tr()),
 
   /// 完全访问：不再询问
   ///
   /// **需要 Shizuku 或 root** —— 否则应用沙箱根本拿不到那些权限。
-  fullAccess('完全访问', '不再询问。需要 Shizuku 或 root 才能真正生效');
+  fullAccess('s0036'.tr(), 's0037'.tr());
 
   const PermissionMode(this.label, this.description);
 
@@ -30,7 +30,7 @@ enum PermissionMode {
 
 /// 界面语言
 enum AppLanguage {
-  zh('中文'),
+  zh('s0038'.tr()),
   en('English');
 
   const AppLanguage(this.label);
@@ -39,9 +39,9 @@ enum AppLanguage {
 
 /// 外观
 enum AppAppearance {
-  light('浅色'),
-  dark('深色'),
-  system('跟随系统');
+  light('s0039'.tr()),
+  dark('s0040'.tr()),
+  system('s0041'.tr());
 
   const AppAppearance(this.label);
   final String label;
@@ -52,10 +52,10 @@ enum AppAppearance {
 /// 只改颜色与背景，不改布局结构。默认黑白；柔雾是 2026-10-23 定过的
 /// 方向；极光、活力来自概念图里的两套配色。
 enum AppThemeStyle {
-  bw('黑白', '默认：只用黑、白、灰'),
-  mist('柔雾', '奶油底 + 淡紫 + 薄荷'),
-  aurora('极光', '深色底 + 紫青极光'),
-  vitality('活力', '暖底 + 珊瑚橙');
+  bw('s0042'.tr(), 's0043'.tr()),
+  mist('s0044'.tr(), 's0045'.tr()),
+  aurora('s0046'.tr(), 's0047'.tr()),
+  vitality('s0048'.tr(), 's0049'.tr());
 
   const AppThemeStyle(this.label, this.description);
   final String label;
@@ -90,10 +90,10 @@ enum AppThemeStyle {
 /// 认不出的名字 → 回退到 `standard`。所以加档位**不会**让旧数据解析失败
 /// （老版本读到 `fullyExpanded` 只是回退，不会崩）。
 enum StepDetail {
-  minimal('精简', '只显示工具名与状态'),
-  standard('标准', '显示工具名、参数摘要与结果'),
-  detailed('详细', '显示完整参数与完整结果'),
-  fullyExpanded('完全展开', '显示模型原始输出与完整过程');
+  minimal('s0050'.tr(), 's0051'.tr()),
+  standard('s0052'.tr(), 's0053'.tr()),
+  detailed('s0054'.tr(), 's0055'.tr()),
+  fullyExpanded('s0056'.tr(), 's0057'.tr());
 
   const StepDetail(this.label, this.description);
   final String label;
@@ -128,8 +128,8 @@ enum StepDetail {
 ///
 /// **行为落点**：`InputBar` 在 busy 状态下按下发送时的处理。
 enum BusySendBehavior {
-  queue('排队发送', '等当前任务结束再发'),
-  interrupt('立即中断并发送', '停止当前任务，改为执行新指令');
+  queue('s0058'.tr(), 's0059'.tr()),
+  interrupt('s0060'.tr(), 's0061'.tr());
 
   const BusySendBehavior(this.label, this.description);
   final String label;
@@ -162,11 +162,11 @@ enum BusySendBehavior {
 /// 按 `name` 存字符串，读回时 `SettingsController` 有兜底（认不出 → `auto`）。
 /// 所以**加档位不会让旧数据解析失败**。
 enum ReasoningLevel {
-  auto('Auto', '由模型自行决定'),
-  off('Off', '不用思考，直接回答'),
-  low('Low', '少量思考'),
-  high('High', '较多思考'),
-  max('Max', '尽可能深地思考');
+  auto('Auto', 's0062'.tr()),
+  off('Off', 's0063'.tr()),
+  low('Low', 's0064'.tr()),
+  high('High', 's0065'.tr()),
+  max('Max', 's0066'.tr());
 
   const ReasoningLevel(this.label, this.description);
   final String label;
@@ -543,20 +543,22 @@ class AccentPreset {
 }
 
 const kAccentPresets = <AccentPreset>[
-  AccentPreset('橙', 0xFFFF7A45),
-  AccentPreset('蓝', 0xFF3B82F6),
-  AccentPreset('绿', 0xFF22C55E),
-  AccentPreset('青', 0xFF06B6D4),
-  AccentPreset('紫', 0xFF8B5CF6),
-  AccentPreset('粉', 0xFFEC4899),
-  AccentPreset('红', 0xFFEF4444),
-  AccentPreset('黄', 0xFFEAB308),
+  AccentPreset('s0067'.tr(), 0xFFFF7A45),
+  AccentPreset('s0068'.tr(), 0xFF3B82F6),
+  AccentPreset('s0069'.tr(), 0xFF22C55E),
+  AccentPreset('s0070'.tr(), 0xFF06B6D4),
+  AccentPreset('s0071'.tr(), 0xFF8B5CF6),
+  AccentPreset('s0072'.tr(), 0xFFEC4899),
+  AccentPreset('s0073'.tr(), 0xFFEF4444),
+  AccentPreset('s0074'.tr(), 0xFFEAB308),
 ];
 
 /// 全部设置。
 class AppSettings {
   const AppSettings({
-    this.permission = PermissionMode.workspaceAuto,
+    // ★ 安全默认：每个操作都先征得同意（原默认是 workspaceAuto，工作区内自动执行）。
+    //   已保存在设备上的设置不受影响，仅影响从未设置过的新安装。
+    this.permission = PermissionMode.manual,
     this.language = AppLanguage.zh,
     this.appearance = AppAppearance.system,
     this.themeStyle = AppThemeStyle.bw,
@@ -807,14 +809,14 @@ class AppSettings {
   static const defaultProviders = <ModelProviderConfig>[
     ModelProviderConfig(
       id: 'deepseek-account',
-      name: 'DeepSeek 账号',
+      name: 's0075'.tr(),
       baseUrl: 'https://api.deepseek.com/v1',
       model: 'deepseek-chat',
       isOfficialAccount: true,
     ),
     ModelProviderConfig(
       id: 'dashscope',
-      name: '通义千问 (DashScope)',
+      name: 's0076'.tr(),
       baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
       model: 'qwen3.8-flash',
     ),

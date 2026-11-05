@@ -1,12 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
-import '../widgets/landscape_frame.dart';
 import 'package:flutter/material.dart';
 
-import '../services/termux_service.dart';
+import '../services/re_toolkit.dart';
+import '../services/sandbox_service.dart';
+import '../widgets/landscape_frame.dart';
 import 're_toolkit_screen.dart';
+import 'terminal_screen.dart';
 
-/// 「工程」页（阶段 2）：语言选择 + Termux 集成。
-/// 阶段 3 的 Reverse Engineering Toolkit 会加在这里（开发者模式入口）。
+/// 「工程」页：内置环境（终端）+ 逆向工具包入口。
+///
+/// 终端跑在 App 自带的 PRoot + Alpine 里，**不依赖 Termux**。
 class EngineeringScreen extends StatefulWidget {
   const EngineeringScreen({super.key});
 
@@ -15,8 +18,9 @@ class EngineeringScreen extends StatefulWidget {
 }
 
 class _EngineeringScreenState extends State<EngineeringScreen> {
-  TermuxStatus? _termux;
-  bool _checking = false;
+  final SandboxService _sandbox = SandboxService();
+  SandboxStatus? _status;
+  bool _busy = false;
 
   @override
   void initState() {
@@ -25,32 +29,57 @@ class _EngineeringScreenState extends State<EngineeringScreen> {
   }
 
   Future<void> _refresh() async {
-    setState(() => _checking = true);
-    final s = await TermuxService.status();
+    final s = await _sandbox.status();
+    if (!mounted) return;
+    setState(() => _status = s);
+  }
+
+  Future<void> _activate() async {
+    setState(() => _busy = true);
+    final s = await _sandbox.activate();
     if (!mounted) return;
     setState(() {
-      _termux = s;
-      _checking = false;
+      _status = s;
+      _busy = false;
     });
   }
 
-  Future<void> _confirmAndRun() async {
-    final command = TermuxService.installCommand();
+  void _openTerminal([String? command]) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => TerminalScreen(
+          initialCommand: command,
+          autoRun: command != null,
+        ),
+      ),
+    );
+  }
+
+  Future<bool> _confirm({
+    required String title,
+    required String body,
+    String? command,
+  }) async {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('termux_confirm_title'.tr()),
+        title: Text(title),
         content: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('termux_confirm_body'.tr()),
-              const SizedBox(height: 12),
-              SelectableText(
-                command,
-                style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
-              ),
+              Text(body),
+              if (command != null) ...[
+                const SizedBox(height: 12),
+                Text('re_command_label'.tr(),
+                    style: Theme.of(ctx).textTheme.labelSmall),
+                const SizedBox(height: 4),
+                SelectableText(
+                  command,
+                  style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
+                ),
+              ],
             ],
           ),
         ),
@@ -66,102 +95,120 @@ class _EngineeringScreenState extends State<EngineeringScreen> {
         ],
       ),
     );
-    if (ok != true || !mounted) return;
+    return ok == true;
+  }
 
-    final result = await TermuxService.run(command);
+  Future<void> _installTools() async {
+    final command = ReToolkit.installTools();
+    final ok = await _confirm(
+      title: 're_confirm_title'.tr(),
+      body: 're_confirm_body'.tr(),
+      command: command,
+    );
+    if (!ok || !mounted) return;
+    _openTerminal(command);
+  }
+
+  Future<void> _activateSuite() async {
+    final ok = await _confirm(
+      title: 'env_suite_confirm_title'.tr(),
+      body: 'env_suite_confirm_body'.tr(),
+    );
+    if (!ok || !mounted) return;
+    setState(() => _busy = true);
+    final r = await _sandbox.activateBuildSuite();
     if (!mounted) return;
-    final msg = result.ok
-        ? 'termux_sent'.tr()
-        : switch (result.error) {
-            TermuxRunError.notInstalled => 'termux_err_not_installed'.tr(),
-            TermuxRunError.permissionDenied => 'termux_err_permission'.tr(),
-            TermuxRunError.backgroundBlocked => 'termux_err_background'.tr(),
-            _ => 'termux_err_unknown'.tr(),
-          };
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(msg)));
-    _refresh();
+    setState(() => _busy = false);
+    final String msg;
+    if (r.ready) {
+      msg = (r.alreadyReady ? 'env_suite_already' : 'env_suite_done').tr();
+    } else {
+      msg = r.message.isEmpty
+          ? 'env_suite_failed'.tr()
+          : '${'env_suite_failed'.tr()} ${r.message}';
+    }
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
 
   @override
   Widget build(BuildContext context) {
-    final termux = _termux;
-
+    final st = _status;
+    final small = Theme.of(context).textTheme.bodySmall;
     return Scaffold(
       appBar: AppBar(title: Text('engineering_title'.tr())),
-      body: LandscapeFrame(child: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          _Section(title: 'termux_section'.tr()),
-          Text('termux_intro'.tr()),
-          const SizedBox(height: 12),
-          if (termux == null || _checking)
-            const LinearProgressIndicator()
-          else ...[
-            _StatusRow(
-              ok: termux.installed,
-              text: termux.installed
-                  ? 'termux_status_installed'.tr()
-                  : 'termux_status_missing'.tr(),
-            ),
-            _StatusRow(
-              ok: termux.permissionGranted,
-              text: termux.permissionGranted
-                  ? 'termux_permission_ok'.tr()
-                  : 'termux_permission_missing'.tr(),
-            ),
-          ],
-          const SizedBox(height: 12),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              OutlinedButton.icon(
-                onPressed: TermuxService.openDownloadPage,
-                icon: const Icon(Icons.open_in_new, size: 16),
-                label: Text('termux_download'.tr()),
+      body: LandscapeFrame(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            _Section(title: 'env_section'.tr()),
+            Text('env_intro'.tr()),
+            const SizedBox(height: 12),
+            if (st == null || _busy)
+              const LinearProgressIndicator()
+            else ...[
+              _StatusRow(
+                ok: st.installed,
+                text: (st.installed ? 'env_status_ready' : 'env_status_missing')
+                    .tr(),
               ),
-              OutlinedButton(
-                onPressed: _refresh,
-                child: Text('termux_recheck'.tr()),
+              _StatusRow(
+                ok: st.prootReady,
+                text: (st.prootReady ? 'env_proot_ready' : 'env_proot_missing')
+                    .tr(),
               ),
             ],
-          ),
-          const SizedBox(height: 12),
-          Text('termux_external_apps_hint'.tr(),
-              style: Theme.of(context).textTheme.bodySmall),
-          const SizedBox(height: 4),
-          Text('termux_permission_hint'.tr(),
-              style: Theme.of(context).textTheme.bodySmall),
-          const SizedBox(height: 20),
-          _Section(title: 'termux_command_title'.tr()),
-          Text('termux_command_note'.tr()),
-          const SizedBox(height: 8),
-          SelectableText(
-            TermuxService.installCommand(),
-            style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
-          ),
-          const SizedBox(height: 12),
-          FilledButton.icon(
-            onPressed: (termux?.ready ?? false)
-                ? () => _confirmAndRun()
-                : null,
-            icon: const Icon(Icons.terminal, size: 16),
-            label: Text('termux_run_button'.tr()),
-          ),
-          const SizedBox(height: 24),
-          _Section(title: 're_toolkit_title'.tr()),
-          Text('re_intro'.tr()),
-          const SizedBox(height: 8),
-          OutlinedButton.icon(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const ReToolkitScreen()),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                if (st != null && !st.installed)
+                  FilledButton(
+                    onPressed: _busy ? null : _activate,
+                    child: Text('terminal_activate'.tr()),
+                  ),
+                FilledButton.icon(
+                  onPressed: () => _openTerminal(),
+                  icon: const Icon(Icons.terminal, size: 16),
+                  label: Text('open_terminal'.tr()),
+                ),
+                OutlinedButton(
+                  onPressed: _refresh,
+                  child: Text('env_recheck'.tr()),
+                ),
+              ],
             ),
-            icon: const Icon(Icons.build_circle_outlined, size: 16),
-            label: Text('re_toolkit_title'.tr()),
-          ),
-        ],
-      )),
+            const SizedBox(height: 24),
+            _Section(title: 'env_tools_title'.tr()),
+            Text('env_tools_note'.tr(), style: small),
+            const SizedBox(height: 8),
+            OutlinedButton(
+              onPressed: _busy ? null : _installTools,
+              child: Text('env_tools_button'.tr()),
+            ),
+            const SizedBox(height: 24),
+            _Section(title: 'env_suite_title'.tr()),
+            Text('env_suite_note'.tr(), style: small),
+            const SizedBox(height: 8),
+            OutlinedButton(
+              onPressed: _busy ? null : _activateSuite,
+              child: Text('env_suite_button'.tr()),
+            ),
+            const SizedBox(height: 24),
+            _Section(title: 're_toolkit_title'.tr()),
+            Text('re_intro'.tr()),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const ReToolkitScreen()),
+              ),
+              icon: const Icon(Icons.build_circle_outlined, size: 16),
+              label: Text('re_toolkit_title'.tr()),
+            ),
+            const SizedBox(height: 24),
+          ],
+        ),
+      ),
     );
   }
 }

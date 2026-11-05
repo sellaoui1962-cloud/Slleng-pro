@@ -1,3 +1,4 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -156,7 +157,7 @@ Future<void> _sandboxSelfTest() async {
   void log(String m) => debugPrint('SANDBOX_SELFTEST $m');
 
   try {
-    log('=== 开始 ===');
+    log('s0001'.tr());
     final st0 = await sandbox.status();
     log('status: installed=${st0.installed} prootReady=${st0.prootReady} '
         'rootfs="${st0.rootfsSummary}"');
@@ -224,7 +225,7 @@ Future<void> _sandboxSelfTest() async {
     await subOut.cancel();
     await subDone.cancel();
     await subErr.cancel();
-    log('=== 结束 ===');
+    log('s0003'.tr());
   } catch (e) {
     log('!! 自检异常: $e');
   } finally {
@@ -299,7 +300,7 @@ Future<void> _sandboxT2ActivationTest() async {
 
   StreamSubscription<SandboxOutputChunk>? subOut;
   try {
-    log('=== 开始 ===');
+    log('s0001'.tr());
     final before = await sandbox.buildSuiteStatus();
     log('激活前: ready=${before.ready} missing=${before.missing.join(",")}');
 
@@ -333,7 +334,7 @@ Future<void> _sandboxT2ActivationTest() async {
       );
       log('探针: ${probe.trim().replaceAll("\n", " | ")}');
     }
-    log('=== 结束 ===');
+    log('s0003'.tr());
   } catch (e) {
     log('!! 异常: $e');
   } finally {

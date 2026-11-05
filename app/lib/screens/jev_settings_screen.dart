@@ -511,7 +511,7 @@ class _JevSettingsScreenState extends State<JevSettingsScreen> {
             minimumSize: const Size(0, 44),
             padding: const EdgeInsets.symmetric(horizontal: HSpace.sm),
             foregroundColor: h.accent,
-            child: const Text('保存'),
+            child:  Text('s0106'.tr()),
           ),
           const SizedBox(width: HSpace.sm),
         ],
@@ -537,7 +537,7 @@ class _JevSettingsScreenState extends State<JevSettingsScreen> {
                 style: TextStyle(fontSize: 13, color: h.textFaint, height: 1.5),
               ),
               const SizedBox(height: HSpace.lg),
-              _groupLabel(h, '云端'),
+              _groupLabel(h, 's0012'.tr()),
               _field(
                 h,
                 '接口地址',

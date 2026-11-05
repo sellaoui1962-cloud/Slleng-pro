@@ -11,10 +11,10 @@ library;
 /// 分组方式
 enum SessionGrouping {
   /// 按工作区分组（每个工作区一个可折叠的组）—— 默认
-  byWorkspace('按工作区'),
+  byWorkspace('s0077'.tr()),
 
   /// 单列表（所有会话平铺，不分组）
-  flatList('单列表');
+  flatList('s0078'.tr());
 
   const SessionGrouping(this.label);
   final String label;
@@ -26,13 +26,13 @@ enum SessionGrouping {
 /// 排序方式
 enum SessionSorting {
   /// 最近更新（默认 —— 最常用的排最前）
-  recent('最近更新'),
+  recent('s0079'.tr()),
 
   /// 手动排序（2026-10-29 用户点名要回来的 —— 2026-10-19 曾因
   /// 「没有拖拽实现」作为假选项删掉过；这次连拖拽一起实现：
   /// 排序选它时会话行尾出现拖拽手柄，拖完的顺序存
   /// [ViewOptions.manualOrder] 持久化，选了就真按它排）
-  manual('手动排序');
+  manual('s0080'.tr());
 
   const SessionSorting(this.label);
   final String label;
@@ -44,13 +44,13 @@ enum SessionSorting {
 /// 会话筛选
 enum SessionFilter {
   /// 隐藏已归档
-  hideArchived('隐藏已归档'),
+  hideArchived('s0081'.tr()),
 
   /// 全部对话（显示已归档）
-  all('全部对话'),
+  all('s0082'.tr()),
 
   /// 仅显示已归档
-  onlyArchived('仅显示已归档');
+  onlyArchived('s0083'.tr());
 
   const SessionFilter(this.label);
   final String label;

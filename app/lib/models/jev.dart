@@ -24,18 +24,18 @@ library;
 /// 决策来源。**持久化用 `name`，只许往后加、不许改名/重排**
 /// （与全仓枚举落盘铁律一致）。
 enum JevSource {
-  cloud('云端'),
-  local08('本地 0.8B'),
-  local2b('本地 2B');
+  cloud('s0012'.tr()),
+  local08('s0013'.tr()),
+  local2b('s0014'.tr());
 
   const JevSource(this.label);
   final String label;
 
   /// 顶栏状态行的短标签（宽度有限）。
   String get shortLabel => switch (this) {
-    JevSource.cloud => '云端',
-    JevSource.local08 => '本地 0.8B',
-    JevSource.local2b => '本地 2B',
+    JevSource.cloud => 's0012'.tr(),
+    JevSource.local08 => 's0013'.tr(),
+    JevSource.local2b => 's0014'.tr(),
   };
 
   static JevSource parse(String? name) =>
@@ -48,10 +48,10 @@ enum JevReasonSource {
   none(''),
 
   /// 云端 AutoThink 模型在不确定时生成的思考（`return_thought`）。
-  modelThought('理由来自决策模型的思考'),
+  modelThought('s0015'.tr()),
 
   /// 由当前对话模型补写的一两句。
-  llm('理由由对话模型补写');
+  llm('s0016'.tr());
 
   const JevReasonSource(this.caption);
   final String caption;
@@ -221,7 +221,7 @@ class JevDeviceProfile {
   double get freeStorageGb => freeStorageMb / 1024;
 
   factory JevDeviceProfile.fromMap(Map<dynamic, dynamic> m) => JevDeviceProfile(
-    model: m['model'] as String? ?? '未知机型',
+    model: m['model'] as String? ?? 's0017'.tr(),
     totalRamMb: (m['totalRamMb'] as num?)?.toInt() ?? 0,
     freeStorageMb: (m['freeStorageMb'] as num?)?.toInt() ?? 0,
     appFilesDir: m['appFilesDir'] as String? ?? '',
@@ -266,29 +266,29 @@ JevRecommendation recommendJev(JevDeviceProfile p) {
   if (p.totalRamMb >= 6144 && p.freeStorageMb >= 3277) {
     return JevRecommendation(
       tier: JevTier.local2b,
-      headline: '最优方案：本地 2B',
+      headline: 's0018'.tr(),
       detail:
           '运行内存 ${ramGb.toStringAsFixed(0)} GB、可用存储 '
           '${freeGb.toStringAsFixed(0)} GB，都够 2B（Q8 权重 2.0 GB）；'
-          '决策质量明显好于 0.8B。',
+          's0021'.tr(),
     );
   }
   if (p.totalRamMb >= 3584 && p.freeStorageMb >= 1229) {
     return JevRecommendation(
       tier: JevTier.local08,
-      headline: '最优方案：本地 0.8B',
+      headline: 's0022'.tr(),
       detail:
           '运行内存 ${ramGb.toStringAsFixed(1)} GB 跑不动 2B，'
-          '但够 0.8B（Q4 权重约 0.5 GB）；要更强的决策可以走云端。',
+          's0024'.tr(),
     );
   }
   return JevRecommendation(
     tier: JevTier.cloudOnly,
-    headline: '本机不支持本地模型，建议云端',
+    headline: 's0025'.tr(),
     detail:
         '运行内存 ${ramGb.toStringAsFixed(1)} GB 或可用存储 '
         '${freeGb.toStringAsFixed(1)} GB 不足（本地最低 0.8B 需约 '
-        '3.5 GB 内存与 1.2 GB 存储），云端不受本机配置限制。',
+        's0028'.tr(),
   );
 }
 
@@ -329,8 +329,8 @@ const kJevModelSpecs = <JevModelSpec>[
   JevModelSpec(
     source: JevSource.local08,
     displayName: 'StartLux-Decision 0.8B',
-    quantLabel: 'Q4_K_M 量化',
-    sizeLabel: '约 0.5 GB',
+    quantLabel: 's0029'.tr(),
+    sizeLabel: 's0030'.tr(),
     approxBytes: 530000000,
     ggufRepo: 'startlux-models/StartLux-Decision-v1.1-0.8B-Instant-GGUF',
     ggufFile: 'StartLux-Decision-v1.1-0.8B-Instant-Q4_K_M.gguf',
@@ -340,7 +340,7 @@ const kJevModelSpecs = <JevModelSpec>[
   JevModelSpec(
     source: JevSource.local2b,
     displayName: 'StartLux-Decision 2B',
-    quantLabel: 'Q8_0 量化',
+    quantLabel: 's0031'.tr(),
     sizeLabel: '2.0 GB',
     approxBytes: 2010000000,
     ggufRepo: 'startlux-models/StartLux-Decision-v1.1-2B-Instant-GGUF',

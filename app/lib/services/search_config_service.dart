@@ -340,7 +340,7 @@ class SearchConfigService {
   String toString() {
     final ep = _lastEndpoint;
     return 'SearchConfigService(endpoint: '
-        '${ep.isEmpty ? '未配置' : redactEndpoint(ep)})';
+        '${ep.isEmpty ? 's0127'.tr() : redactEndpoint(ep)})';
   }
 
   /// 把异常压成**类型名**（就这么多，故意不带 message）。

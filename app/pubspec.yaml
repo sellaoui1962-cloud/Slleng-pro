@@ -37,6 +37,8 @@ dependencies:
 
   # 多语言：阿拉伯语 / 英语 / 法语（easy_localization，JSON 翻译文件）。
   easy_localization: ^3.0.7
+  flutter_localizations:
+    sdk: flutter
 
   # 设置持久化 —— 用户改过的设置必须活过重启。
   # 只引入这一个包：设置项少且都是标量，不需要更重的状态管理框架。

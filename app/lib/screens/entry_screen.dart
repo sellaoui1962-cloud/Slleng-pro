@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../models/settings.dart';
 import '../services/settings_controller.dart';
 import 'chat_screen.dart';
 import 'engineering_screen.dart';

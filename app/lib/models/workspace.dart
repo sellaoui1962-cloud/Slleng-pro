@@ -62,7 +62,7 @@ class HSession {
     final ts = (m['updatedAt'] as num?)?.toInt() ?? 0;
     return HSession(
       id: (m['id'] as String?) ?? '',
-      title: (m['title'] as String?) ?? '新会话',
+      title: (m['title'] as String?) ?? 's0084'.tr(),
       lastActivity: ts > 0 ? DateTime.fromMillisecondsSinceEpoch(ts) : null,
       starred: (m['starred'] as bool?) ?? false,
       archived: (m['archived'] as bool?) ?? false,
@@ -77,7 +77,7 @@ class HSession {
     final t = lastActivity;
     if (t == null) return '';
     final d = DateTime.now().difference(t);
-    if (d.inMinutes < 1) return '刚刚';
+    if (d.inMinutes < 1) return 's0085'.tr();
     if (d.inMinutes < 60) return '${d.inMinutes}分钟';
     if (d.inHours < 24) return '${d.inHours}小时';
     if (d.inDays < 30) return '${d.inDays}天';

@@ -1,0 +1,1868 @@
+﻿id,category,zh,en,ar,fr,placeholders_keep,used_in
+s0001,ui,=== 开始 ===,=== 开始 ===,=== 开始 ===,=== 开始 ===,,main.dart
+s0002,ui,"mounts: ${mounts.map((m) => ""${m.prefix}${m.readOnly ? ""(只读)"" : """"}"").join("", "")}","mounts: __VAR_0____VAR_1__"").join("", "")}","mounts: __VAR_0____VAR_1__"").join("", "")}","mounts: __VAR_0____VAR_1__"").join("", "")}",YES,main.dart
+s0003,ui,=== 结束 ===,=== 结束 ===,=== 结束 ===,=== 结束 ===,,main.dart
+s0004,ui,!! 自检异常: $e,!! 自检异常: __VAR_0__,!! 自检异常: __VAR_0__,!! 自检异常: __VAR_0__,YES,main.dart
+s0005,ui,提交失败：${submit.error},提交失败：__VAR_0__,提交失败：__VAR_0__,提交失败：__VAR_0__,YES,main.dart
+s0006,ui,"激活前: ready=${before.ready} missing=${before.missing.join("","")}",激活前: ready=__VAR_0__ missing=__VAR_1__,激活前: ready=__VAR_0__ missing=__VAR_1__,激活前: ready=__VAR_0__ missing=__VAR_1__,YES,main.dart
+s0007,ui,结果: ok=${r.ok} alreadyReady=${r.alreadyReady} ,结果: ok=__VAR_0__ alreadyReady=__VAR_1__ ,结果: ok=__VAR_0__ alreadyReady=__VAR_1__ ,结果: ok=__VAR_0__ alreadyReady=__VAR_1__ ,YES,main.dart
+s0008,ui,ready=${r.ready} 耗时=${sw.elapsed.inSeconds}s,ready=__VAR_0__ 耗时=__VAR_1__s,ready=__VAR_0__ 耗时=__VAR_1__s,ready=__VAR_0__ 耗时=__VAR_1__s,YES,main.dart
+s0009,ui,"激活后: ready=${after.ready} version=""${after.version}"" ","激活后: ready=__VAR_0__ version=""__VAR_1__"" ","激活后: ready=__VAR_0__ version=""__VAR_1__"" ","激活后: ready=__VAR_0__ version=""__VAR_1__"" ",YES,main.dart
+s0010,ui,"探针: ${probe.trim().replaceAll(""\n"", "" | "")}",探针: __VAR_0__,探针: __VAR_0__,探针: __VAR_0__,YES,main.dart
+s0011,ui,!! 异常: $e,!! 异常: __VAR_0__,!! 异常: __VAR_0__,!! 异常: __VAR_0__,YES,main.dart
+s0012,ui,云端,云端,云端,云端,,models/jev.dart; screens/jev_settings_screen.dart; services/jev_service.dart
+s0013,ui,本地 0.8B,,,,,models/jev.dart
+s0014,ui,本地 2B,,,,,models/jev.dart
+s0015,ui,理由来自决策模型的思考,,,,,models/jev.dart
+s0016,ui,理由由对话模型补写,,,,,models/jev.dart
+s0017,ui,未知机型,,,,,models/jev.dart
+s0018,ui,最优方案：本地 2B,,,,,models/jev.dart
+s0019,ui,运行内存 ${ramGb.toStringAsFixed(0)} GB、可用存储 ,,,,YES,models/jev.dart
+s0020,ui,${freeGb.toStringAsFixed(0)} GB，都够 2B（Q8 权重 2.0 GB）；,,,,YES,models/jev.dart
+s0021,ui,决策质量明显好于 0.8B。,,,,,models/jev.dart
+s0022,ui,最优方案：本地 0.8B,,,,,models/jev.dart
+s0023,ui,运行内存 ${ramGb.toStringAsFixed(1)} GB 跑不动 2B，,,,,YES,models/jev.dart
+s0024,ui,但够 0.8B（Q4 权重约 0.5 GB）；要更强的决策可以走云端。,,,,,models/jev.dart
+s0025,ui,本机不支持本地模型，建议云端,,,,,models/jev.dart
+s0026,ui,运行内存 ${ramGb.toStringAsFixed(1)} GB 或可用存储 ,,,,YES,models/jev.dart
+s0027,ui,${freeGb.toStringAsFixed(1)} GB 不足（本地最低 0.8B 需约 ,,,,YES,models/jev.dart
+s0028,ui,3.5 GB 内存与 1.2 GB 存储），云端不受本机配置限制。,,,,,models/jev.dart
+s0029,ui,Q4_K_M 量化,,,,,models/jev.dart
+s0030,ui,约 0.5 GB,,,,,models/jev.dart
+s0031,ui,Q8_0 量化,,,,,models/jev.dart
+s0032,ui,手动审批,,,,,models/settings.dart
+s0033,ui,每次修改都要你确认,,,,,models/settings.dart
+s0034,ui,工作区内修改,,,,,models/settings.dart
+s0035,ui,工作区内的改动自动执行，越界仍会询问,,,,,models/settings.dart
+s0036,ui,完全访问,,,,,models/settings.dart
+s0037,ui,不再询问。需要 Shizuku 或 root 才能真正生效,,,,,models/settings.dart
+s0038,ui,中文,,,,,models/settings.dart
+s0039,ui,浅色,,,,,models/settings.dart
+s0040,ui,深色,,,,,models/settings.dart
+s0041,ui,跟随系统,,,,,models/settings.dart
+s0042,ui,黑白,,,,,models/settings.dart
+s0043,ui,默认：只用黑、白、灰,,,,,models/settings.dart
+s0044,ui,柔雾,,,,,models/settings.dart
+s0045,ui,奶油底 + 淡紫 + 薄荷,,,,,models/settings.dart
+s0046,ui,极光,,,,,models/settings.dart
+s0047,ui,深色底 + 紫青极光,,,,,models/settings.dart
+s0048,ui,活力,,,,,models/settings.dart
+s0049,ui,暖底 + 珊瑚橙,,,,,models/settings.dart
+s0050,ui,精简,,,,,models/settings.dart
+s0051,ui,只显示工具名与状态,,,,,models/settings.dart
+s0052,ui,标准,标准,标准,标准,,models/settings.dart; screens/settings_screen.dart
+s0053,ui,显示工具名、参数摘要与结果,,,,,models/settings.dart
+s0054,ui,详细,,,,,models/settings.dart
+s0055,ui,显示完整参数与完整结果,,,,,models/settings.dart
+s0056,ui,完全展开,,,,,models/settings.dart
+s0057,ui,显示模型原始输出与完整过程,,,,,models/settings.dart
+s0058,ui,排队发送,,,,,models/settings.dart
+s0059,ui,等当前任务结束再发,,,,,models/settings.dart
+s0060,ui,立即中断并发送,,,,,models/settings.dart
+s0061,ui,停止当前任务，改为执行新指令,,,,,models/settings.dart
+s0062,ui,由模型自行决定,,,,,models/settings.dart
+s0063,ui,不用思考，直接回答,,,,,models/settings.dart
+s0064,ui,少量思考,,,,,models/settings.dart
+s0065,ui,较多思考,,,,,models/settings.dart
+s0066,ui,尽可能深地思考,,,,,models/settings.dart
+s0067,ui,橙,,,,,models/settings.dart
+s0068,ui,蓝,,,,,models/settings.dart
+s0069,ui,绿,,,,,models/settings.dart
+s0070,ui,青,,,,,models/settings.dart
+s0071,ui,紫,,,,,models/settings.dart
+s0072,ui,粉,,,,,models/settings.dart
+s0073,ui,红,,,,,models/settings.dart
+s0074,ui,黄,,,,,models/settings.dart
+s0075,ui,DeepSeek 账号,,,,,models/settings.dart
+s0076,ui,通义千问 (DashScope),,,,,models/settings.dart
+s0077,ui,按工作区,,,,,models/view_options.dart
+s0078,ui,单列表,,,,,models/view_options.dart
+s0079,ui,最近更新,,,,,models/view_options.dart
+s0080,ui,手动排序,,,,,models/view_options.dart
+s0081,ui,隐藏已归档,,,,,models/view_options.dart
+s0082,ui,全部对话,,,,,models/view_options.dart
+s0083,ui,仅显示已归档,,,,,models/view_options.dart
+s0084,ui,新会话,新会话,新会话,新会话,,models/workspace.dart; screens/chat_screen.dart; services/local_agent.dart …
+s0085,ui,刚刚,,,,,models/workspace.dart
+s0086,ui,${d.inMinutes}分钟,,,,YES,models/workspace.dart
+s0087,ui,${d.inHours}小时,,,,YES,models/workspace.dart
+s0088,ui,${d.inDays}天,,,,YES,models/workspace.dart
+s0089,ui,${(d.inDays / 30).floor()}个月,,,,YES,models/workspace.dart
+s0090,ui,已归档对话,已归档对话,已归档对话,已归档对话,,screens/archived_sessions_screen.dart; screens/settings_screen.dart
+s0091,ui,没有已归档的对话,没有已归档的对话,没有已归档的对话,没有已归档的对话,,screens/archived_sessions_screen.dart
+s0092,ui,在抽屉里长按会话可以归档，\n归档后到这里找回或清理。,在抽屉里长按会话可以归档，\n归档后到这里找回或清理。,在抽屉里长按会话可以归档，\n归档后到这里找回或清理。,在抽屉里长按会话可以归档，\n归档后到这里找回或清理。,,screens/archived_sessions_screen.dart
+s0093,ui,打开,打开,打开,打开,,screens/archived_sessions_screen.dart
+s0094,ui,取消归档,取消归档,取消归档,取消归档,,screens/archived_sessions_screen.dart
+s0095,ui,删除,删除,删除,删除,,screens/archived_sessions_screen.dart; screens/chat_screen.dart; screens/jev_local_settings_screen.dart …
+s0096,ui,$count 条,__VAR_0__ 条,__VAR_0__ 条,__VAR_0__ 条,YES,screens/archived_sessions_screen.dart; screens/settings_screen.dart
+s0097,ui,回档,回档,回档,回档,,screens/archived_sessions_screen.dart
+s0098,ui,读取自动化任务失败：$e,读取自动化任务失败：__VAR_0__,读取自动化任务失败：__VAR_0__,读取自动化任务失败：__VAR_0__,YES,screens/automation_screen.dart
+s0099,ui,新建自动化任务,新建自动化任务,新建自动化任务,新建自动化任务,,screens/automation_screen.dart
+s0100,ui,标题,标题,标题,标题,,screens/automation_screen.dart; widgets/v04_tool_card.dart
+s0101,ui,提示词,提示词,提示词,提示词,,screens/automation_screen.dart
+s0102,ui,间隔（分钟）,间隔（分钟）,间隔（分钟）,间隔（分钟）,,screens/automation_screen.dart
+s0103,ui,按 cron 表达式,按 cron 表达式,按 cron 表达式,按 cron 表达式,,screens/automation_screen.dart
+s0104,ui,当前版本只支持固定间隔；cron 未实现,当前版本只支持固定间隔；cron 未实现,当前版本只支持固定间隔；cron 未实现,当前版本只支持固定间隔；cron 未实现,,screens/automation_screen.dart
+s0105,ui,取消,取消,取消,取消,,screens/automation_screen.dart; screens/chat_screen.dart; screens/jev_local_settings_screen.dart …
+s0106,ui,保存,保存,保存,保存,,screens/automation_screen.dart; screens/chat_screen.dart; screens/jev_settings_screen.dart …
+s0107,ui,标题/提示词不能为空，间隔必须是正整数分钟,标题/提示词不能为空，间隔必须是正整数分钟,标题/提示词不能为空，间隔必须是正整数分钟,标题/提示词不能为空，间隔必须是正整数分钟,,screens/automation_screen.dart
+s0108,ui,保存失败：后端拒绝或通道不可用（未写入）,保存失败：后端拒绝或通道不可用（未写入）,保存失败：后端拒绝或通道不可用（未写入）,保存失败：后端拒绝或通道不可用（未写入）,,screens/automation_screen.dart
+s0109,ui,保存失败：$e,保存失败：__VAR_0__,保存失败：__VAR_0__,保存失败：__VAR_0__,YES,screens/automation_screen.dart
+s0110,ui,自动化任务,自动化任务,自动化任务,自动化任务,,screens/automation_screen.dart
+s0111,ui,到点后在你下次打开/回到 App 时自动执行；App 没打开时只提醒。,到点后在你下次打开/回到 App 时自动执行；App 没打开时只提醒。,到点后在你下次打开/回到 App 时自动执行；App 没打开时只提醒。,到点后在你下次打开/回到 App 时自动执行；App 没打开时只提醒。,,screens/automation_screen.dart
+s0112,ui,还没有自动化任务。点右上角 + 新建一条（定时提醒）。,还没有自动化任务。点右上角 + 新建一条（定时提醒）。,还没有自动化任务。点右上角 + 新建一条（定时提醒）。,还没有自动化任务。点右上角 + 新建一条（定时提醒）。,,screens/automation_screen.dart
+s0113,ui,未命名,未命名,未命名,未命名,,screens/automation_screen.dart; screens/settings_screen.dart
+s0114,ui,每 ${t[,每 ${t[,每 ${t[,每 ${t[,YES,screens/automation_screen.dart
+s0115,ui,} 分钟 · ,} 分钟 · ,} 分钟 · ,} 分钟 · ,,screens/automation_screen.dart
+s0116,ui,已连接,已连接,已连接,已连接,,screens/chat_screen.dart
+s0117,ui,GITHUB| 拿不到工作区路径,GITHUB| 拿不到工作区路径,GITHUB| 拿不到工作区路径,GITHUB| 拿不到工作区路径,,screens/chat_screen.dart
+s0118,ui,GIT| 拿不到工作区路径,GIT| 拿不到工作区路径,GIT| 拿不到工作区路径,GIT| 拿不到工作区路径,,screens/chat_screen.dart
+s0119,ui,这个仓库还没下载到手机,这个仓库还没下载到手机,这个仓库还没下载到手机,这个仓库还没下载到手机,,screens/chat_screen.dart; widgets/git_panel.dart
+s0120,ui,新建分支,新建分支,新建分支,新建分支,,screens/chat_screen.dart; widgets/git_branch_sheet.dart; widgets/git_panel.dart
+s0121,ui,分支名，例如 feature/login,分支名，例如 feature/login,分支名，例如 feature/login,分支名，例如 feature/login,,screens/chat_screen.dart; widgets/git_panel.dart
+s0122,ui,创建并切换,创建并切换,创建并切换,创建并切换,,screens/chat_screen.dart; widgets/git_panel.dart
+s0123,ui,已创建并切到 ${name.trim()},已创建并切到 __VAR_0__,已创建并切到 __VAR_0__,已创建并切到 __VAR_0__,YES,screens/chat_screen.dart; widgets/git_panel.dart
+s0124,ui,已切换到 $picked,已切换到 __VAR_0__,已切换到 __VAR_0__,已切换到 __VAR_0__,YES,screens/chat_screen.dart
+s0125,ui,上下文,上下文,上下文,上下文,,screens/chat_screen.dart
+s0126,ui,命中,命中,命中,命中,,screens/chat_screen.dart
+s0127,ui,未配置,未配置,未配置,未配置,,screens/chat_screen.dart; screens/mcp_screen.dart
+s0128,ui,待填密钥,待填密钥,待填密钥,待填密钥,,screens/chat_screen.dart; screens/settings_screen.dart
+s0129,ui,就绪,就绪,就绪,就绪,,screens/chat_screen.dart
+s0130,ui,未接入,未接入,未接入,未接入,,screens/chat_screen.dart
+s0131,ui,引擎,引擎,引擎,引擎,,screens/chat_screen.dart
+s0132,ui,状态,状态,状态,状态,,screens/chat_screen.dart
+s0133,ui,读取工作区失败：$e,读取工作区失败：__VAR_0__,读取工作区失败：__VAR_0__,读取工作区失败：__VAR_0__,YES,screens/chat_screen.dart
+s0134,ui,未选择工作区,未选择工作区,未选择工作区,未选择工作区,,screens/chat_screen.dart
+s0135,ui,未选择文件夹（或这个位置无法读写，请换一个）,未选择文件夹（或这个位置无法读写，请换一个）,未选择文件夹（或这个位置无法读写，请换一个）,未选择文件夹（或这个位置无法读写，请换一个）,,screens/chat_screen.dart
+s0136,ui,重试选择文件夹,重试选择文件夹,重试选择文件夹,重试选择文件夹,,screens/chat_screen.dart
+s0137,ui,再打开一次系统选择器。若仍被系统回收，改用「默认工作区」最稳。,再打开一次系统选择器。若仍被系统回收，改用「默认工作区」最稳。,再打开一次系统选择器。若仍被系统回收，改用「默认工作区」最稳。,再打开一次系统选择器。若仍被系统回收，改用「默认工作区」最稳。,,screens/chat_screen.dart
+s0138,ui,使用「默认工作区」,使用「默认工作区」,使用「默认工作区」,使用「默认工作区」,,screens/chat_screen.dart
+s0139,ui,App 自带目录，不经过系统选择器，不会再被回收。,App 自带目录，不经过系统选择器，不会再被回收。,App 自带目录，不经过系统选择器，不会再被回收。,App 自带目录，不经过系统选择器，不会再被回收。,,screens/chat_screen.dart
+s0140,ui,这个位置没有本地文件夹,这个位置没有本地文件夹,这个位置没有本地文件夹,这个位置没有本地文件夹,,screens/chat_screen.dart
+s0141,ui,没能收到选择结果,没能收到选择结果,没能收到选择结果,没能收到选择结果,,screens/chat_screen.dart
+s0142,ui,这个文件夹不能用作工作区,这个文件夹不能用作工作区,这个文件夹不能用作工作区,这个文件夹不能用作工作区,,screens/chat_screen.dart
+s0143,ui,改选子文件夹,改选子文件夹,改选子文件夹,改选子文件夹,,screens/chat_screen.dart
+s0144,ui,点进去选一个具体的项目文件夹（子文件夹可以正常授权）。,点进去选一个具体的项目文件夹（子文件夹可以正常授权）。,点进去选一个具体的项目文件夹（子文件夹可以正常授权）。,点进去选一个具体的项目文件夹（子文件夹可以正常授权）。,,screens/chat_screen.dart
+s0145,ui,App 自带的目录，不受这个限制，创建后可以直接开始干活。,App 自带的目录，不受这个限制，创建后可以直接开始干活。,App 自带的目录，不受这个限制，创建后可以直接开始干活。,App 自带的目录，不受这个限制，创建后可以直接开始干活。,,screens/chat_screen.dart
+s0146,ui,这个位置不能用作工作区。,这个位置不能用作工作区。,这个位置不能用作工作区。,这个位置不能用作工作区。,,screens/chat_screen.dart
+s0147,ui,无法创建默认工作区,无法创建默认工作区,无法创建默认工作区,无法创建默认工作区,,screens/chat_screen.dart
+s0148,ui,正在运行…（等待模型输出）,正在运行…（等待模型输出）,正在运行…（等待模型输出）,正在运行…（等待模型输出）,,screens/chat_screen.dart
+s0149,ui,读取会话记录失败：$e,读取会话记录失败：__VAR_0__,读取会话记录失败：__VAR_0__,读取会话记录失败：__VAR_0__,YES,screens/chat_screen.dart
+s0150,ui,本轮请求未被执行（原因未记录）,本轮请求未被执行（原因未记录）,本轮请求未被执行（原因未记录）,本轮请求未被执行（原因未记录）,,screens/chat_screen.dart
+s0151,ui,未知工具,未知工具,未知工具,未知工具,,screens/chat_screen.dart
+s0152,ui,重命名会话,重命名会话,重命名会话,重命名会话,,screens/chat_screen.dart
+s0153,ui,会话名称,会话名称,会话名称,会话名称,,screens/chat_screen.dart
+s0154,ui,删除会话,删除会话,删除会话,删除会话,,screens/chat_screen.dart
+s0155,ui,这会删除该会话的记录。\n工作区里的文件不会被删除。,这会删除该会话的记录。\n工作区里的文件不会被删除。,这会删除该会话的记录。\n工作区里的文件不会被删除。,这会删除该会话的记录。\n工作区里的文件不会被删除。,,screens/chat_screen.dart
+s0156,ui,删除 ${items.length} 个会话,删除 __VAR_0__ 个会话,删除 __VAR_0__ 个会话,删除 __VAR_0__ 个会话,YES,screens/chat_screen.dart
+s0157,ui,这会删除所选会话的记录。\n工作区里的文件不会被删除。,这会删除所选会话的记录。\n工作区里的文件不会被删除。,这会删除所选会话的记录。\n工作区里的文件不会被删除。,这会删除所选会话的记录。\n工作区里的文件不会被删除。,,screens/chat_screen.dart
+s0158,ui,后面的消息没有显示。,后面的消息没有显示。,后面的消息没有显示。,后面的消息没有显示。,,screens/chat_screen.dart
+s0159,ui,相机,相机,相机,相机,,screens/chat_screen.dart; screens/settings_screen.dart
+s0160,ui,拍照,拍照,拍照,拍照,,screens/chat_screen.dart
+s0161,ui,照片,照片,照片,照片,,screens/chat_screen.dart
+s0162,ui,截图、图片,截图、图片,截图、图片,截图、图片,,screens/chat_screen.dart
+s0163,ui,文件,文件,文件,文件,,screens/chat_screen.dart; widgets/v04_tool_card.dart
+s0164,ui,代码、文本、文档,代码、文本、文档,代码、文本、文档,代码、文本、文档,,screens/chat_screen.dart
+s0165,ui,请先允许相机权限，再点一次拍照,请先允许相机权限，再点一次拍照,请先允许相机权限，再点一次拍照,请先允许相机权限，再点一次拍照,,screens/chat_screen.dart
+s0166,ui,拍照失败：$e,拍照失败：__VAR_0__,拍照失败：__VAR_0__,拍照失败：__VAR_0__,YES,screens/chat_screen.dart
+s0167,ui,选择文件失败：$e,选择文件失败：__VAR_0__,选择文件失败：__VAR_0__,选择文件失败：__VAR_0__,YES,screens/chat_screen.dart
+s0168,ui,HERC-EVENT 事件流异常（不影响结果）：$e,HERC-EVENT 事件流异常（不影响结果）：__VAR_0__,HERC-EVENT 事件流异常（不影响结果）：__VAR_0__,HERC-EVENT 事件流异常（不影响结果）：__VAR_0__,YES,screens/chat_screen.dart
+s0169,ui,正在生成…（第 $index 轮）,正在生成…（第 __VAR_0__ 轮）,正在生成…（第 __VAR_0__ 轮）,正在生成…（第 __VAR_0__ 轮）,YES,screens/chat_screen.dart
+s0170,ui,正在生成…,正在生成…,正在生成…,正在生成…,,screens/chat_screen.dart
+s0171,ui,正在生成…（第 ${e.index ?? ,正在生成…（第 ${e.index ?? ,正在生成…（第 ${e.index ?? ,正在生成…（第 ${e.index ?? ,YES,screens/chat_screen.dart
+s0172,ui,} 轮）,} 轮）,} 轮）,} 轮）,,screens/chat_screen.dart
+s0173,ui,已拦截,已拦截,已拦截,已拦截,,screens/chat_screen.dart
+s0174,ui,HERC-EVENT 未知事件类型「${e.type}」已忽略,HERC-EVENT 未知事件类型「__VAR_0__」已忽略,HERC-EVENT 未知事件类型「__VAR_0__」已忽略,HERC-EVENT 未知事件类型「__VAR_0__」已忽略,YES,screens/chat_screen.dart
+s0175,ui,（Dart 侧比 Kotlin 侧旧，请更新前端；不影响运行结果）,（Dart 侧比 Kotlin 侧旧，请更新前端；不影响运行结果）,（Dart 侧比 Kotlin 侧旧，请更新前端；不影响运行结果）,（Dart 侧比 Kotlin 侧旧，请更新前端；不影响运行结果）,,screens/chat_screen.dart
+s0176,ui,服务端上报,服务端上报,服务端上报,服务端上报,,screens/chat_screen.dart; services/local_agent.dart
+s0177,ui,⚠️ 未从服务端获取，按保守值估算,⚠️ 未从服务端获取，按保守值估算,⚠️ 未从服务端获取，按保守值估算,⚠️ 未从服务端获取，按保守值估算,,screens/chat_screen.dart
+s0178,ui,正在停止当前任务并发送…,正在停止当前任务并发送…,正在停止当前任务并发送…,正在停止当前任务并发送…,,screens/chat_screen.dart
+s0179,ui,已排队，当前任务结束后自动发送,已排队，当前任务结束后自动发送,已排队，当前任务结束后自动发送,已排队，当前任务结束后自动发送,,screens/chat_screen.dart
+s0180,ui,已插队，模型将在本轮结束时看到,已插队，模型将在本轮结束时看到,已插队，模型将在本轮结束时看到,已插队，模型将在本轮结束时看到,,screens/chat_screen.dart
+s0181,ui,插话未成功（队列已满或任务刚结束），已保留在排队,插话未成功（队列已满或任务刚结束），已保留在排队,插话未成功（队列已满或任务刚结束），已保留在排队,插话未成功（队列已满或任务刚结束），已保留在排队,,screens/chat_screen.dart
+s0182,ui,编辑排队消息,编辑排队消息,编辑排队消息,编辑排队消息,,screens/chat_screen.dart
+s0183,ui,保存后替换这条排队内容；附件与队列位置不变。,保存后替换这条排队内容；附件与队列位置不变。,保存后替换这条排队内容；附件与队列位置不变。,保存后替换这条排队内容；附件与队列位置不变。,,screens/chat_screen.dart
+s0184,ui,排队待发（${_queue.length}）,排队待发（__VAR_0__）,排队待发（__VAR_0__）,排队待发（__VAR_0__）,YES,screens/chat_screen.dart
+s0185,ui,点一条可编辑；跑完当前任务会自动发出,点一条可编辑；跑完当前任务会自动发出,点一条可编辑；跑完当前任务会自动发出,点一条可编辑；跑完当前任务会自动发出,,screens/chat_screen.dart
+s0186,ui,关于 $f,关于 __VAR_0__,关于 __VAR_0__,关于 __VAR_0__,YES,screens/chat_screen.dart
+s0187,ui,分支,分支,分支,分支,,screens/chat_screen.dart; services/session_store.dart
+s0188,ui,建立分支失败：$e,建立分支失败：__VAR_0__,建立分支失败：__VAR_0__,建立分支失败：__VAR_0__,YES,screens/chat_screen.dart
+s0189,ui,请先选择一个工作区,请先选择一个工作区,请先选择一个工作区,请先选择一个工作区,,screens/chat_screen.dart
+s0190,ui,当前还没有会话（先发一条消息创建），无需压缩。,当前还没有会话（先发一条消息创建），无需压缩。,当前还没有会话（先发一条消息创建），无需压缩。,当前还没有会话（先发一条消息创建），无需压缩。,,screens/chat_screen.dart
+s0191,ui,压缩失败：$e,压缩失败：__VAR_0__,压缩失败：__VAR_0__,压缩失败：__VAR_0__,YES,screens/chat_screen.dart
+s0192,ui,还没有工作区。\n\n,还没有工作区。\n\n,还没有工作区。\n\n,还没有工作区。\n\n,,screens/chat_screen.dart
+s0193,ui,工作区就是你让智能体操作的那个项目文件夹。,工作区就是你让智能体操作的那个项目文件夹。,工作区就是你让智能体操作的那个项目文件夹。,工作区就是你让智能体操作的那个项目文件夹。,,screens/chat_screen.dart
+s0194,ui,点左上角菜单 → ⊕ 选择工作区。,点左上角菜单 → ⊕ 选择工作区。,点左上角菜单 → ⊕ 选择工作区。,点左上角菜单 → ⊕ 选择工作区。,,screens/chat_screen.dart
+s0195,ui,用户选择停止。你可以继续发消息。,用户选择停止。你可以继续发消息。,用户选择停止。你可以继续发消息。,用户选择停止。你可以继续发消息。,,screens/chat_screen.dart
+s0196,ui,HERC-GUARD 已切换会话，丢弃运行结果,HERC-GUARD 已切换会话，丢弃运行结果,HERC-GUARD 已切换会话，丢弃运行结果,HERC-GUARD 已切换会话，丢弃运行结果,,screens/chat_screen.dart
+s0197,ui,（发起时 session=${origin.sessionId ?? ,（发起时 session=${origin.sessionId ?? ,（发起时 session=${origin.sessionId ?? ,（发起时 session=${origin.sessionId ?? ,YES,screens/chat_screen.dart
+s0198,ui,当前 session=$_activeSessionId / gen=$_ctxGen）,当前 session=__VAR_0__ / gen=__VAR_1__）,当前 session=__VAR_0__ / gen=__VAR_1__）,当前 session=__VAR_0__ / gen=__VAR_1__）,YES,screens/chat_screen.dart
+s0199,ui,—— 数据已由 Kotlin 落盘，切回原会话可见,—— 数据已由 Kotlin 落盘，切回原会话可见,—— 数据已由 Kotlin 落盘，切回原会话可见,—— 数据已由 Kotlin 落盘，切回原会话可见,,screens/chat_screen.dart
+s0200,ui,运行失败：$human,运行失败：__VAR_0__,运行失败：__VAR_0__,运行失败：__VAR_0__,YES,screens/chat_screen.dart
+s0201,ui,上一个会话的运行失败：$human,上一个会话的运行失败：__VAR_0__,上一个会话的运行失败：__VAR_0__,上一个会话的运行失败：__VAR_0__,YES,screens/chat_screen.dart
+s0202,ui,决策,决策,决策,决策,,screens/chat_screen.dart
+s0203,ui,上下文已达 80%，已压缩历史,上下文已达 80%，已压缩历史,上下文已达 80%，已压缩历史,上下文已达 80%，已压缩历史,,screens/chat_screen.dart
+s0204,ui,（${formatTokensCompact(before)} → ${formatTokensCompact(after)} tokens），任务继续,（__VAR_0__ → __VAR_1__ tokens），任务继续,（__VAR_0__ → __VAR_1__ tokens），任务继续,（__VAR_0__ → __VAR_1__ tokens），任务继续,YES,screens/chat_screen.dart
+s0205,ui,上下文已达 80%，已压缩历史，任务继续,上下文已达 80%，已压缩历史，任务继续,上下文已达 80%，已压缩历史，任务继续,上下文已达 80%，已压缩历史，任务继续,,screens/chat_screen.dart
+s0206,ui,模型需要你的回答,模型需要你的回答,模型需要你的回答,模型需要你的回答,,screens/chat_screen.dart
+s0207,ui,（模型提了一个问题，但内容为空）,（模型提了一个问题，但内容为空）,（模型提了一个问题，但内容为空）,（模型提了一个问题，但内容为空）,,screens/chat_screen.dart
+s0208,ui,知道了,知道了,知道了,知道了,,screens/chat_screen.dart; screens/voice_settings_screen.dart; widgets/background_keepalive_card.dart
+s0209,ui,暂时收起,暂时收起,暂时收起,暂时收起,,screens/chat_screen.dart
+s0210,ui,等待超时，已按「未回答」继续,等待超时，已按「未回答」继续,等待超时，已按「未回答」继续,等待超时，已按「未回答」继续,,screens/chat_screen.dart
+s0211,ui,本次提问已中止,本次提问已中止,本次提问已中止,本次提问已中止,,screens/chat_screen.dart
+s0212,ui,当前还没有可续跑的会话记录,当前还没有可续跑的会话记录,当前还没有可续跑的会话记录,当前还没有可续跑的会话记录,,screens/chat_screen.dart
+s0213,ui,请先选择一个工作区再继续,请先选择一个工作区再继续,请先选择一个工作区再继续,请先选择一个工作区再继续,,screens/chat_screen.dart
+s0214,ui,继续未完成的任务,继续未完成的任务,继续未完成的任务,继续未完成的任务,,screens/chat_screen.dart; services/agent_bridge.dart
+s0215,ui,请调整当前计划：,请调整当前计划：,请调整当前计划：,请调整当前计划：,,screens/chat_screen.dart
+s0216,ui,[heracles][approval] 完全访问档收到审批请求（tool=$tool）,[heracles][approval] 完全访问档收到审批请求（tool=__VAR_0__）,[heracles][approval] 完全访问档收到审批请求（tool=__VAR_0__）,[heracles][approval] 完全访问档收到审批请求（tool=__VAR_0__）,YES,screens/chat_screen.dart
+s0217,ui,⇒ 直接放行、不弹窗（Kotlin 侧漏判档位时由这里兜住）,⇒ 直接放行、不弹窗（Kotlin 侧漏判档位时由这里兜住）,⇒ 直接放行、不弹窗（Kotlin 侧漏判档位时由这里兜住）,⇒ 直接放行、不弹窗（Kotlin 侧漏判档位时由这里兜住）,,screens/chat_screen.dart
+s0218,ui,（无参数）,（无参数）,（无参数）,（无参数）,,screens/chat_screen.dart
+s0219,ui,${p.name} 的模型,__VAR_0__ 的模型,__VAR_0__ 的模型,__VAR_0__ 的模型,YES,screens/chat_screen.dart
+s0220,ui,${p.modelCatalog.length} 个,__VAR_0__ 个,__VAR_0__ 个,__VAR_0__ 个,YES,screens/chat_screen.dart
+s0221,ui,正在加载更早消息…,正在加载更早消息…,正在加载更早消息…,正在加载更早消息…,,screens/chat_screen.dart
+s0222,ui,加载更早消息,加载更早消息,加载更早消息,加载更早消息,,screens/chat_screen.dart
+s0223,ui,先选一个工作区,先选一个工作区,先选一个工作区,先选一个工作区,,screens/chat_screen.dart
+s0224,ui,工作区 = 你要让智能体操作的\n那个项目文件夹。\n\n,工作区 = 你要让智能体操作的\n那个项目文件夹。\n\n,工作区 = 你要让智能体操作的\n那个项目文件夹。\n\n,工作区 = 你要让智能体操作的\n那个项目文件夹。\n\n,,screens/chat_screen.dart
+s0225,ui,点左上角菜单 → ⊕ 选择工作区。\n,点左上角菜单 → ⊕ 选择工作区。\n,点左上角菜单 → ⊕ 选择工作区。\n,点左上角菜单 → ⊕ 选择工作区。\n,,screens/chat_screen.dart
+s0226,ui,要构建 APK 就用「默认工作区」。,要构建 APK 就用「默认工作区」。,要构建 APK 就用「默认工作区」。,要构建 APK 就用「默认工作区」。,,screens/chat_screen.dart
+s0227,ui,选择文件夹,选择文件夹,选择文件夹,选择文件夹,,screens/chat_screen.dart
+s0228,ui,有新内容，点击回到底部,有新内容，点击回到底部,有新内容，点击回到底部,有新内容，点击回到底部,,screens/chat_screen.dart
+s0229,ui,回到底部,回到底部,回到底部,回到底部,,screens/chat_screen.dart
+s0230,ui,排队 $count 条，点击管理,排队 __VAR_0__ 条，点击管理,排队 __VAR_0__ 条，点击管理,排队 __VAR_0__ 条，点击管理,YES,screens/chat_screen.dart
+s0231,ui,排队 $count · 管理,排队 __VAR_0__ · 管理,排队 __VAR_0__ · 管理,排队 __VAR_0__ · 管理,YES,screens/chat_screen.dart
+s0232,ui,点这一行编辑,点这一行编辑,点这一行编辑,点这一行编辑,,screens/chat_screen.dart
+s0233,ui,置顶（下一个发）,置顶（下一个发）,置顶（下一个发）,置顶（下一个发）,,screens/chat_screen.dart
+s0234,ui,编辑,编辑,编辑,编辑,,screens/chat_screen.dart; screens/settings_screen.dart
+s0235,ui,立即发送（插话）,立即发送（插话）,立即发送（插话）,立即发送（插话）,,screens/chat_screen.dart
+s0236,ui,等待您的回答,等待您的回答,等待您的回答,等待您的回答,,screens/chat_screen.dart
+s0237,ui,回答,回答,回答,回答,,screens/chat_screen.dart
+s0238,ui,5 分钟内有效,5 分钟内有效,5 分钟内有效,5 分钟内有效,,screens/chat_screen.dart
+s0239,ui,模型提了一个问题,模型提了一个问题,模型提了一个问题,模型提了一个问题,,screens/chat_screen.dart
+s0240,ui,今天想做些什么？\n任意代码项目都能交给我,今天想做些什么？\n任意代码项目都能交给我,今天想做些什么？\n任意代码项目都能交给我,今天想做些什么？\n任意代码项目都能交给我,,screens/chat_screen.dart
+s0241,ui,快速看懂这个项目,快速看懂这个项目,快速看懂这个项目,快速看懂这个项目,,screens/chat_screen.dart
+s0242,ui,帮我写个脚本,帮我写个脚本,帮我写个脚本,帮我写个脚本,,screens/chat_screen.dart
+s0243,ui,帮我搭个小工具,帮我搭个小工具,帮我搭个小工具,帮我搭个小工具,,screens/chat_screen.dart
+s0244,ui,帮我修一个 bug,帮我修一个 bug,帮我修一个 bug,帮我修一个 bug,,screens/chat_screen.dart
+s0245,ui,帮我写一份文档,帮我写一份文档,帮我写一份文档,帮我写一份文档,,screens/chat_screen.dart
+s0246,ui,做个 Android 小工具,做个 Android 小工具,做个 Android 小工具,做个 Android 小工具,,screens/chat_screen.dart
+s0247,ui,还没有配置模型 API Key —— 填好才能开始对话,还没有配置模型 API Key —— 填好才能开始对话,还没有配置模型 API Key —— 填好才能开始对话,还没有配置模型 API Key —— 填好才能开始对话,,screens/chat_screen.dart
+s0248,ui,去设置,去设置,去设置,去设置,,screens/chat_screen.dart
+s0249,ui,重试,重试,重试,重试,,screens/chat_screen.dart; screens/settings_screen.dart; screens/voice_settings_screen.dart …
+s0250,ui,关闭,关闭,关闭,关闭,,screens/chat_screen.dart; widgets/git_panel.dart; widgets/github_connect_sheet.dart …
+s0251,ui,本地配置,本地配置,本地配置,本地配置,,screens/jev_local_settings_screen.dart; screens/jev_settings_screen.dart
+s0252,ui,本机检测,本机检测,本机检测,本机检测,,screens/jev_local_settings_screen.dart
+s0253,ui,本地模型,本地模型,本地模型,本地模型,,screens/jev_local_settings_screen.dart
+s0254,ui,本地推理引擎尚未接入：模型可以先下载备好，引擎由,本地推理引擎尚未接入：模型可以先下载备好，引擎由,本地推理引擎尚未接入：模型可以先下载备好，引擎由,本地推理引擎尚未接入：模型可以先下载备好，引擎由,,screens/jev_local_settings_screen.dart
+s0255,ui,后端接入后即可离线决策；现在想体验，先用云端。,后端接入后即可离线决策；现在想体验，先用云端。,后端接入后即可离线决策；现在想体验，先用云端。,后端接入后即可离线决策；现在想体验，先用云端。,,screens/jev_local_settings_screen.dart
+s0256,ui,权重为 StartLux-Decision（CC BY-NC 4.0，非商业使用），,权重为 StartLux-Decision（CC BY-NC 4.0，非商业使用），,权重为 StartLux-Decision（CC BY-NC 4.0，非商业使用），,权重为 StartLux-Decision（CC BY-NC 4.0，非商业使用），,,screens/jev_local_settings_screen.dart
+s0257,ui,经 Hugging Face 下载（镜像优先）；另含引擎所需的,经 Hugging Face 下载（镜像优先）；另含引擎所需的,经 Hugging Face 下载（镜像优先）；另含引擎所需的,经 Hugging Face 下载（镜像优先）；另含引擎所需的,,screens/jev_local_settings_screen.dart
+s0258,ui,tokenizer 与决策配置文件。,tokenizer 与决策配置文件。,tokenizer 与决策配置文件。,tokenizer 与决策配置文件。,,screens/jev_local_settings_screen.dart
+s0259,ui,检测不可用（宿主未返回本机信息）。云端决策不受影响。,检测不可用（宿主未返回本机信息）。云端决策不受影响。,检测不可用（宿主未返回本机信息）。云端决策不受影响。,检测不可用（宿主未返回本机信息）。云端决策不受影响。,,screens/jev_local_settings_screen.dart
+s0260,ui,重新检测,重新检测,重新检测,重新检测,,screens/jev_local_settings_screen.dart
+s0261,ui,机型,机型,机型,机型,,screens/jev_local_settings_screen.dart
+s0262,ui,未知,未知,未知,未知,,screens/jev_local_settings_screen.dart; screens/settings_screen.dart; widgets/bw_usage_sheet.dart …
+s0263,ui,运行内存,运行内存,运行内存,运行内存,,screens/jev_local_settings_screen.dart
+s0264,ui,可用存储,可用存储,可用存储,可用存储,,screens/jev_local_settings_screen.dart
+s0265,ui,按推荐切换到「${rec.source!.label}」,按推荐切换到「__VAR_0__」,按推荐切换到「__VAR_0__」,按推荐切换到「__VAR_0__」,YES,screens/jev_local_settings_screen.dart
+s0266,ui,已下载,已下载,已下载,已下载,,screens/jev_local_settings_screen.dart; screens/voice_settings_screen.dart
+s0267,ui,下载中,下载中,下载中,下载中,,screens/jev_local_settings_screen.dart; screens/voice_settings_screen.dart
+s0268,ui,下载失败,下载失败,下载失败,下载失败,,screens/jev_local_settings_screen.dart; screens/voice_settings_screen.dart; services/jev_service.dart
+s0269,ui,未下载,未下载,未下载,未下载,,screens/jev_local_settings_screen.dart; screens/voice_settings_screen.dart
+s0270,ui,下载,下载,下载,下载,,screens/jev_local_settings_screen.dart; screens/sandbox_screen.dart; screens/voice_settings_screen.dart
+s0271,ui,上游,上游,上游,上游,,screens/jev_settings_screen.dart
+s0272,ui,限流,限流,限流,限流,,screens/jev_settings_screen.dart
+s0273,ui,频率,频率,频率,频率,,screens/jev_settings_screen.dart
+s0274,ui,超时,超时,超时,超时,,screens/jev_settings_screen.dart
+s0275,ui,过载,过载,过载,过载,,screens/jev_settings_screen.dart
+s0276,ui,容量,容量,容量,容量,,screens/jev_settings_screen.dart
+s0277,ui,权限,权限,权限,权限,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0278,ui,授权,授权,授权,授权,,screens/jev_settings_screen.dart
+s0279,ui,灰度,灰度,灰度,灰度,,screens/jev_settings_screen.dart
+s0280,ui,参数,参数,参数,参数,,screens/jev_settings_screen.dart
+s0281,ui,形状,形状,形状,形状,,screens/jev_settings_screen.dart
+s0282,ui,报文,报文,报文,报文,,screens/jev_settings_screen.dart
+s0283,ui,字段,字段,字段,字段,,screens/jev_settings_screen.dart
+s0284,ui,类型,类型,类型,类型,,screens/jev_settings_screen.dart; widgets/v04_tool_card.dart
+s0285,ui,参数形状不对：请求体要按文档用 state + questions 形状（应用已按文档,参数形状不对：请求体要按文档用 state + questions 形状（应用已按文档,参数形状不对：请求体要按文档用 state + questions 形状（应用已按文档,参数形状不对：请求体要按文档用 state + questions 形状（应用已按文档,,screens/jev_settings_screen.dart
+s0286,ui,发送），题数 1–16 道、请求体 ≤1MiB。仍反复出现时把 traceId 与,发送），题数 1–16 道、请求体 ≤1MiB。仍反复出现时把 traceId 与,发送），题数 1–16 道、请求体 ≤1MiB。仍反复出现时把 traceId 与,发送），题数 1–16 道、请求体 ≤1MiB。仍反复出现时把 traceId 与,,screens/jev_settings_screen.dart
+s0287,ui,原始响应体一并报给平台。,原始响应体一并报给平台。,原始响应体一并报给平台。,原始响应体一并报给平台。,,screens/jev_settings_screen.dart
+s0288,ui,上游限制：平台侧限流、容量或请求体积超限 —— 稍后重试或缩短输入；,上游限制：平台侧限流、容量或请求体积超限 —— 稍后重试或缩短输入；,上游限制：平台侧限流、容量或请求体积超限 —— 稍后重试或缩短输入；,上游限制：平台侧限流、容量或请求体积超限 —— 稍后重试或缩短输入；,,screens/jev_settings_screen.dart
+s0289,ui,反复出现时带 traceId 找平台。,反复出现时带 traceId 找平台。,反复出现时带 traceId 找平台。,反复出现时带 traceId 找平台。,,screens/jev_settings_screen.dart
+s0290,ui,模型权限：账号可能没有 $kJevDefaultModel 的调用权限（「获取可用模型」,模型权限：账号可能没有 __VAR_0__ 的调用权限（「获取可用模型」,模型权限：账号可能没有 __VAR_0__ 的调用权限（「获取可用模型」,模型权限：账号可能没有 __VAR_0__ 的调用权限（「获取可用模型」,YES,screens/jev_settings_screen.dart
+s0291,ui,的目录里查不到它时尤其可能）。,的目录里查不到它时尤其可能）。,的目录里查不到它时尤其可能）。,的目录里查不到它时尤其可能）。,,screens/jev_settings_screen.dart
+s0292,ui,鉴权失败：密钥无效、过期或没填 —— 检查 API 密钥（sk_ 开头）。,鉴权失败：密钥无效、过期或没填 —— 检查 API 密钥（sk_ 开头）。,鉴权失败：密钥无效、过期或没填 —— 检查 API 密钥（sk_ 开头）。,鉴权失败：密钥无效、过期或没填 —— 检查 API 密钥（sk_ 开头）。,,screens/jev_settings_screen.dart
+s0293,ui,平台先验鉴权再验参数，所以密钥不对时看不到 422（无 Key 三发全 401）。,平台先验鉴权再验参数，所以密钥不对时看不到 422（无 Key 三发全 401）。,平台先验鉴权再验参数，所以密钥不对时看不到 422（无 Key 三发全 401）。,平台先验鉴权再验参数，所以密钥不对时看不到 422（无 Key 三发全 401）。,,screens/jev_settings_screen.dart
+s0294,ui,422 三类常见原因：① 参数形状（state + questions 报文形状）,422 三类常见原因：① 参数形状（state + questions 报文形状）,422 三类常见原因：① 参数形状（state + questions 报文形状）,422 三类常见原因：① 参数形状（state + questions 报文形状）,,screens/jev_settings_screen.dart
+s0295,ui, ② 上游限制（题数 >16 / 请求体 >1MiB / 上游过载、限流）, ② 上游限制（题数 >16 / 请求体 >1MiB / 上游过载、限流）, ② 上游限制（题数 >16 / 请求体 >1MiB / 上游过载、限流）, ② 上游限制（题数 >16 / 请求体 >1MiB / 上游过载、限流）,,screens/jev_settings_screen.dart
+s0296,ui, ③ 模型权限（账号没有 $kJevDefaultModel 的权限）, ③ 模型权限（账号没有 __VAR_0__ 的权限）, ③ 模型权限（账号没有 __VAR_0__ 的权限）, ③ 模型权限（账号没有 __VAR_0__ 的权限）,YES,screens/jev_settings_screen.dart
+s0297,ui,连接成功：决策服务返回「${res.recommended ? ,连接成功：决策服务返回「${res.recommended ? ,连接成功：决策服务返回「${res.recommended ? ,连接成功：决策服务返回「${res.recommended ? ,YES,screens/jev_settings_screen.dart
+s0298,ui,置信度 $pct% · 耗时 $sec 秒,置信度 __VAR_0__% · 耗时 __VAR_1__ 秒,置信度 __VAR_0__% · 耗时 __VAR_1__ 秒,置信度 __VAR_0__% · 耗时 __VAR_1__ 秒,YES,screens/jev_settings_screen.dart
+s0299,ui,参数形状不符合平台要求,参数形状不符合平台要求,参数形状不符合平台要求,参数形状不符合平台要求,,screens/jev_settings_screen.dart
+s0300,ui,上游限制,上游限制,上游限制,上游限制,,screens/jev_settings_screen.dart
+s0301,ui,模型权限不足,模型权限不足,模型权限不足,模型权限不足,,screens/jev_settings_screen.dart
+s0302,ui,密钥无效或未授权,密钥无效或未授权,密钥无效或未授权,密钥无效或未授权,,screens/jev_settings_screen.dart
+s0303,ui,接口地址不对,接口地址不对,接口地址不对,接口地址不对,,screens/jev_settings_screen.dart
+s0304,ui,连接失败：$label,连接失败：__VAR_0__,连接失败：__VAR_0__,连接失败：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0305,ui,连接失败,连接失败,连接失败,连接失败,,screens/jev_settings_screen.dart; widgets/github_connect_sheet.dart
+s0306,ui,连接失败：$reason,连接失败：__VAR_0__,连接失败：__VAR_0__,连接失败：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0307,ui,连接失败（HTTP $status）,连接失败（HTTP __VAR_0__）,连接失败（HTTP __VAR_0__）,连接失败（HTTP __VAR_0__）,YES,screens/jev_settings_screen.dart
+s0308,ui,请求 URL：${r.endpoint.trim().isEmpty ? ,请求 URL：${r.endpoint.trim().isEmpty ? ,请求 URL：${r.endpoint.trim().isEmpty ? ,请求 URL：${r.endpoint.trim().isEmpty ? ,YES,screens/jev_settings_screen.dart
+s0309,ui,HTTP 码：—（请求没有发出：${r.failureMessage ?? ,HTTP 码：—（请求没有发出：${r.failureMessage ?? ,HTTP 码：—（请求没有发出：${r.failureMessage ?? ,HTTP 码：—（请求没有发出：${r.failureMessage ?? ,YES,screens/jev_settings_screen.dart
+s0310,ui,traceId：（无）,traceId：（无）,traceId：（无）,traceId：（无）,,screens/jev_settings_screen.dart
+s0311,ui,—（没有拿到 HTTP 响应${transport == null ? ,—（没有拿到 HTTP 响应${transport == null ? ,—（没有拿到 HTTP 响应${transport == null ? ,—（没有拿到 HTTP 响应${transport == null ? ,YES,screens/jev_settings_screen.dart
+s0312,ui,请求 URL：${d.resolvedEndpoint.trim().isEmpty ? ,请求 URL：${d.resolvedEndpoint.trim().isEmpty ? ,请求 URL：${d.resolvedEndpoint.trim().isEmpty ? ,请求 URL：${d.resolvedEndpoint.trim().isEmpty ? ,YES,screens/jev_settings_screen.dart
+s0313,ui,HTTP 码：$statusText,HTTP 码：__VAR_0__,HTTP 码：__VAR_0__,HTTP 码：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0314,ui,耗时：${(d.elapsedMs / 1000).toStringAsFixed(1)} 秒,耗时：__VAR_0__ 秒,耗时：__VAR_0__ 秒,耗时：__VAR_0__ 秒,YES,screens/jev_settings_screen.dart
+s0315,ui,（原始响应体共 ${body.length} 字符，已截断到 $kJevRawBodyLimit）,（原始响应体共 __VAR_0__ 字符，已截断到 __VAR_1__）,（原始响应体共 __VAR_0__ 字符，已截断到 __VAR_1__）,（原始响应体共 __VAR_0__ 字符，已截断到 __VAR_1__）,YES,screens/jev_settings_screen.dart
+s0316,ui,JEV 决策连接诊断,JEV 决策连接诊断,JEV 决策连接诊断,JEV 决策连接诊断,,screens/jev_settings_screen.dart
+s0317,ui,结论：${jevOutcomeHeadline(r)},结论：__VAR_0__,结论：__VAR_0__,结论：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0318,ui,原始响应体：（无）,原始响应体：（无）,原始响应体：（无）,原始响应体：（无）,,screens/jev_settings_screen.dart
+s0319,ui,原始响应体：,原始响应体：,原始响应体：,原始响应体：,,screens/jev_settings_screen.dart
+s0320,ui,排障提示：$hint,排障提示：__VAR_0__,排障提示：__VAR_0__,排障提示：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0321,ui,已保存,已保存,已保存,已保存,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0322,ui,先填接口地址,先填接口地址,先填接口地址,先填接口地址,,screens/jev_settings_screen.dart
+s0323,ui,目录里没有 $kJevDefaultModel —— 这个密钥可能没有该模型的权限,目录里没有 __VAR_0__ —— 这个密钥可能没有该模型的权限,目录里没有 __VAR_0__ —— 这个密钥可能没有该模型的权限,目录里没有 __VAR_0__ —— 这个密钥可能没有该模型的权限,YES,screens/jev_settings_screen.dart
+s0324,ui,（平台目录只回可用的模型）。,（平台目录只回可用的模型）。,（平台目录只回可用的模型）。,（平台目录只回可用的模型）。,,screens/jev_settings_screen.dart
+s0325,ui,找到 ${models.length} 个模型，点一下填入,找到 __VAR_0__ 个模型，点一下填入,找到 __VAR_0__ 个模型，点一下填入,找到 __VAR_0__ 个模型，点一下填入,YES,screens/jev_settings_screen.dart
+s0326,ui,连通性测试：路口信号灯为红色，前方有行人，现在是否应停车？,连通性测试：路口信号灯为红色，前方有行人，现在是否应停车？,连通性测试：路口信号灯为红色，前方有行人，现在是否应停车？,连通性测试：路口信号灯为红色，前方有行人，现在是否应停车？,,screens/jev_settings_screen.dart
+s0327,ui,详情已复制,详情已复制,详情已复制,详情已复制,,screens/jev_settings_screen.dart
+s0328,ui,JEV 决策引擎,JEV 决策引擎,JEV 决策引擎,JEV 决策引擎,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0329,ui,引擎来源（云端 / 本地）在决策页输入框左下角点按切换；,引擎来源（云端 / 本地）在决策页输入框左下角点按切换；,引擎来源（云端 / 本地）在决策页输入框左下角点按切换；,引擎来源（云端 / 本地）在决策页输入框左下角点按切换；,,screens/jev_settings_screen.dart
+s0330,ui,这里编辑云端接口，本地模型与本机检测在下方「本地配置」里。,这里编辑云端接口，本地模型与本机检测在下方「本地配置」里。,这里编辑云端接口，本地模型与本机检测在下方「本地配置」里。,这里编辑云端接口，本地模型与本机检测在下方「本地配置」里。,,screens/jev_settings_screen.dart
+s0331,ui,接口地址,接口地址,接口地址,接口地址,,screens/jev_settings_screen.dart
+s0332,ui,API 密钥,API 密钥,API 密钥,API 密钥,,screens/jev_settings_screen.dart
+s0333,ui,平台密钥，sk_ 开头,平台密钥，sk_ 开头,平台密钥，sk_ 开头,平台密钥，sk_ 开头,,screens/jev_settings_screen.dart
+s0334,ui,模型,模型,模型,模型,,screens/jev_settings_screen.dart; screens/settings_screen.dart; widgets/bw_model_sheet.dart
+s0335,ui,基元律动固定 NeoHorse-Jev-4B,基元律动固定 NeoHorse-Jev-4B,基元律动固定 NeoHorse-Jev-4B,基元律动固定 NeoHorse-Jev-4B,,screens/jev_settings_screen.dart
+s0336,ui,模型目录,模型目录,模型目录,模型目录,,screens/jev_settings_screen.dart; screens/settings_screen.dart; screens/voice_settings_screen.dart
+s0337,ui,获取可用模型,获取可用模型,获取可用模型,获取可用模型,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0338,ui,测试中…,测试中…,测试中…,测试中…,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0339,ui,测试连接,测试连接,测试连接,测试连接,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0340,ui,改完点右上角「保存」；获取模型与测试连接用的是框里,改完点右上角「保存」；获取模型与测试连接用的是框里,改完点右上角「保存」；获取模型与测试连接用的是框里,改完点右上角「保存」；获取模型与测试连接用的是框里,,screens/jev_settings_screen.dart
+s0341,ui,当前填的值，不用先保存。,当前填的值，不用先保存。,当前填的值，不用先保存。,当前填的值，不用先保存。,,screens/jev_settings_screen.dart
+s0342,ui,理由生成暂不支持（后续版本提供）：决策只给结论与概率。,理由生成暂不支持（后续版本提供）：决策只给结论与概率。,理由生成暂不支持（后续版本提供）：决策只给结论与概率。,理由生成暂不支持（后续版本提供）：决策只给结论与概率。,,screens/jev_settings_screen.dart
+s0343,ui,本地,本地,本地,本地,,screens/jev_settings_screen.dart
+s0344,ui,将请求：POST （先填接口地址）,将请求：POST （先填接口地址）,将请求：POST （先填接口地址）,将请求：POST （先填接口地址）,,screens/jev_settings_screen.dart
+s0345,ui,将请求：POST ${resolution.url},将请求：POST __VAR_0__,将请求：POST __VAR_0__,将请求：POST __VAR_0__,YES,screens/jev_settings_screen.dart
+s0346,ui,模型 ID 固定为 $kJevDefaultModel：平台只认这一个决策模型，,模型 ID 固定为 __VAR_0__：平台只认这一个决策模型，,模型 ID 固定为 __VAR_0__：平台只认这一个决策模型，,模型 ID 固定为 __VAR_0__：平台只认这一个决策模型，,YES,screens/jev_settings_screen.dart
+s0347,ui,填别的会在发送时被强制纠正。,填别的会在发送时被强制纠正。,填别的会在发送时被强制纠正。,填别的会在发送时被强制纠正。,,screens/jev_settings_screen.dart
+s0348,ui,已按固定 ID 发送,已按固定 ID 发送,已按固定 ID 发送,已按固定 ID 发送,,screens/jev_settings_screen.dart
+s0349,ui,平台提示：$platformHint,平台提示：__VAR_0__,平台提示：__VAR_0__,平台提示：__VAR_0__,YES,screens/jev_settings_screen.dart
+s0350,ui,收起,收起,收起,收起,,screens/jev_settings_screen.dart; screens/settings_screen.dart; widgets/tool_call_card.dart
+s0351,ui,详情,详情,详情,详情,,screens/jev_settings_screen.dart; screens/settings_screen.dart
+s0352,ui,复制详情,复制详情,复制详情,复制详情,,screens/jev_settings_screen.dart
+s0353,ui,本机检测 · 已下载 $downloaded 个本地模型,本机检测 · 已下载 __VAR_0__ 个本地模型,本机检测 · 已下载 __VAR_0__ 个本地模型,本机检测 · 已下载 __VAR_0__ 个本地模型,YES,screens/jev_settings_screen.dart
+s0354,ui,本机检测 · 本地模型下载与管理,本机检测 · 本地模型下载与管理,本机检测 · 本地模型下载与管理,本机检测 · 本地模型下载与管理,,screens/jev_settings_screen.dart
+s0355,model_prompt,MCP 接口未接通：本次没有保存（等后端通道落地后再启用）,,,,,screens/mcp_screen.dart
+s0356,model_prompt,MCP 服务器,,,,,screens/mcp_screen.dart
+s0357,model_prompt,当前版本没有 MCP 通道：不能增删改服务器、也读不到连接状态。,,,,,screens/mcp_screen.dart
+s0358,model_prompt,"下面只是表单骨架，提交会明确告诉你""未保存""。",,,,,screens/mcp_screen.dart
+s0359,model_prompt,校验规则（后端 validateMcpServer）,,,,,screens/mcp_screen.dart
+s0360,model_prompt,· 名字不能为空、不能重复；\n,,,,,screens/mcp_screen.dart
+s0361,model_prompt,· transport 只支持 stdio / http；\n,,,,,screens/mcp_screen.dart
+s0362,model_prompt,· stdio 必须有 command；http 必须有合法 url；\n,,,,,screens/mcp_screen.dart
+s0363,model_prompt,· **密钥不许放进 env**（会拒绝保存，避免把 key 写进配置文件）；\n,,,,,screens/mcp_screen.dart
+s0364,model_prompt,· 关闭的服务器不会出现在工具列表里。,,,,,screens/mcp_screen.dart
+s0365,model_prompt,名称,,,,,screens/mcp_screen.dart; screens/settings_screen.dart
+s0366,model_prompt,传输方式,,,,,screens/mcp_screen.dart
+s0367,model_prompt,启用,,,,,screens/mcp_screen.dart
+s0368,ui,开源许可,开源许可,开源许可,开源许可,,screens/oss_licenses_screen.dart
+s0369,ui,Heracles 本体以 GPL-3.0 开源；同时基于以下 $thirdParty 个开源项目构建，谨此致谢。,Heracles 本体以 GPL-3.0 开源；同时基于以下 __VAR_0__ 个开源项目构建，谨此致谢。,Heracles 本体以 GPL-3.0 开源；同时基于以下 __VAR_0__ 个开源项目构建，谨此致谢。,Heracles 本体以 GPL-3.0 开源；同时基于以下 __VAR_0__ 个开源项目构建，谨此致谢。,YES,screens/oss_licenses_screen.dart
+s0370,ui,名单含直接依赖与它们的依赖（两层），以及平台、原生组件与图标资产；,名单含直接依赖与它们的依赖（两层），以及平台、原生组件与图标资产；,名单含直接依赖与它们的依赖（两层），以及平台、原生组件与图标资产；,名单含直接依赖与它们的依赖（两层），以及平台、原生组件与图标资产；,,screens/oss_licenses_screen.dart
+s0371,ui,点任意一项可查看其完整许可文本。,点任意一项可查看其完整许可文本。,点任意一项可查看其完整许可文本。,点任意一项可查看其完整许可文本。,,screens/oss_licenses_screen.dart
+s0372,ui,Heracles 本体,Heracles 本体,Heracles 本体,Heracles 本体,,screens/oss_licenses_screen.dart
+s0373,ui,直接依赖,直接依赖,直接依赖,直接依赖,,screens/oss_licenses_screen.dart
+s0374,ui,二层依赖,二层依赖,二层依赖,二层依赖,,screens/oss_licenses_screen.dart
+s0375,ui,平台与原生,平台与原生,平台与原生,平台与原生,,screens/oss_licenses_screen.dart
+s0376,ui,沙箱已激活,沙箱已激活,沙箱已激活,沙箱已激活,,screens/sandbox_screen.dart
+s0377,ui,激活失败：内置环境不可用时需要联网重试,激活失败：内置环境不可用时需要联网重试,激活失败：内置环境不可用时需要联网重试,激活失败：内置环境不可用时需要联网重试,,screens/sandbox_screen.dart
+s0378,ui,重置沙箱？,重置沙箱？,重置沙箱？,重置沙箱？,,screens/sandbox_screen.dart
+s0379,ui,沙箱里的环境、产物和缓存会被整块清掉，回到未激活状态。,沙箱里的环境、产物和缓存会被整块清掉，回到未激活状态。,沙箱里的环境、产物和缓存会被整块清掉，回到未激活状态。,沙箱里的环境、产物和缓存会被整块清掉，回到未激活状态。,,screens/sandbox_screen.dart
+s0380,ui,挂载点指向的外部文件不受影响。,挂载点指向的外部文件不受影响。,挂载点指向的外部文件不受影响。,挂载点指向的外部文件不受影响。,,screens/sandbox_screen.dart
+s0381,ui,重置,重置,重置,重置,,screens/sandbox_screen.dart
+s0382,ui,沙箱已重置,沙箱已重置,沙箱已重置,沙箱已重置,,screens/sandbox_screen.dart
+s0383,ui,重置失败：后端尚未支持重置,重置失败：后端尚未支持重置,重置失败：后端尚未支持重置,重置失败：后端尚未支持重置,,screens/sandbox_screen.dart
+s0384,ui,沙箱,沙箱,沙箱,沙箱,,screens/sandbox_screen.dart; screens/settings_screen.dart; widgets/tool_call_card.dart
+s0385,ui,挂载点,挂载点,挂载点,挂载点,,screens/sandbox_screen.dart
+s0386,ui,执行通道,执行通道,执行通道,执行通道,,screens/sandbox_screen.dart
+s0387,ui,通道只展示可用性，放不放行由权限门禁决定。,通道只展示可用性，放不放行由权限门禁决定。,通道只展示可用性，放不放行由权限门禁决定。,通道只展示可用性，放不放行由权限门禁决定。,,screens/sandbox_screen.dart
+s0388,ui,编译环境,编译环境,编译环境,编译环境,,screens/sandbox_screen.dart
+s0389,ui,环境,环境,环境,环境,,screens/sandbox_screen.dart; widgets/sandbox_env_section.dart
+s0390,ui,管理,管理,管理,管理,,screens/sandbox_screen.dart
+s0391,ui,正在读取状态…,正在读取状态…,正在读取状态…,正在读取状态…,,screens/sandbox_screen.dart
+s0392,ui,已激活,已激活,已激活,已激活,,screens/sandbox_screen.dart
+s0393,ui,未激活,未激活,未激活,未激活,,screens/sandbox_screen.dart
+s0394,ui,PRoot 就绪,PRoot 就绪,PRoot 就绪,PRoot 就绪,,screens/sandbox_screen.dart
+s0395,ui,内置 Linux 环境已就绪。,内置 Linux 环境已就绪。,内置 Linux 环境已就绪。,内置 Linux 环境已就绪。,,screens/sandbox_screen.dart
+s0396,ui,内置的 Alpine Linux 环境还没有装好。激活会解包约 9 MB 的 ,内置的 Alpine Linux 环境还没有装好。激活会解包约 9 MB 的 ,内置的 Alpine Linux 环境还没有装好。激活会解包约 9 MB 的 ,内置的 Alpine Linux 环境还没有装好。激活会解包约 9 MB 的 ,,screens/sandbox_screen.dart
+s0397,ui,rootfs（离线内置，不需要联网），之后 agent 的命令默认 ,rootfs（离线内置，不需要联网），之后 agent 的命令默认 ,rootfs（离线内置，不需要联网），之后 agent 的命令默认 ,rootfs（离线内置，不需要联网），之后 agent 的命令默认 ,,screens/sandbox_screen.dart
+s0398,ui,在沙箱里执行，产物与真机文件分开存放。,在沙箱里执行，产物与真机文件分开存放。,在沙箱里执行，产物与真机文件分开存放。,在沙箱里执行，产物与真机文件分开存放。,,screens/sandbox_screen.dart
+s0399,ui,PRoot 尚未就绪，命令暂时无法在沙箱执行。,PRoot 尚未就绪，命令暂时无法在沙箱执行。,PRoot 尚未就绪，命令暂时无法在沙箱执行。,PRoot 尚未就绪，命令暂时无法在沙箱执行。,,screens/sandbox_screen.dart
+s0400,ui,正在解包 rootfs…,正在解包 rootfs…,正在解包 rootfs…,正在解包 rootfs…,,screens/sandbox_screen.dart
+s0401,ui,激活沙箱,激活沙箱,激活沙箱,激活沙箱,,screens/sandbox_screen.dart
+s0402,ui,激活后显示。沙箱通过 @名字 访问外部目录。,激活后显示。沙箱通过 @名字 访问外部目录。,激活后显示。沙箱通过 @名字 访问外部目录。,激活后显示。沙箱通过 @名字 访问外部目录。,,screens/sandbox_screen.dart
+s0403,ui,暂无挂载点。,暂无挂载点。,暂无挂载点。,暂无挂载点。,,screens/sandbox_screen.dart
+s0404,ui,只读,只读,只读,只读,,screens/sandbox_screen.dart
+s0405,ui,读写,读写,读写,读写,,screens/sandbox_screen.dart
+s0406,ui,暂无通道信息。,暂无通道信息。,暂无通道信息。,暂无通道信息。,,screens/sandbox_screen.dart
+s0407,ui,风险 ${switch (channels[i].risk) { 0 => ,风险 ${switch (channels[i].risk) { 0 => ,风险 ${switch (channels[i].risk) { 0 => ,风险 ${switch (channels[i].risk) { 0 => ,YES,screens/sandbox_screen.dart
+s0408,ui,可用,可用,可用,可用,,screens/sandbox_screen.dart
+s0409,ui,不可用,不可用,不可用,不可用,,screens/sandbox_screen.dart; widgets/usage_sidebar.dart
+s0410,ui,编译环境 · 已就绪,编译环境 · 已就绪,编译环境 · 已就绪,编译环境 · 已就绪,,screens/sandbox_screen.dart
+s0411,ui,编译环境 · 未安装,编译环境 · 未安装,编译环境 · 未安装,编译环境 · 未安装,,screens/sandbox_screen.dart
+s0412,ui,已安装 · 实际占用 ${_formatBytes(occupied)},已安装 · 实际占用 __VAR_0__,已安装 · 实际占用 __VAR_0__,已安装 · 实际占用 __VAR_0__,YES,screens/sandbox_screen.dart
+s0413,ui,正在准备…,正在准备…,正在准备…,正在准备…,,screens/sandbox_screen.dart
+s0414,ui,约 415 MB · 需要联网下载${missingText.isEmpty ? ,约 415 MB · 需要联网下载${missingText.isEmpty ? ,约 415 MB · 需要联网下载${missingText.isEmpty ? ,约 415 MB · 需要联网下载${missingText.isEmpty ? ,YES,screens/sandbox_screen.dart
+s0415,ui,安装位置,安装位置,安装位置,安装位置,,screens/sandbox_screen.dart
+s0416,ui,卸载编译环境,卸载编译环境,卸载编译环境,卸载编译环境,,screens/sandbox_screen.dart
+s0417,ui,下载编译环境？,下载编译环境？,下载编译环境？,下载编译环境？,,screens/sandbox_screen.dart
+s0418,ui,需要下载约 415 MB（JDK 17 + Gradle + android.jar）。,需要下载约 415 MB（JDK 17 + Gradle + android.jar）。,需要下载约 415 MB（JDK 17 + Gradle + android.jar）。,需要下载约 415 MB（JDK 17 + Gradle + android.jar）。,,screens/sandbox_screen.dart
+s0419,ui,建议在 Wi-Fi 下进行；中断后可以续传。,建议在 Wi-Fi 下进行；中断后可以续传。,建议在 Wi-Fi 下进行；中断后可以续传。,建议在 Wi-Fi 下进行；中断后可以续传。,,screens/sandbox_screen.dart
+s0420,ui,编译环境已就绪,编译环境已就绪,编译环境已就绪,编译环境已就绪,,screens/sandbox_screen.dart
+s0421,ui,编译环境已装好,编译环境已装好,编译环境已装好,编译环境已装好,,screens/sandbox_screen.dart
+s0422,ui,失败：${r.message},失败：__VAR_0__,失败：__VAR_0__,失败：__VAR_0__,YES,screens/sandbox_screen.dart
+s0423,ui,卸载编译环境？,卸载编译环境？,卸载编译环境？,卸载编译环境？,,screens/sandbox_screen.dart
+s0424,ui,会删除沙箱里的 JDK 17、Gradle 和 android.jar,会删除沙箱里的 JDK 17、Gradle 和 android.jar,会删除沙箱里的 JDK 17、Gradle 和 android.jar,会删除沙箱里的 JDK 17、Gradle 和 android.jar,,screens/sandbox_screen.dart
+s0425,ui,卸载后沙箱就不能编译 APK 了，下次要用需要重新下载；,卸载后沙箱就不能编译 APK 了，下次要用需要重新下载；,卸载后沙箱就不能编译 APK 了，下次要用需要重新下载；,卸载后沙箱就不能编译 APK 了，下次要用需要重新下载；,,screens/sandbox_screen.dart
+s0426,ui,源码工作区与手机的其它文件不受影响。,源码工作区与手机的其它文件不受影响。,源码工作区与手机的其它文件不受影响。,源码工作区与手机的其它文件不受影响。,,screens/sandbox_screen.dart
+s0427,ui,卸载,卸载,卸载,卸载,,screens/sandbox_screen.dart; screens/voice_settings_screen.dart; widgets/sandbox_env_section.dart
+s0428,ui,卸载未完成：${_resetFailureText(r)},卸载未完成：__VAR_0__,卸载未完成：__VAR_0__,卸载未完成：__VAR_0__,YES,screens/sandbox_screen.dart
+s0429,ui,卸载后仍残留 ${_formatBytes(residualBytes)}（$where），可以再试一次,卸载后仍残留 __VAR_0__（__VAR_1__），可以再试一次,卸载后仍残留 __VAR_0__（__VAR_1__），可以再试一次,卸载后仍残留 __VAR_0__（__VAR_1__），可以再试一次,YES,screens/sandbox_screen.dart
+s0430,ui,编译环境已卸载（释放 ${_formatBytes(r.freedBytes)}）,编译环境已卸载（释放 __VAR_0__）,编译环境已卸载（释放 __VAR_0__）,编译环境已卸载（释放 __VAR_0__）,YES,screens/sandbox_screen.dart
+s0431,ui,后端未返回原因,后端未返回原因,后端未返回原因,后端未返回原因,,screens/sandbox_screen.dart
+s0432,ui,重置沙箱,重置沙箱,重置沙箱,重置沙箱,,screens/sandbox_screen.dart
+s0433,ui,整块回滚，清掉环境与产物,整块回滚，清掉环境与产物,整块回滚，清掉环境与产物,整块回滚，清掉环境与产物,,screens/sandbox_screen.dart
+s0434,ui,全部开启,全部开启,全部开启,全部开启,,screens/settings_screen.dart
+s0435,ui,$n 项未开启,__VAR_0__ 项未开启,__VAR_0__ 项未开启,__VAR_0__ 项未开启,YES,screens/settings_screen.dart
+s0436,ui,已授权,已授权,已授权,已授权,,screens/settings_screen.dart
+s0437,ui,未授权,未授权,未授权,未授权,,screens/settings_screen.dart
+s0438,ui,设备权限,设备权限,设备权限,设备权限,,screens/settings_screen.dart
+s0439,ui,SenseVoiceSmall · 已就绪,SenseVoiceSmall · 已就绪,SenseVoiceSmall · 已就绪,SenseVoiceSmall · 已就绪,,screens/settings_screen.dart
+s0440,ui,SenseVoiceSmall · 准备中,SenseVoiceSmall · 准备中,SenseVoiceSmall · 准备中,SenseVoiceSmall · 准备中,,screens/settings_screen.dart
+s0441,ui,SenseVoiceSmall · 已下载,SenseVoiceSmall · 已下载,SenseVoiceSmall · 已下载,SenseVoiceSmall · 已下载,,screens/settings_screen.dart
+s0442,ui,SenseVoiceSmall · 下载中,SenseVoiceSmall · 下载中,SenseVoiceSmall · 下载中,SenseVoiceSmall · 下载中,,screens/settings_screen.dart
+s0443,ui,SenseVoiceSmall · 未下载,SenseVoiceSmall · 未下载,SenseVoiceSmall · 未下载,SenseVoiceSmall · 未下载,,screens/settings_screen.dart
+s0444,ui,语音识别,语音识别,语音识别,语音识别,,screens/settings_screen.dart; screens/voice_settings_screen.dart
+s0445,ui,后台运行,后台运行,后台运行,后台运行,,screens/settings_screen.dart
+s0446,ui,长任务在后台继续跑需要的系统设置。Android 不保证永不被杀；,长任务在后台继续跑需要的系统设置。Android 不保证永不被杀；,长任务在后台继续跑需要的系统设置。Android 不保证永不被杀；,长任务在后台继续跑需要的系统设置。Android 不保证永不被杀；,,screens/settings_screen.dart
+s0447,ui,这里只显示真实状态与引导，不假装“开了就一直跑”。,这里只显示真实状态与引导，不假装“开了就一直跑”。,这里只显示真实状态与引导，不假装“开了就一直跑”。,这里只显示真实状态与引导，不假装“开了就一直跑”。,,screens/settings_screen.dart
+s0448,ui,系统不允许 App 自行关闭权限：「${_pendingCloseLabel ?? key}」,系统不允许 App 自行关闭权限：「__VAR_0__」,系统不允许 App 自行关闭权限：「__VAR_0__」,系统不允许 App 自行关闭权限：「__VAR_0__」,YES,screens/settings_screen.dart
+s0449,ui,仍是开启状态，请在应用详情页里关闭。,仍是开启状态，请在应用详情页里关闭。,仍是开启状态，请在应用详情页里关闭。,仍是开启状态，请在应用详情页里关闭。,,screens/settings_screen.dart
+s0450,ui,执行系统级命令与设备操作,执行系统级命令与设备操作,执行系统级命令与设备操作,执行系统级命令与设备操作,,screens/settings_screen.dart
+s0451,ui,所有文件访问,所有文件访问,所有文件访问,所有文件访问,,screens/settings_screen.dart
+s0452,ui,按设计不申请，文件经授权目录访问,按设计不申请，文件经授权目录访问,按设计不申请，文件经授权目录访问,按设计不申请，文件经授权目录访问,,screens/settings_screen.dart
+s0453,ui,图片与视频,图片与视频,图片与视频,图片与视频,,screens/settings_screen.dart
+s0454,ui,读取相册，用于发送图片、视频附件,读取相册，用于发送图片、视频附件,读取相册，用于发送图片、视频附件,读取相册，用于发送图片、视频附件,,screens/settings_screen.dart
+s0455,ui,拍照后直接作为附件发送,拍照后直接作为附件发送,拍照后直接作为附件发送,拍照后直接作为附件发送,,screens/settings_screen.dart
+s0456,ui,麦克风,麦克风,麦克风,麦克风,,screens/settings_screen.dart
+s0457,ui,语音输入，把说的话转成文字,语音输入，把说的话转成文字,语音输入，把说的话转成文字,语音输入，把说的话转成文字,,screens/settings_screen.dart
+s0458,ui,通知,通知,通知,通知,,screens/settings_screen.dart
+s0459,ui,任务完成与审批请求提醒,任务完成与审批请求提醒,任务完成与审批请求提醒,任务完成与审批请求提醒,,screens/settings_screen.dart
+s0460,ui,日历,日历,日历,日历,,screens/settings_screen.dart
+s0461,ui,后续自动化任务可能需要读写日历,后续自动化任务可能需要读写日历,后续自动化任务可能需要读写日历,后续自动化任务可能需要读写日历,,screens/settings_screen.dart
+s0462,ui,无障碍服务,无障碍服务,无障碍服务,无障碍服务,,screens/settings_screen.dart
+s0463,ui,读取界面元素、辅助点击操作,读取界面元素、辅助点击操作,读取界面元素、辅助点击操作,读取界面元素、辅助点击操作,,screens/settings_screen.dart
+s0464,ui,悬浮窗,悬浮窗,悬浮窗,悬浮窗,,screens/settings_screen.dart
+s0465,ui,在其他应用上方显示运行状态,在其他应用上方显示运行状态,在其他应用上方显示运行状态,在其他应用上方显示运行状态,,screens/settings_screen.dart
+s0466,ui,屏幕自动化,屏幕自动化,屏幕自动化,屏幕自动化,,screens/settings_screen.dart
+s0467,ui,厂商专属开关（如小米），接口预留,厂商专属开关（如小米），接口预留,厂商专属开关（如小米），接口预留,厂商专属开关（如小米），接口预留,,screens/settings_screen.dart
+s0468,ui,安装未知应用,安装未知应用,安装未知应用,安装未知应用,,screens/settings_screen.dart
+s0469,ui,安装构建出的安装包时申请,安装构建出的安装包时申请,安装构建出的安装包时申请,安装构建出的安装包时申请,,screens/settings_screen.dart
+s0470,ui,检测中,检测中,检测中,检测中,,screens/settings_screen.dart
+s0471,ui,未开启 · 按设计,未开启 · 按设计,未开启 · 按设计,未开启 · 按设计,,screens/settings_screen.dart
+s0472,ui,接口预留,接口预留,接口预留,接口预留,,screens/settings_screen.dart
+s0473,ui,已开启,已开启,已开启,已开启,,screens/settings_screen.dart; widgets/background_keepalive_card.dart
+s0474,ui,安装时申请,安装时申请,安装时申请,安装时申请,,screens/settings_screen.dart
+s0475,ui,未启动,未启动,未启动,未启动,,screens/settings_screen.dart
+s0476,ui,关闭授权请在 Shizuku 应用里操作,关闭授权请在 Shizuku 应用里操作,关闭授权请在 Shizuku 应用里操作,关闭授权请在 Shizuku 应用里操作,,screens/settings_screen.dart
+s0477,ui,保活状态 · 电池优化 · 自启动,保活状态 · 电池优化 · 自启动,保活状态 · 电池优化 · 自启动,保活状态 · 电池优化 · 自启动,,screens/settings_screen.dart
+s0478,ui,没能打开系统授权界面,没能打开系统授权界面,没能打开系统授权界面,没能打开系统授权界面,,screens/settings_screen.dart
+s0479,ui,系统不再弹授权框，已打开设置页；请在那里开启,系统不再弹授权框，已打开设置页；请在那里开启,系统不再弹授权框，已打开设置页；请在那里开启,系统不再弹授权框，已打开设置页；请在那里开启,,screens/settings_screen.dart
+s0480,ui,该权限已经开启,该权限已经开启,该权限已经开启,该权限已经开启,,screens/settings_screen.dart
+s0481,ui,系统不允许 App 自行关闭权限，请在应用详情页里关闭「$label」,系统不允许 App 自行关闭权限，请在应用详情页里关闭「__VAR_0__」,系统不允许 App 自行关闭权限，请在应用详情页里关闭「__VAR_0__」,系统不允许 App 自行关闭权限，请在应用详情页里关闭「__VAR_0__」,YES,screens/settings_screen.dart
+s0482,ui,无障碍自愈${_granted == true ? ,无障碍自愈${_granted == true ? ,无障碍自愈${_granted == true ? ,无障碍自愈${_granted == true ? ,YES,screens/settings_screen.dart
+s0483,ui,权限只在你主动开启后生效；关闭任意一项，对应工具会立即不可用并说明原因。,权限只在你主动开启后生效；关闭任意一项，对应工具会立即不可用并说明原因。,权限只在你主动开启后生效；关闭任意一项，对应工具会立即不可用并说明原因。,权限只在你主动开启后生效；关闭任意一项，对应工具会立即不可用并说明原因。,,screens/settings_screen.dart
+s0484,ui,授权引导,授权引导,授权引导,授权引导,,screens/settings_screen.dart
+s0485,ui,三种授权方式任选其一：,三种授权方式任选其一：,三种授权方式任选其一：,三种授权方式任选其一：,,screens/settings_screen.dart
+s0486,ui,通过 Shizuku 一键授权,通过 Shizuku 一键授权,通过 Shizuku 一键授权,通过 Shizuku 一键授权,,screens/settings_screen.dart
+s0487,ui,我已执行授权，刷新状态,我已执行授权，刷新状态,我已执行授权，刷新状态,我已执行授权，刷新状态,,screens/settings_screen.dart
+s0488,ui,一切正常 —— 无障碍被系统关闭时会自动恢复，无需干预。,一切正常 —— 无障碍被系统关闭时会自动恢复，无需干预。,一切正常 —— 无障碍被系统关闭时会自动恢复，无需干预。,一切正常 —— 无障碍被系统关闭时会自动恢复，无需干预。,,screens/settings_screen.dart
+s0489,ui,重新向 Shizuku 申请授权（收录本 App）,重新向 Shizuku 申请授权（收录本 App）,重新向 Shizuku 申请授权（收录本 App）,重新向 Shizuku 申请授权（收录本 App）,,screens/settings_screen.dart
+s0490,ui,诊断与自检,诊断与自检,诊断与自检,诊断与自检,,screens/settings_screen.dart
+s0491,ui,当前执行路由：,当前执行路由：,当前执行路由：,当前执行路由：,,screens/settings_screen.dart
+s0492,ui,无,无,无,无,,screens/settings_screen.dart
+s0493,ui,Stellar 已安装,Stellar 已安装,Stellar 已安装,Stellar 已安装,,screens/settings_screen.dart
+s0494,ui,Stellar 服务在运行,Stellar 服务在运行,Stellar 服务在运行,Stellar 服务在运行,,screens/settings_screen.dart
+s0495,ui,Stellar 已授权本 App,Stellar 已授权本 App,Stellar 已授权本 App,Stellar 已授权本 App,,screens/settings_screen.dart
+s0496,ui,Stellar 模式：Root（能力最强）,Stellar 模式：Root（能力最强）,Stellar 模式：Root（能力最强）,Stellar 模式：Root（能力最强）,,screens/settings_screen.dart
+s0497,ui,Stellar 模式：ADB / Shell（uid=${_diag[,Stellar 模式：ADB / Shell（uid=${_diag[,Stellar 模式：ADB / Shell（uid=${_diag[,Stellar 模式：ADB / Shell（uid=${_diag[,YES,screens/settings_screen.dart
+s0498,ui,Shizuku 已安装,Shizuku 已安装,Shizuku 已安装,Shizuku 已安装,,screens/settings_screen.dart
+s0499,ui,Shizuku binder 连通,Shizuku binder 连通,Shizuku binder 连通,Shizuku binder 连通,,screens/settings_screen.dart
+s0500,ui,Shizuku 已授权本 App,Shizuku 已授权本 App,Shizuku 已授权本 App,Shizuku 已授权本 App,,screens/settings_screen.dart
+s0501,ui,Shizuku 版本过旧(pre-v11),Shizuku 版本过旧(pre-v11),Shizuku 版本过旧(pre-v11),Shizuku 版本过旧(pre-v11),,screens/settings_screen.dart
+s0502,ui,编码层自检,编码层自检,编码层自检,编码层自检,,screens/settings_screen.dart
+s0503,ui,在手机上真跑一遍：起前台服务 → 读温度/电量 → 定位工具链 → ,在手机上真跑一遍：起前台服务 → 读温度/电量 → 定位工具链 → ,在手机上真跑一遍：起前台服务 → 读温度/电量 → 定位工具链 → ,在手机上真跑一遍：起前台服务 → 读温度/电量 → 定位工具链 → ,,screens/settings_screen.dart
+s0504,ui,建 Hello World → 构建 → 拆包核对。,建 Hello World → 构建 → 拆包核对。,建 Hello World → 构建 → 拆包核对。,建 Hello World → 构建 → 拆包核对。,,screens/settings_screen.dart
+s0505,ui,跑一遍编码层自检,跑一遍编码层自检,跑一遍编码层自检,跑一遍编码层自检,,screens/settings_screen.dart
+s0506,ui,构建要 1–3 分钟，期间请不要切走应用…,构建要 1–3 分钟，期间请不要切走应用…,构建要 1–3 分钟，期间请不要切走应用…,构建要 1–3 分钟，期间请不要切走应用…,,screens/settings_screen.dart
+s0507,ui,是,是,是,是,,screens/settings_screen.dart
+s0508,ui,否,否,否,否,,screens/settings_screen.dart
+s0509,ui,本机通过 Stellar 提供 shell 能力,本机通过 Stellar 提供 shell 能力,本机通过 Stellar 提供 shell 能力,本机通过 Stellar 提供 shell 能力,,screens/settings_screen.dart
+s0510,ui,"] == true ? ""（Root 模式，能力最强）"" : ""（ADB/Shell 模式）""}。","] == true ? ""（Root 模式，能力最强）"" : ""（ADB/Shell 模式）""}。","] == true ? ""（Root 模式，能力最强）"" : ""（ADB/Shell 模式）""}。","] == true ? ""（Root 模式，能力最强）"" : ""（ADB/Shell 模式）""}。",,screens/settings_screen.dart
+s0511,ui,授权请到 Stellar 的「授权应用」里查看。,授权请到 Stellar 的「授权应用」里查看。,授权请到 Stellar 的「授权应用」里查看。,授权请到 Stellar 的「授权应用」里查看。,,screens/settings_screen.dart
+s0512,ui,本机通过 Shizuku 提供 shell 能力。,本机通过 Shizuku 提供 shell 能力。,本机通过 Shizuku 提供 shell 能力。,本机通过 Shizuku 提供 shell 能力。,,screens/settings_screen.dart
+s0513,ui,若 Shizuku 界面显示 0 个已授权应用，那是它自身的列表问题，不影响功能。,若 Shizuku 界面显示 0 个已授权应用，那是它自身的列表问题，不影响功能。,若 Shizuku 界面显示 0 个已授权应用，那是它自身的列表问题，不影响功能。,若 Shizuku 界面显示 0 个已授权应用，那是它自身的列表问题，不影响功能。,,screens/settings_screen.dart
+s0514,ui,未安装 Stellar / Shizuku。请先安装其一并启动服务，再回到这里点授权按钮。,未安装 Stellar / Shizuku。请先安装其一并启动服务，再回到这里点授权按钮。,未安装 Stellar / Shizuku。请先安装其一并启动服务，再回到这里点授权按钮。,未安装 Stellar / Shizuku。请先安装其一并启动服务，再回到这里点授权按钮。,,screens/settings_screen.dart
+s0515,ui,Stellar 服务在运行但尚未授权本 App —— 点上方按钮会弹出它的授权框。,Stellar 服务在运行但尚未授权本 App —— 点上方按钮会弹出它的授权框。,Stellar 服务在运行但尚未授权本 App —— 点上方按钮会弹出它的授权框。,Stellar 服务在运行但尚未授权本 App —— 点上方按钮会弹出它的授权框。,,screens/settings_screen.dart
+s0516,ui,检测到管理器但服务未运行（或未授权）。,检测到管理器但服务未运行（或未授权）。,检测到管理器但服务未运行（或未授权）。,检测到管理器但服务未运行（或未授权）。,,screens/settings_screen.dart
+s0517,ui,请先在 Stellar / Shizuku 里启动服务，再回到这里点授权按钮。,请先在 Stellar / Shizuku 里启动服务，再回到这里点授权按钮。,请先在 Stellar / Shizuku 里启动服务，再回到这里点授权按钮。,请先在 Stellar / Shizuku 里启动服务，再回到这里点授权按钮。,,screens/settings_screen.dart
+s0518,ui,内置 Linux 环境,内置 Linux 环境,内置 Linux 环境,内置 Linux 环境,,screens/settings_screen.dart
+s0519,ui,内置 Linux 环境 · 已激活,内置 Linux 环境 · 已激活,内置 Linux 环境 · 已激活,内置 Linux 环境 · 已激活,,screens/settings_screen.dart
+s0520,ui,内置 Linux 环境 · 未激活,内置 Linux 环境 · 未激活,内置 Linux 环境 · 未激活,内置 Linux 环境 · 未激活,,screens/settings_screen.dart
+s0521,ui,暂无,暂无,暂无,暂无,,screens/settings_screen.dart
+s0522,ui,$n 个,__VAR_0__ 个,__VAR_0__ 个,__VAR_0__ 个,YES,screens/settings_screen.dart
+s0523,ui,全局,全局,全局,全局,,screens/settings_screen.dart; services/device_capabilities.dart
+s0524,ui,本工作区,本工作区,本工作区,本工作区,,screens/settings_screen.dart
+s0525,ui,本会话,本会话,本会话,本会话,,screens/settings_screen.dart
+s0526,ui,后端 B1 接入中：本作用域的记忆读取与写入尚未接通,后端 B1 接入中：本作用域的记忆读取与写入尚未接通,后端 B1 接入中：本作用域的记忆读取与写入尚未接通,后端 B1 接入中：本作用域的记忆读取与写入尚未接通,,screens/settings_screen.dart
+s0527,ui,保存失败,保存失败,保存失败,保存失败,,screens/settings_screen.dart
+s0528,ui,删除失败,删除失败,删除失败,删除失败,,screens/settings_screen.dart
+s0529,ui,清空失败,清空失败,清空失败,清空失败,,screens/settings_screen.dart
+s0530,ui,读取失败,读取失败,读取失败,读取失败,,screens/settings_screen.dart
+s0531,ui,暂无记忆,暂无记忆,暂无记忆,暂无记忆,,screens/settings_screen.dart
+s0532,ui,全局 $gn · 本工作区 $wn,全局 __VAR_0__ · 本工作区 __VAR_1__,全局 __VAR_0__ · 本工作区 __VAR_1__,全局 __VAR_0__ · 本工作区 __VAR_1__,YES,screens/settings_screen.dart
+s0533,ui,全局 $gn,全局 __VAR_0__,全局 __VAR_0__,全局 __VAR_0__,YES,screens/settings_screen.dart
+s0534,ui,全局记忆,全局记忆,全局记忆,全局记忆,,screens/settings_screen.dart
+s0535,ui,长期偏好,长期偏好,长期偏好,长期偏好,,screens/settings_screen.dart
+s0536,ui,项目背景,项目背景,项目背景,项目背景,,screens/settings_screen.dart
+s0537,ui,使用习惯,使用习惯,使用习惯,使用习惯,,screens/settings_screen.dart
+s0538,ui,其他,其他,其他,其他,,screens/settings_screen.dart; widgets/bw_usage_sheet.dart
+s0539,ui,手动添加,手动添加,手动添加,手动添加,,screens/settings_screen.dart
+s0540,ui,模型记的,模型记的,模型记的,模型记的,,screens/settings_screen.dart
+s0541,ui,旧格式,旧格式,旧格式,旧格式,,screens/settings_screen.dart
+s0542,ui,提议晋升,提议晋升,提议晋升,提议晋升,,screens/settings_screen.dart
+s0543,ui,${d.month}月${d.day}日,__VAR_0__月__VAR_1__日,__VAR_0__月__VAR_1__日,__VAR_0__月__VAR_1__日,YES,screens/settings_screen.dart
+s0544,ui,偏好,偏好,偏好,偏好,,screens/settings_screen.dart
+s0545,ui,背景,背景,背景,背景,,screens/settings_screen.dart
+s0546,ui,习惯,习惯,习惯,习惯,,screens/settings_screen.dart
+s0547,ui,${d.month}月${d.day}日 $hh:$mm,__VAR_0__月__VAR_1__日 __VAR_2__:__VAR_3__,__VAR_0__月__VAR_1__日 __VAR_2__:__VAR_3__,__VAR_0__月__VAR_1__日 __VAR_2__:__VAR_3__,YES,screens/settings_screen.dart
+s0548,ui,提议列表读取失败：$e,提议列表读取失败：__VAR_0__,提议列表读取失败：__VAR_0__,提议列表读取失败：__VAR_0__,YES,screens/settings_screen.dart
+s0549,ui,预算读取失败：$e,预算读取失败：__VAR_0__,预算读取失败：__VAR_0__,预算读取失败：__VAR_0__,YES,screens/settings_screen.dart
+s0550,ui,本工作区记忆,本工作区记忆,本工作区记忆,本工作区记忆,,screens/settings_screen.dart
+s0551,ui,本会话记忆,本会话记忆,本会话记忆,本会话记忆,,screens/settings_screen.dart
+s0552,ui,清空$noun？,清空__VAR_0__？,清空__VAR_0__？,清空__VAR_0__？,YES,screens/settings_screen.dart
+s0553,ui,所有跨会话记忆都会被删除，无法恢复。,所有跨会话记忆都会被删除，无法恢复。,所有跨会话记忆都会被删除，无法恢复。,所有跨会话记忆都会被删除，无法恢复。,,screens/settings_screen.dart
+s0554,ui,之后的新会话不再带着这些内容开始。,之后的新会话不再带着这些内容开始。,之后的新会话不再带着这些内容开始。,之后的新会话不再带着这些内容开始。,,screens/settings_screen.dart
+s0555,ui,本工作区的共享记忆都会被删除（其它作用域不受影响），无法恢复。,本工作区的共享记忆都会被删除（其它作用域不受影响），无法恢复。,本工作区的共享记忆都会被删除（其它作用域不受影响），无法恢复。,本工作区的共享记忆都会被删除（其它作用域不受影响），无法恢复。,,screens/settings_screen.dart
+s0556,ui,这个会话的私有记忆会被删除,这个会话的私有记忆会被删除,这个会话的私有记忆会被删除,这个会话的私有记忆会被删除,,screens/settings_screen.dart
+s0557,ui,（工作区 / 全局不受影响），无法恢复。,（工作区 / 全局不受影响），无法恢复。,（工作区 / 全局不受影响），无法恢复。,（工作区 / 全局不受影响），无法恢复。,,screens/settings_screen.dart
+s0558,ui,清空记忆,清空记忆,清空记忆,清空记忆,,screens/settings_screen.dart
+s0559,ui,已清空,已清空,已清空,已清空,,screens/settings_screen.dart
+s0560,ui,删除这条记忆？,删除这条记忆？,删除这条记忆？,删除这条记忆？,,screens/settings_screen.dart
+s0561,ui,已添加,已添加,已添加,已添加,,screens/settings_screen.dart
+s0562,ui,晋升失败,晋升失败,晋升失败,晋升失败,,screens/settings_screen.dart
+s0563,ui,操作失败,操作失败,操作失败,操作失败,,screens/settings_screen.dart
+s0564,ui,已晋升为全局记忆,已晋升为全局记忆,已晋升为全局记忆,已晋升为全局记忆,,screens/settings_screen.dart
+s0565,ui,已忽略,已忽略,已忽略,已忽略,,screens/settings_screen.dart
+s0566,ui,待后端 B1 接入,待后端 B1 接入,待后端 B1 接入,待后端 B1 接入,,screens/settings_screen.dart
+s0567,ui,已用 ${_fmtBytes(used)} · 软预算 待后端 B1 接入,已用 __VAR_0__ · 软预算 待后端 B1 接入,已用 __VAR_0__ · 软预算 待后端 B1 接入,已用 __VAR_0__ · 软预算 待后端 B1 接入,YES,screens/settings_screen.dart
+s0568,ui,已用 ${_fmtBytes(used)} · 软预算 ${_fmtBytes(soft)},已用 __VAR_0__ · 软预算 __VAR_1__,已用 __VAR_0__ · 软预算 __VAR_1__,已用 __VAR_0__ · 软预算 __VAR_1__,YES,screens/settings_screen.dart
+s0569,ui,软预算：满了会淘汰最旧条目，不会拒绝新增,软预算：满了会淘汰最旧条目，不会拒绝新增,软预算：满了会淘汰最旧条目，不会拒绝新增,软预算：满了会淘汰最旧条目，不会拒绝新增,,screens/settings_screen.dart
+s0570,ui,软预算：B1 接入后按「满了淘汰最旧条目、不拒写」执行,软预算：B1 接入后按「满了淘汰最旧条目、不拒写」执行,软预算：B1 接入后按「满了淘汰最旧条目、不拒写」执行,软预算：B1 接入后按「满了淘汰最旧条目、不拒写」执行,,screens/settings_screen.dart
+s0571,ui,每轮最多 ${budget.globalWorkspaceInjectChars} 字符（全局 + 本工作区）,每轮最多 __VAR_0__ 字符（全局 + 本工作区）,每轮最多 __VAR_0__ 字符（全局 + 本工作区）,每轮最多 __VAR_0__ 字符（全局 + 本工作区）,YES,screens/settings_screen.dart
+s0572,ui,每轮最多 ${budget.sessionInjectChars} 字符（本会话）,每轮最多 __VAR_0__ 字符（本会话）,每轮最多 __VAR_0__ 字符（本会话）,每轮最多 __VAR_0__ 字符（本会话）,YES,screens/settings_screen.dart
+s0573,ui,按任务检索后注入；没命中的条目压成摘要,按任务检索后注入；没命中的条目压成摘要,按任务检索后注入；没命中的条目压成摘要,按任务检索后注入；没命中的条目压成摘要,,screens/settings_screen.dart
+s0574,ui,上限为契约默认值（§N12.8），B1 接入后以宿主回报为准,上限为契约默认值（§N12.8），B1 接入后以宿主回报为准,上限为契约默认值（§N12.8），B1 接入后以宿主回报为准,上限为契约默认值（§N12.8），B1 接入后以宿主回报为准,,screens/settings_screen.dart
+s0575,ui,存储软预算,存储软预算,存储软预算,存储软预算,,screens/settings_screen.dart
+s0576,ui,注入预算,注入预算,注入预算,注入预算,,screens/settings_screen.dart
+s0577,ui,全局记忆对所有会话只读 · 模型只能提议，不能直接写,全局记忆对所有会话只读 · 模型只能提议，不能直接写,全局记忆对所有会话只读 · 模型只能提议，不能直接写,全局记忆对所有会话只读 · 模型只能提议，不能直接写,,screens/settings_screen.dart
+s0578,ui,本工作区所有会话共享,本工作区所有会话共享,本工作区所有会话共享,本工作区所有会话共享,,screens/settings_screen.dart
+s0579,ui,只在本会话生效,只在本会话生效,只在本会话生效,只在本会话生效,,screens/settings_screen.dart
+s0580,ui,清空,清空,清空,清空,,screens/settings_screen.dart; widgets/decision_panel.dart
+s0581,ui,添加,添加,添加,添加,,screens/settings_screen.dart
+s0582,ui,后端 B1 接入中,后端 B1 接入中,后端 B1 接入中,后端 B1 接入中,,screens/settings_screen.dart
+s0583,ui,模型想记住（${p.entries.length}）,模型想记住（__VAR_0__）,模型想记住（__VAR_0__）,模型想记住（__VAR_0__）,YES,screens/settings_screen.dart
+s0584,ui,模型提议的全局记忆，只有你确认后才会对所有会话生效,模型提议的全局记忆，只有你确认后才会对所有会话生效,模型提议的全局记忆，只有你确认后才会对所有会话生效,模型提议的全局记忆，只有你确认后才会对所有会话生效,,screens/settings_screen.dart
+s0585,ui,模型提议,模型提议,模型提议,模型提议,,screens/settings_screen.dart
+s0586,ui,忽略,忽略,忽略,忽略,,screens/settings_screen.dart
+s0587,ui,晋升为全局,晋升为全局,晋升为全局,晋升为全局,,screens/settings_screen.dart
+s0588,ui,记忆,记忆,记忆,记忆,,screens/settings_screen.dart
+s0589,ui,会话私有记忆只在该会话里生效 · 进入某个会话查看,会话私有记忆只在该会话里生效 · 进入某个会话查看,会话私有记忆只在该会话里生效 · 进入某个会话查看,会话私有记忆只在该会话里生效 · 进入某个会话查看,,screens/settings_screen.dart
+s0590,ui,到期 ${_memoryDate(entry.expiresAt!)},到期 __VAR_0__,到期 __VAR_0__,到期 __VAR_0__,YES,screens/settings_screen.dart
+s0591,ui,内容为空,内容为空,内容为空,内容为空,,screens/settings_screen.dart; services/global_memory.dart
+s0592,ui,编辑记忆,编辑记忆,编辑记忆,编辑记忆,,screens/settings_screen.dart
+s0593,ui,添加记忆,添加记忆,添加记忆,添加记忆,,screens/settings_screen.dart
+s0594,ui,写下要长期记住的事…,写下要长期记住的事…,写下要长期记住的事…,写下要长期记住的事…,,screens/settings_screen.dart
+s0595,ui,通用设置,通用设置,通用设置,通用设置,,screens/settings_screen.dart
+s0596,ui,显示,显示,显示,显示,,screens/settings_screen.dart
+s0597,ui,界面语言,界面语言,界面语言,界面语言,,screens/settings_screen.dart
+s0598,ui,目前仅支持中文；English 暂未提供,目前仅支持中文；English 暂未提供,目前仅支持中文；English 暂未提供,目前仅支持中文；English 暂未提供,,screens/settings_screen.dart
+s0599,ui,暂不支持英文，后续版本提供,暂不支持英文，后续版本提供,暂不支持英文，后续版本提供,暂不支持英文，后续版本提供,,screens/settings_screen.dart
+s0600,ui,字号大小,字号大小,字号大小,字号大小,,screens/settings_screen.dart
+s0601,ui,全局字阶按比例缩放，拖动实时预览,全局字阶按比例缩放，拖动实时预览,全局字阶按比例缩放，拖动实时预览,全局字阶按比例缩放，拖动实时预览,,screens/settings_screen.dart
+s0602,ui,小,小,小,小,,screens/settings_screen.dart
+s0603,ui,大,大,大,大,,screens/settings_screen.dart
+s0604,ui,行为,行为,行为,行为,,screens/settings_screen.dart
+s0605,ui,工作步骤展示,工作步骤展示,工作步骤展示,工作步骤展示,,screens/settings_screen.dart
+s0606,ui,选择希望看到多少工具调用细节,选择希望看到多少工具调用细节,选择希望看到多少工具调用细节,选择希望看到多少工具调用细节,,screens/settings_screen.dart
+s0607,ui,繁忙时发送,繁忙时发送,繁忙时发送,繁忙时发送,,screens/settings_screen.dart
+s0608,ui,任务执行中发消息如何处理,任务执行中发消息如何处理,任务执行中发消息如何处理,任务执行中发消息如何处理,,screens/settings_screen.dart
+s0609,ui,排队,排队,排队,排队,,screens/settings_screen.dart
+s0610,ui,插队,插队,插队,插队,,screens/settings_screen.dart
+s0611,ui,最大轮次,最大轮次,最大轮次,最大轮次,,screens/settings_screen.dart
+s0612,ui,单次任务最多执行的工具轮次,单次任务最多执行的工具轮次,单次任务最多执行的工具轮次,单次任务最多执行的工具轮次,,screens/settings_screen.dart
+s0613,ui,自动,自动,自动,自动,,screens/settings_screen.dart
+s0614,ui,自动 = 云端 40 轮（默认）。轮次越多，单次任务能做的步骤,自动 = 云端 40 轮（默认）。轮次越多，单次任务能做的步骤,自动 = 云端 40 轮（默认）。轮次越多，单次任务能做的步骤,自动 = 云端 40 轮（默认）。轮次越多，单次任务能做的步骤,,screens/settings_screen.dart
+s0615,ui,越多，但可能跑更久；云端按轮计费，花费也更多。,越多，但可能跑更久；云端按轮计费，花费也更多。,越多，但可能跑更久；云端按轮计费，花费也更多。,越多，但可能跑更久；云端按轮计费，花费也更多。,,screens/settings_screen.dart
+s0616,ui,流式输出,流式输出,流式输出,流式输出,,screens/settings_screen.dart
+s0617,ui,逐字显示模型回复,逐字显示模型回复,逐字显示模型回复,逐字显示模型回复,,screens/settings_screen.dart
+s0618,ui,始终开启,始终开启,始终开启,始终开启,,screens/settings_screen.dart
+s0619,ui,新会话的默认权限,新会话的默认权限,新会话的默认权限,新会话的默认权限,,screens/settings_screen.dart
+s0620,ui,决定工具执行前是否需要你确认,决定工具执行前是否需要你确认,决定工具执行前是否需要你确认,决定工具执行前是否需要你确认,,screens/settings_screen.dart
+s0621,ui,「完全访问」需要 Shizuku 或 root 才能真正生效。,「完全访问」需要 Shizuku 或 root 才能真正生效。,「完全访问」需要 Shizuku 或 root 才能真正生效。,「完全访问」需要 Shizuku 或 root 才能真正生效。,,screens/settings_screen.dart
+s0622,ui,填入各提供商的 API 密钥即可使用其模型。,填入各提供商的 API 密钥即可使用其模型。,填入各提供商的 API 密钥即可使用其模型。,填入各提供商的 API 密钥即可使用其模型。,,screens/settings_screen.dart
+s0623,ui,(未命名),(未命名),(未命名),(未命名),,screens/settings_screen.dart
+s0624,ui,同时清除已保存的 API Key,同时清除已保存的 API Key,同时清除已保存的 API Key,同时清除已保存的 API Key,,screens/settings_screen.dart
+s0625,ui,删除这个提供商？,删除这个提供商？,删除这个提供商？,删除这个提供商？,,screens/settings_screen.dart
+s0626,ui,"「${provider.name.isEmpty ? ""(未命名)"" : provider.name}」的配置",「__VAR_0__」的配置,「__VAR_0__」的配置,「__VAR_0__」的配置,YES,screens/settings_screen.dart
+s0627,ui,与已保存的 API Key 都会被清除，无法恢复。,与已保存的 API Key 都会被清除，无法恢复。,与已保存的 API Key 都会被清除，无法恢复。,与已保存的 API Key 都会被清除，无法恢复。,,screens/settings_screen.dart
+s0628,ui,默认,默认,默认,默认,,screens/settings_screen.dart
+s0629,ui,未配置 API Key,未配置 API Key,未配置 API Key,未配置 API Key,,screens/settings_screen.dart
+s0630,ui,设为默认,设为默认,设为默认,设为默认,,screens/settings_screen.dart
+s0631,ui,未配置接口地址,未配置接口地址,未配置接口地址,未配置接口地址,,screens/settings_screen.dart
+s0632,ui,已配置,已配置,已配置,已配置,,screens/settings_screen.dart
+s0633,ui,模型已下载 · 引擎未接入,模型已下载 · 引擎未接入,模型已下载 · 引擎未接入,模型已下载 · 引擎未接入,,screens/settings_screen.dart
+s0634,ui,模型未下载,模型未下载,模型未下载,模型未下载,,screens/settings_screen.dart
+s0635,ui,来源 ${config.source.label} · $status,来源 __VAR_0__ · __VAR_1__,来源 __VAR_0__ · __VAR_1__,来源 __VAR_0__ · __VAR_1__,YES,screens/settings_screen.dart
+s0636,ui,添加模型提供商,添加模型提供商,添加模型提供商,添加模型提供商,,screens/settings_screen.dart
+s0637,ui,先填 API 地址,先填 API 地址,先填 API 地址,先填 API 地址,,screens/settings_screen.dart
+s0638,ui,找到 ${models.length} 个模型,找到 __VAR_0__ 个模型,找到 __VAR_0__ 个模型,找到 __VAR_0__ 个模型,YES,screens/settings_screen.dart
+s0639,ui,"${withCaps > 0 ? ""（$withCaps 个含上下文长度）"" : ""（服务端未提供上下文长度）""}",__VAR_0__,__VAR_0__,__VAR_0__,YES,screens/settings_screen.dart
+s0640,ui,添加提供商,添加提供商,添加提供商,添加提供商,,screens/settings_screen.dart
+s0641,ui,编辑提供商,编辑提供商,编辑提供商,编辑提供商,,screens/settings_screen.dart
+s0642,ui,例如：我的 DeepSeek,例如：我的 DeepSeek,例如：我的 DeepSeek,例如：我的 DeepSeek,,screens/settings_screen.dart
+s0643,ui,API 协议,API 协议,API 协议,API 协议,,screens/settings_screen.dart
+s0644,ui,⚠️ Key 共 ${k.length} 字符，但首尾有空白,⚠️ Key 共 __VAR_0__ 字符，但首尾有空白,⚠️ Key 共 __VAR_0__ 字符，但首尾有空白,⚠️ Key 共 __VAR_0__ 字符，但首尾有空白,YES,screens/settings_screen.dart
+s0645,ui,（${k.length - trimmed.length} 个）—— 请删掉,（__VAR_0__ 个）—— 请删掉,（__VAR_0__ 个）—— 请删掉,（__VAR_0__ 个）—— 请删掉,YES,screens/settings_screen.dart
+s0646,ui,Key 共 ${k.length} 字符,Key 共 __VAR_0__ 字符,Key 共 __VAR_0__ 字符,Key 共 __VAR_0__ 字符,YES,screens/settings_screen.dart
+s0647,ui,模型选择器中将不显示任何模型；目录外 ID 仍可直接发送。,模型选择器中将不显示任何模型；目录外 ID 仍可直接发送。,模型选择器中将不显示任何模型；目录外 ID 仍可直接发送。,模型选择器中将不显示任何模型；目录外 ID 仍可直接发送。,,screens/settings_screen.dart
+s0648,ui,手填模型 ID（目录外也可直接发送）,手填模型 ID（目录外也可直接发送）,手填模型 ID（目录外也可直接发送）,手填模型 ID（目录外也可直接发送）,,screens/settings_screen.dart
+s0649,ui,+ 添加,+ 添加,+ 添加,+ 添加,,screens/settings_screen.dart
+s0650,ui,先填 Base URL 和模型名,先填 Base URL 和模型名,先填 Base URL 和模型名,先填 Base URL 和模型名,,screens/settings_screen.dart
+s0651,ui,✅ 连接成功（HTTP 200）,✅ 连接成功（HTTP 200）,✅ 连接成功（HTTP 200）,✅ 连接成功（HTTP 200）,,screens/settings_screen.dart
+s0652,ui,"✅ 连接成功，模型回：${echo.trim().substring(0, echo.trim().length.clamp(0, 60))}",✅ 连接成功，模型回：__VAR_0__,✅ 连接成功，模型回：__VAR_0__,✅ 连接成功，模型回：__VAR_0__,YES,screens/settings_screen.dart
+s0653,ui,❌ API Key 不对（401）,❌ API Key 不对（401）,❌ API Key 不对（401）,❌ API Key 不对（401）,,screens/settings_screen.dart
+s0654,ui,❌ 路径不对（404）—— Base URL 通常要以 /v1 结尾,❌ 路径不对（404）—— Base URL 通常要以 /v1 结尾,❌ 路径不对（404）—— Base URL 通常要以 /v1 结尾,❌ 路径不对（404）—— Base URL 通常要以 /v1 结尾,,screens/settings_screen.dart
+s0655,ui,❌ 连不上：${e.toString().split(,❌ 连不上：${e.toString().split(,❌ 连不上：${e.toString().split(,❌ 连不上：${e.toString().split(,YES,screens/settings_screen.dart
+s0656,ui,外观,外观,外观,外观,,screens/settings_screen.dart
+s0657,ui,深浅,深浅,深浅,深浅,,screens/settings_screen.dart
+s0658,ui,主题,主题,主题,主题,,screens/settings_screen.dart
+s0659,ui,界面字号,界面字号,界面字号,界面字号,,screens/settings_screen.dart
+s0660,ui,图标风格,图标风格,图标风格,图标风格,,screens/settings_screen.dart
+s0661,ui,填充 · 黑白,填充 · 黑白,填充 · 黑白,填充 · 黑白,,screens/settings_screen.dart
+s0662,ui,玻璃效果,玻璃效果,玻璃效果,玻璃效果,,screens/settings_screen.dart
+s0663,ui,面板使用半透明毛玻璃质感,面板使用半透明毛玻璃质感,面板使用半透明毛玻璃质感,面板使用半透明毛玻璃质感,,screens/settings_screen.dart
+s0664,ui,无法打开浏览器,无法打开浏览器,无法打开浏览器,无法打开浏览器,,screens/settings_screen.dart
+s0665,ui,关于,关于,关于,关于,,screens/settings_screen.dart
+s0666,ui,手机上的开发智能体,手机上的开发智能体,手机上的开发智能体,手机上的开发智能体,,screens/settings_screen.dart
+s0667,ui,版本 —,版本 —,版本 —,版本 —,,screens/settings_screen.dart
+s0668,ui,版本 $_version,版本 __VAR_0__,版本 __VAR_0__,版本 __VAR_0__,YES,screens/settings_screen.dart
+s0669,ui,Heracles 是一个装在手机里的开发智能体：一句话说清需求，,Heracles 是一个装在手机里的开发智能体：一句话说清需求，,Heracles 是一个装在手机里的开发智能体：一句话说清需求，,Heracles 是一个装在手机里的开发智能体：一句话说清需求，,,screens/settings_screen.dart
+s0670,ui,它就在你的手机上读文件、改代码、跑命令，把 App 构建、解包、,它就在你的手机上读文件、改代码、跑命令，把 App 构建、解包、,它就在你的手机上读文件、改代码、跑命令，把 App 构建、解包、,它就在你的手机上读文件、改代码、跑命令，把 App 构建、解包、,,screens/settings_screen.dart
+s0671,ui,重打包成能直接安装的成品——从想法到装上手机，一台手机全搞定。,重打包成能直接安装的成品——从想法到装上手机，一台手机全搞定。,重打包成能直接安装的成品——从想法到装上手机，一台手机全搞定。,重打包成能直接安装的成品——从想法到装上手机，一台手机全搞定。,,screens/settings_screen.dart
+s0672,ui,它能做什么,它能做什么,它能做什么,它能做什么,,screens/settings_screen.dart
+s0673,ui,在手机上开发,在手机上开发,在手机上开发,在手机上开发,,screens/settings_screen.dart
+s0674,ui,把项目文件夹设为工作区，它读代码、改文件、跑命令；,把项目文件夹设为工作区，它读代码、改文件、跑命令；,把项目文件夹设为工作区，它读代码、改文件、跑命令；,把项目文件夹设为工作区，它读代码、改文件、跑命令；,,screens/settings_screen.dart
+s0675,ui,改动先以 diff 呈现，你确认后才落盘。,改动先以 diff 呈现，你确认后才落盘。,改动先以 diff 呈现，你确认后才落盘。,改动先以 diff 呈现，你确认后才落盘。,,screens/settings_screen.dart
+s0676,ui,本机构建与改包,本机构建与改包,本机构建与改包,本机构建与改包,,screens/settings_screen.dart
+s0677,ui,无需电脑和 Gradle，在手机上完成编译、打包、签名，,无需电脑和 Gradle，在手机上完成编译、打包、签名，,无需电脑和 Gradle，在手机上完成编译、打包、签名，,无需电脑和 Gradle，在手机上完成编译、打包、签名，,,screens/settings_screen.dart
+s0678,ui,产出可安装的 APK；也能解包、修改、重打包现有应用。,产出可安装的 APK；也能解包、修改、重打包现有应用。,产出可安装的 APK；也能解包、修改、重打包现有应用。,产出可安装的 APK；也能解包、修改、重打包现有应用。,,screens/settings_screen.dart
+s0679,ui,任务计划看得见,任务计划看得见,任务计划看得见,任务计划看得见,,screens/settings_screen.dart
+s0680,ui,复杂任务自动拆成步骤，进度挂在屏幕顶部的灵动岛上，,复杂任务自动拆成步骤，进度挂在屏幕顶部的灵动岛上，,复杂任务自动拆成步骤，进度挂在屏幕顶部的灵动岛上，,复杂任务自动拆成步骤，进度挂在屏幕顶部的灵动岛上，,,screens/settings_screen.dart
+s0681,ui,走到哪一步、还剩什么，随时可看可调整。,走到哪一步、还剩什么，随时可看可调整。,走到哪一步、还剩什么，随时可看可调整。,走到哪一步、还剩什么，随时可看可调整。,,screens/settings_screen.dart
+s0682,ui,记得住你的习惯,记得住你的习惯,记得住你的习惯,记得住你的习惯,,screens/settings_screen.dart
+s0683,ui,偏好、背景与项目约定会被结构化记住，新会话自动带上；,偏好、背景与项目约定会被结构化记住，新会话自动带上；,偏好、背景与项目约定会被结构化记住，新会话自动带上；,偏好、背景与项目约定会被结构化记住，新会话自动带上；,,screens/settings_screen.dart
+s0684,ui,所有记忆都可查、可改、可删。,所有记忆都可查、可改、可删。,所有记忆都可查、可改、可删。,所有记忆都可查、可改、可删。,,screens/settings_screen.dart
+s0685,ui,接入你自己的模型,接入你自己的模型,接入你自己的模型,接入你自己的模型,,screens/settings_screen.dart
+s0686,ui,自带 API Key 接入云端大模型，支持 OpenAI 兼容与 ,自带 API Key 接入云端大模型，支持 OpenAI 兼容与 ,自带 API Key 接入云端大模型，支持 OpenAI 兼容与 ,自带 API Key 接入云端大模型，支持 OpenAI 兼容与 ,,screens/settings_screen.dart
+s0687,ui,Anthropic 两种协议，思考等级可调。,Anthropic 两种协议，思考等级可调。,Anthropic 两种协议，思考等级可调。,Anthropic 两种协议，思考等级可调。,,screens/settings_screen.dart
+s0688,ui,安全与隐私,安全与隐私,安全与隐私,安全与隐私,,screens/settings_screen.dart
+s0689,ui,Key 只存在这台手机上,Key 只存在这台手机上,Key 只存在这台手机上,Key 只存在这台手机上,,screens/settings_screen.dart
+s0690,ui,你的 API Key 只保存在本机，不经过任何中转服务器。,你的 API Key 只保存在本机，不经过任何中转服务器。,你的 API Key 只保存在本机，不经过任何中转服务器。,你的 API Key 只保存在本机，不经过任何中转服务器。,,screens/settings_screen.dart
+s0691,ui,危险操作先经你确认,危险操作先经你确认,危险操作先经你确认,危险操作先经你确认,,screens/settings_screen.dart
+s0692,ui,删除文件、执行命令等操作默认先弹窗征得同意；,删除文件、执行命令等操作默认先弹窗征得同意；,删除文件、执行命令等操作默认先弹窗征得同意；,删除文件、执行命令等操作默认先弹窗征得同意；,,screens/settings_screen.dart
+s0693,ui,三档权限模式，放行程度由你决定。,三档权限模式，放行程度由你决定。,三档权限模式，放行程度由你决定。,三档权限模式，放行程度由你决定。,,screens/settings_screen.dart
+s0694,ui,数据去向透明,数据去向透明,数据去向透明,数据去向透明,,screens/settings_screen.dart
+s0695,ui,Heracles 没有自己的服务器，不收集你的数据；,Heracles 没有自己的服务器，不收集你的数据；,Heracles 没有自己的服务器，不收集你的数据；,Heracles 没有自己的服务器，不收集你的数据；,,screens/settings_screen.dart
+s0696,ui,代码只会发送给你自己配置的模型服务商。,代码只会发送给你自己配置的模型服务商。,代码只会发送给你自己配置的模型服务商。,代码只会发送给你自己配置的模型服务商。,,screens/settings_screen.dart
+s0697,ui,开源与反馈,开源与反馈,开源与反馈,开源与反馈,,screens/settings_screen.dart
+s0698,ui,GitHub 仓库,GitHub 仓库,GitHub 仓库,GitHub 仓库,,screens/settings_screen.dart
+s0699,ui,问题反馈,问题反馈,问题反馈,问题反馈,,screens/settings_screen.dart
+s0700,ui,开源许可证,开源许可证,开源许可证,开源许可证,,screens/settings_screen.dart
+s0701,ui,完整列表,完整列表,完整列表,完整列表,,screens/settings_screen.dart
+s0702,ui,版本信息,版本信息,版本信息,版本信息,,screens/settings_screen.dart
+s0703,ui,当前版本,当前版本,当前版本,当前版本,,screens/settings_screen.dart
+s0704,ui,构建号,构建号,构建号,构建号,,screens/settings_screen.dart
+s0705,ui,运行平台,运行平台,运行平台,运行平台,,screens/settings_screen.dart
+s0706,ui,开发框架,开发框架,开发框架,开发框架,,screens/settings_screen.dart
+s0707,ui,© 2026 Heracles 项目 · 开源软件,© 2026 Heracles 项目 · 开源软件,© 2026 Heracles 项目 · 开源软件,© 2026 Heracles 项目 · 开源软件,,screens/settings_screen.dart
+s0708,ui,已始终允许的工具,已始终允许的工具,已始终允许的工具,已始终允许的工具,,screens/settings_screen.dart
+s0709,ui,审批时选过「始终允许」的工具,审批时选过「始终允许」的工具,审批时选过「始终允许」的工具,审批时选过「始终允许」的工具,,screens/settings_screen.dart
+s0710,ui,清除,清除,清除,清除,,screens/settings_screen.dart
+s0711,model_prompt,技能,,,,,screens/skills_screen.dart
+s0712,model_prompt,技能接口未接通,,,,,screens/skills_screen.dart
+s0713,model_prompt,当前版本没有技能列表通道：技能由后端按工作区注入（内置技能 + 用户技能），,,,,,screens/skills_screen.dart
+s0714,model_prompt,App 侧还不能列出/启用/停用/安装。这里如实说明，不显示假开关。,,,,,screens/skills_screen.dart
+s0715,model_prompt,用户技能目录与扫描规则,,,,,screens/skills_screen.dart
+s0716,model_prompt,把技能放在工作区的 `.heracles/skills/<名字>/SKILL.md`。,,,,,screens/skills_screen.dart
+s0717,model_prompt,启动任务时后端会扫描该目录，把技能说明注入到本轮上下文。,,,,,screens/skills_screen.dart
+s0718,model_prompt,SKILL.md 需要 `---` 头（name / description）＋正文。,,,,,screens/skills_screen.dart
+s0719,model_prompt,权限说明,,,,,screens/skills_screen.dart
+s0720,model_prompt,"技能只影响""模型看到什么说明""，不绕过工具审批门禁：",,,,,screens/skills_screen.dart
+s0721,model_prompt,技能里要求的命令/写文件仍走同一套 Allow / NeedsApproval / Deny 判定。,,,,,screens/skills_screen.dart
+s0722,ui,流式识别（内置）：14M 中文 streaming zipformer 已随 App 打包，,流式识别（内置）：14M 中文 streaming zipformer 已随 App 打包，,流式识别（内置）：14M 中文 streaming zipformer 已随 App 打包，,流式识别（内置）：14M 中文 streaming zipformer 已随 App 打包，,,screens/voice_settings_screen.dart
+s0723,ui,约 24 MB，无需下载；点麦克风说话时会边说边出字，全程本机离线。,约 24 MB，无需下载；点麦克风说话时会边说边出字，全程本机离线。,约 24 MB，无需下载；点麦克风说话时会边说边出字，全程本机离线。,约 24 MB，无需下载；点麦克风说话时会边说边出字，全程本机离线。,,screens/voice_settings_screen.dart
+s0724,ui,整段识别（可选）：SenseVoiceSmall（阿里 FunASR）多语言模型，,整段识别（可选）：SenseVoiceSmall（阿里 FunASR）多语言模型，,整段识别（可选）：SenseVoiceSmall（阿里 FunASR）多语言模型，,整段识别（可选）：SenseVoiceSmall（阿里 FunASR）多语言模型，,,screens/voice_settings_screen.dart
+s0725,ui,量化版约 231 MB，经 ModelScope 官方仓库下载，适合长句高精度转写。,量化版约 231 MB，经 ModelScope 官方仓库下载，适合长句高精度转写。,量化版约 231 MB，经 ModelScope 官方仓库下载，适合长句高精度转写。,量化版约 231 MB，经 ModelScope 官方仓库下载，适合长句高精度转写。,,screens/voice_settings_screen.dart
+s0726,ui,两套模型都存放在 App 私有目录，卸载 App 会一并删除；「卸载语音输入」,两套模型都存放在 App 私有目录，卸载 App 会一并删除；「卸载语音输入」,两套模型都存放在 App 私有目录，卸载 App 会一并删除；「卸载语音输入」,两套模型都存放在 App 私有目录，卸载 App 会一并删除；「卸载语音输入」,,screens/voice_settings_screen.dart
+s0727,ui,会删掉两套模型并停用语音输入，可用「重新安装」重新解压内置模型。,会删掉两套模型并停用语音输入，可用「重新安装」重新解压内置模型。,会删掉两套模型并停用语音输入，可用「重新安装」重新解压内置模型。,会删掉两套模型并停用语音输入，可用「重新安装」重新解压内置模型。,,screens/voice_settings_screen.dart
+s0728,ui,录音不上传。麦克风权限在「设置 → 设备权限」里统一开启。,录音不上传。麦克风权限在「设置 → 设备权限」里统一开启。,录音不上传。麦克风权限在「设置 → 设备权限」里统一开启。,录音不上传。麦克风权限在「设置 → 设备权限」里统一开启。,,screens/voice_settings_screen.dart
+s0729,ui,语音识别说明,语音识别说明,语音识别说明,语音识别说明,,screens/voice_settings_screen.dart
+s0730,ui,语音输入,语音输入,语音输入,语音输入,,screens/voice_settings_screen.dart
+s0731,ui,语音模型,语音模型,语音模型,语音模型,,screens/voice_settings_screen.dart
+s0732,ui,检测中…,检测中…,检测中…,检测中…,,screens/voice_settings_screen.dart
+s0733,ui,语音输入不可用（已卸载）,语音输入不可用（已卸载）,语音输入不可用（已卸载）,语音输入不可用（已卸载）,,screens/voice_settings_screen.dart
+s0734,ui,语音输入需准备 · 正在准备内置模型…,语音输入需准备 · 正在准备内置模型…,语音输入需准备 · 正在准备内置模型…,语音输入需准备 · 正在准备内置模型…,,screens/voice_settings_screen.dart
+s0735,ui,语音输入可用（无需下载）,语音输入可用（无需下载）,语音输入可用（无需下载）,语音输入可用（无需下载）,,screens/voice_settings_screen.dart
+s0736,ui,语音输入需准备 · 内置模型准备失败（可重试）,语音输入需准备 · 内置模型准备失败（可重试）,语音输入需准备 · 内置模型准备失败（可重试）,语音输入需准备 · 内置模型准备失败（可重试）,,screens/voice_settings_screen.dart
+s0737,ui,语音输入需准备,语音输入需准备,语音输入需准备,语音输入需准备,,screens/voice_settings_screen.dart
+s0738,ui,重新安装,重新安装,重新安装,重新安装,,screens/voice_settings_screen.dart
+s0739,ui,中文 streaming zipformer · 约 24 MB,中文 streaming zipformer · 约 24 MB,中文 streaming zipformer · 约 24 MB,中文 streaming zipformer · 约 24 MB,,screens/voice_settings_screen.dart
+s0740,ui,$base · 已卸载,__VAR_0__ · 已卸载,__VAR_0__ · 已卸载,__VAR_0__ · 已卸载,YES,screens/voice_settings_screen.dart
+s0741,ui,$base · 已就绪,__VAR_0__ · 已就绪,__VAR_0__ · 已就绪,__VAR_0__ · 已就绪,YES,screens/voice_settings_screen.dart
+s0742,ui,$base · 已就绪（使用已下载的双语模型）,__VAR_0__ · 已就绪（使用已下载的双语模型）,__VAR_0__ · 已就绪（使用已下载的双语模型）,__VAR_0__ · 已就绪（使用已下载的双语模型）,YES,screens/voice_settings_screen.dart
+s0743,ui,$base · 准备失败,__VAR_0__ · 准备失败,__VAR_0__ · 准备失败,__VAR_0__ · 准备失败,YES,screens/voice_settings_screen.dart
+s0744,ui,$base · 首次使用时自动准备,__VAR_0__ · 首次使用时自动准备,__VAR_0__ · 首次使用时自动准备,__VAR_0__ · 首次使用时自动准备,YES,screens/voice_settings_screen.dart
+s0745,ui,流式识别（内置）,流式识别（内置）,流式识别（内置）,流式识别（内置）,,screens/voice_settings_screen.dart
+s0746,ui,已下载 ${_fmtFixed(state.received)} / ${_fmtFixed(state.total)},已下载 __VAR_0__ / __VAR_1__,已下载 __VAR_0__ / __VAR_1__,已下载 __VAR_0__ / __VAR_1__,YES,screens/voice_settings_screen.dart
+s0747,ui,ONNX 量化版 · ${voiceFormatBytes(kVoiceModelTotalBytes)} · ,ONNX 量化版 · __VAR_0__ · ,ONNX 量化版 · __VAR_0__ · ,ONNX 量化版 · __VAR_0__ · ,YES,screens/voice_settings_screen.dart
+s0748,ui,已就绪,已就绪,已就绪,已就绪,,screens/voice_settings_screen.dart
+s0749,ui,正在准备模型…,正在准备模型…,正在准备模型…,正在准备模型…,,screens/voice_settings_screen.dart
+s0750,ui,可选 · 已下载，用于长句高精度整段转写,可选 · 已下载，用于长句高精度整段转写,可选 · 已下载，用于长句高精度整段转写,可选 · 已下载，用于长句高精度整段转写,,screens/voice_settings_screen.dart
+s0751,ui,可选 · 下载中，不影响语音输入,可选 · 下载中，不影响语音输入,可选 · 下载中，不影响语音输入,可选 · 下载中，不影响语音输入,,screens/voice_settings_screen.dart
+s0752,ui,可选 · 未下载不影响语音输入,可选 · 未下载不影响语音输入,可选 · 未下载不影响语音输入,可选 · 未下载不影响语音输入,,screens/voice_settings_screen.dart
+s0753,ui,卸载语音输入？,卸载语音输入？,卸载语音输入？,卸载语音输入？,,screens/voice_settings_screen.dart
+s0754,ui,会删除内置流式模型（约 24 MB）与 SenseVoice（若已下载），,会删除内置流式模型（约 24 MB）与 SenseVoice（若已下载），,会删除内置流式模型（约 24 MB）与 SenseVoice（若已下载），,会删除内置流式模型（约 24 MB）与 SenseVoice（若已下载），,,screens/voice_settings_screen.dart
+s0755,ui,语音输入随即不可用；可随时在本页「重新安装」。,语音输入随即不可用；可随时在本页「重新安装」。,语音输入随即不可用；可随时在本页「重新安装」。,语音输入随即不可用；可随时在本页「重新安装」。,,screens/voice_settings_screen.dart
+s0756,ui,确认卸载,确认卸载,确认卸载,确认卸载,,screens/voice_settings_screen.dart
+s0757,ui,已卸载 · 已释放 ${voiceFormatBytes(result.freedBytes)},已卸载 · 已释放 __VAR_0__,已卸载 · 已释放 __VAR_0__,已卸载 · 已释放 __VAR_0__,YES,screens/voice_settings_screen.dart
+s0758,ui,已卸载，但有 ${result.failures.length} 项删除失败：,已卸载，但有 __VAR_0__ 项删除失败：,已卸载，但有 __VAR_0__ 项删除失败：,已卸载，但有 __VAR_0__ 项删除失败：,YES,screens/voice_settings_screen.dart
+s0759,ui,已重新安装 · 流式识别可用,已重新安装 · 流式识别可用,已重新安装 · 流式识别可用,已重新安装 · 流式识别可用,,screens/voice_settings_screen.dart
+s0760,ui,安装失败：${result.message ?? ,安装失败：${result.message ?? ,安装失败：${result.message ?? ,安装失败：${result.message ?? ,YES,screens/voice_settings_screen.dart
+s0761,ui,内置流式模型已就绪,内置流式模型已就绪,内置流式模型已就绪,内置流式模型已就绪,,screens/voice_settings_screen.dart
+s0762,ui,准备失败：${result.message ?? ,准备失败：${result.message ?? ,准备失败：${result.message ?? ,准备失败：${result.message ?? ,YES,screens/voice_settings_screen.dart
+s0763,ui,删除语音模型？,删除语音模型？,删除语音模型？,删除语音模型？,,screens/voice_settings_screen.dart
+s0764,ui,删除 SenseVoice 后仍可用内置流式识别；需要时可重新下载。,删除 SenseVoice 后仍可用内置流式识别；需要时可重新下载。,删除 SenseVoice 后仍可用内置流式识别；需要时可重新下载。,删除 SenseVoice 后仍可用内置流式识别；需要时可重新下载。,,screens/voice_settings_screen.dart
+s0765,ui,files/voice_models/（App 私有目录）,files/voice_models/（App 私有目录）,files/voice_models/（App 私有目录）,files/voice_models/（App 私有目录）,,screens/voice_settings_screen.dart
+s0766,ui,该目录下两套模型（内置流式 + SenseVoice）在「卸载语音输入」时一并删除；,该目录下两套模型（内置流式 + SenseVoice）在「卸载语音输入」时一并删除；,该目录下两套模型（内置流式 + SenseVoice）在「卸载语音输入」时一并删除；,该目录下两套模型（内置流式 + SenseVoice）在「卸载语音输入」时一并删除；,,screens/voice_settings_screen.dart
+s0767,ui,卸载 App 也会一并删除。录音不上传。,卸载 App 也会一并删除。录音不上传。,卸载 App 也会一并删除。录音不上传。,卸载 App 也会一并删除。录音不上传。,,screens/voice_settings_screen.dart
+s0768,model_prompt,宿主未实现 requestPermission,,,,,services/agent_bridge.dart
+s0769,model_prompt,未知的引导类型（必须是 ${kinds.toList()..sort()} 之一）,,,,YES,services/agent_bridge.dart
+s0770,model_prompt,桥接未就绪,,,,,services/agent_bridge.dart
+s0771,model_prompt,还没有可用的模型提供商：请到「设置 → 模型」里选一个云端提供商并填入 API Key，,,,,,services/agent_bridge.dart
+s0772,model_prompt,然后回到这里重发。,,,,,services/agent_bridge.dart
+s0773,model_prompt,运行失败：$e,,,,YES,services/agent_bridge.dart
+s0774,model_prompt,平台未实现,,,,,services/agent_bridge.dart
+s0775,model_prompt,调用失败,,,,,services/agent_bridge.dart
+s0776,model_prompt,（平台没返回内容）,,,,,services/agent_bridge.dart
+s0777,model_prompt,平台未实现（测试环境）,,,,,services/agent_bridge.dart
+s0778,model_prompt,调用失败：${e.message ?? e.code},,,,YES,services/agent_bridge.dart
+s0779,model_prompt,没有可用的模型配置，无法做摘要压缩,,,,,services/agent_bridge.dart
+s0780,model_prompt,用户：${(r[,,,,YES,services/agent_bridge.dart
+s0781,model_prompt,助手：${(r[,,,,YES,services/agent_bridge.dart
+s0782,model_prompt,工具 ${(r[,,,,YES,services/agent_bridge.dart
+s0783,model_prompt,这个会话还没有内容，不需要压缩。,,,,,services/agent_bridge.dart
+s0784,model_prompt,模型没有返回摘要内容，未写入压缩标记,,,,,services/agent_bridge.dart
+s0785,model_prompt,✅ 会话已压缩（/compact）。更早的细节从下一次对话起不再进入上下文，,,,,,services/agent_bridge.dart
+s0786,model_prompt,摘要如下：\n\n$summary,,,,YES,services/agent_bridge.dart
+s0787,model_prompt,读取记忆失败：$e,,,,YES,services/agent_bridge.dart
+s0788,model_prompt,记忆写入失败：$e,,,,YES,services/agent_bridge.dart; services/global_memory.dart
+s0789,model_prompt,API Key 不对（401）,,,,,services/agent_bridge.dart
+s0790,model_prompt,后端返回了空模型列表,,,,,services/agent_bridge.dart
+s0791,model_prompt,响应不是合法 JSON —— 检查 Base URL 是否正确,,,,,services/agent_bridge.dart
+s0792,model_prompt,连不上：${e.message},,,,YES,services/agent_bridge.dart
+s0793,model_prompt,请求失败：${e.message},,,,YES,services/agent_bridge.dart
+s0794,model_prompt,失败,,,,,services/agent_bridge.dart
+s0795,model_prompt,拒绝,,,,,services/agent_bridge.dart
+s0796,model_prompt,循环,,,,,services/agent_bridge.dart
+s0797,ui,automation 消费失败：$e\n$st,,,,YES,services/automation_runner.dart
+s0798,ui,"automation 任务清单无法解析，本次不执行也不覆盖：${_clip(raw, 200)}",,,,YES,services/automation_runner.dart
+s0799,ui,任务不存在（可能已被删除）,,,,,services/automation_runner.dart
+s0800,ui,任务已停用，不执行,,,,,services/automation_runner.dart
+s0801,ui,同一任务正在执行，本次跳过,,,,,services/automation_runner.dart
+s0802,ui,automation 保存任务清单失败：$e,,,,YES,services/automation_runner.dart
+s0803,ui,automation 保存任务清单失败（宿主返回 false）：历史下次打开会丢,,,,,services/automation_runner.dart
+s0804,ui,执行失败（执行器未给出原因）,,,,,services/automation_runner.dart
+s0805,ui,执行时异常：$e,,,,YES,services/automation_runner.dart
+s0806,ui,距上次运行不足间隔一半（${elapsed}ms < ${gateMs}ms），判为重复触发,,,,YES,services/automation_runner.dart
+s0807,ui,没有可用的模型配置（请先在设置里填写 API Key 与模型）,,,,,services/automation_wiring.dart
+s0808,ui,没有可用的工作区（请先在侧边栏添加或选择工作区）,,,,,services/automation_wiring.dart
+s0809,ui,任务被取消,,,,,services/automation_wiring.dart
+s0810,ui,执行异常：$e,,,,YES,services/automation_wiring.dart
+s0811,ui,设备通道 `$channelName` 不可用（App 没有挂上原生实现，,,,,YES,services/device_capabilities.dart
+s0812,ui,或当前跑在纯 Dart 环境里）。文件 / 命令 / 温度这类设备能力全部不可用。,,,,,services/device_capabilities.dart
+s0813,ui,设备通道抛出异常（本不该发生，$kDeviceBridgeBugHint）：,,,,YES,services/device_capabilities.dart
+s0814,ui,调用设备通道 $method 时出错（$kDeviceBridgeBugHint）：$e,,,,YES,services/device_capabilities.dart
+s0815,ui,设备通道 $method 返回了意料之外的形状（${raw.runtimeType}），,,,,YES,services/device_capabilities.dart
+s0816,ui,预期是 Map。这是原生侧的 bug。,,,,,services/device_capabilities.dart
+s0817,ui,请把这条报给开发者,,,,,services/device_capabilities.dart
+s0818,ui,设备通道返回了失败，但没有给出原因（`ok:false` 且缺 `error` 字段）—— ,,,,,services/device_capabilities.dart
+s0819,ui,这是原生侧的 bug，$kDeviceBridgeBugHint。,,,,YES,services/device_capabilities.dart
+s0820,ui,workspaceRoot 不能为空,,,,,services/device_capabilities.dart; services/session_store.dart
+s0821,ui,workspaceRoot 必须是设备上的绝对路径（收到 `$raw`）。,,,,YES,services/device_capabilities.dart; services/session_store.dart
+s0822,ui,SAF 工作区请传 `picker.folder` 返回的 path。,,,,,services/device_capabilities.dart; services/session_store.dart
+s0823,ui,只接受相对工作区的路径，收到绝对路径 `$path`。,,,,YES,services/device_capabilities.dart
+s0824,ui,请改成相对路径（例如 `src/main.dart`）。,,,,,services/device_capabilities.dart
+s0825,ui,路径 `$path` 越出了工作区根目录（`$_root`）。,,,,YES,services/device_capabilities.dart
+s0826,ui,工作区以外的文件不可访问。,,,,,services/device_capabilities.dart
+s0827,ui,路径无法解析（未知原因）。,,,,,services/device_capabilities.dart
+s0828,ui,"工作区目录：`$shown`${recursive ? ""（递归）"" : """"}",,,,YES,services/device_capabilities.dart
+s0829,ui,（空目录）,,,,,services/device_capabilities.dart
+s0830,ui,⚠️ 已截断：最多返回 $limit 项（另有未列出的条目）。,,,,YES,services/device_capabilities.dart
+s0831,ui,需要更精确的结果请用 find_files 按模式查找。,,,,,services/device_capabilities.dart
+s0832,ui,[目录] $rel/,,,,YES,services/device_capabilities.dart
+s0833,ui,[文件] $rel (${_formatSize(e.size)}),,,,YES,services/device_capabilities.dart
+s0834,ui,offset 必须从 1 开始（行号是 1-based）。,,,,,services/device_capabilities.dart
+s0835,ui,文件不存在：`${path.trim()}`。先用 list_files / find_files 确认路径。,,,,YES,services/device_capabilities.dart
+s0836,ui,`${path.trim()}` 是目录，不是文件。列目录请用 list_files。,,,,YES,services/device_capabilities.dart
+s0837,ui,文件太大（${_formatSize(size)}，上限 ,,,,YES,services/device_capabilities.dart
+s0838,ui,请用 find_files / grep_files 定位，或换一个更小的文件。,,,,,services/device_capabilities.dart
+s0839,ui,（文件为空，或该区间没有内容）—— `$shown`\n,,,,YES,services/device_capabilities.dart
+s0840,ui,"⚠️ 通道不返回总行数，所以无法区分""文件是空的""与""起始行 $offset 超出了末尾""。",,,,YES,services/device_capabilities.dart
+s0841,ui,要确认的话用 offset=1 从头读。,,,,,services/device_capabilities.dart
+s0842,ui,（只显示了第 $offset–$lastLine 行；文件还有更多内容没有返回。,,,,YES,services/device_capabilities.dart
+s0843,ui,继续读用 offset=${lastLine + 1}。）,,,,YES,services/device_capabilities.dart
+s0844,ui,（注：这个文件 ${_formatSize(size)}，超过设备通道 ,,,,YES,services/device_capabilities.dart
+s0845,ui,${_formatSize(_Limits.channelTextBytes)} 的文本读取上限 —— ,,,,YES,services/device_capabilities.dart
+s0846,ui,超过该上限的部分读不回来。更深的内容请用 grep_files 定位行号后用 offset 精确读。）,,,,,services/device_capabilities.dart
+s0847,ui,读取二进制失败（通道未返回 bytes）,,,,,services/device_capabilities.dart
+s0848,ui,文件过大（${list.length} 字节，上限 $maxBytes）——请先拆分,,,,YES,services/device_capabilities.dart
+s0849,ui,已读取 ${list.length} 字节,,,,YES,services/device_capabilities.dart
+s0850,ui,当前环境不支持二进制读取（通道缺失）,,,,,services/device_capabilities.dart
+s0851,ui,读取二进制失败：${e.message ?? e.code},,,,YES,services/device_capabilities.dart
+s0852,ui,"${existed ? ""已覆盖写入"" : ""已创建""} `$shown`（${_formatSize(bytes)}）。",,,,YES,services/device_capabilities.dart
+s0853,ui,`old_string` 不能为空。要新建文件请用 write_file。,,,,,services/device_capabilities.dart
+s0854,ui,`${path.trim()}` 超过了通道的 1MB 文本上限，只读回了前面一部分。,,,,YES,services/device_capabilities.dart
+s0855,ui,在没读全的情况下做替换可能把文件改坏，所以拒绝执行。,,,,,services/device_capabilities.dart
+s0856,ui,请用 read_file 分段确认要改的位置，再用 write_file 整体重写，,,,,,services/device_capabilities.dart
+s0857,ui,或先把文件拆小。,,,,,services/device_capabilities.dart
+s0858,ui,在 `$path` 里找不到 `old_string`（0 处命中）。,,,,YES,services/device_capabilities.dart
+s0859,ui,old_string 必须与文件内容**逐字符一致**（含缩进与换行）。,,,,,services/device_capabilities.dart
+s0860,ui,"${near == null ? """" : ""文件里最接近的一行是：`$near`。""}",,,,YES,services/device_capabilities.dart
+s0861,ui,请先用 read_file 看清实际内容再改。,,,,,services/device_capabilities.dart
+s0862,ui,`old_string` 在 `$path` 里命中了 $hits 处，无法确定改哪一处。,,,,YES,services/device_capabilities.dart
+s0863,ui,请把 old_string 写长一些（带上足够的上文/下文），使它唯一。,,,,,services/device_capabilities.dart
+s0864,ui,要整体重写请用 write_file。,,,,,services/device_capabilities.dart
+s0865,ui,"已修改 `$path`（1 处替换，${_lineDelta(original, updated)}）。",,,,YES,services/device_capabilities.dart
+s0866,ui,行数不变（$a 行）,,,,YES,services/device_capabilities.dart
+s0867,ui,新增 $d 行（$b→$a 行）,,,,YES,services/device_capabilities.dart
+s0868,ui,删除 ${-d} 行（$b→$a 行）,,,,YES,services/device_capabilities.dart
+s0869,ui,`${path.trim()}` 超过了通道的 1MB 文本上限，补丁只能在读全的文件上打。,,,,YES,services/device_capabilities.dart
+s0870,ui,已拒绝（把半个文件打上补丁会静默改坏代码）。,,,,,services/device_capabilities.dart
+s0871,ui,"补丁里没有找到任何 `@@ -a,b +c,d @@` 头。",,,,,services/device_capabilities.dart
+s0872,ui,apply_patch 只接受 unified diff 格式；单处小改直接用 edit 更省事。,,,,,services/device_capabilities.dart
+s0873,ui,"已应用 ${hunks.length} 个 hunk 到 `$path`（${_lineDelta(original, updated)}）。",,,,YES,services/device_capabilities.dart
+s0874,ui,补丁第 $hunkNo 个 hunk 匹配不上（`$path`）。\n,,,,YES,services/device_capabilities.dart
+s0875,ui,它声称从第 ${hunk.oldStart} 行开始，期望读到 ${expected.length} 行：\n,,,,YES,services/device_capabilities.dart
+s0876,ui,但文件第 ${actualAt + 1} 行附近实际是：\n,,,,YES,services/device_capabilities.dart
+s0877,ui,请先 read_file 看清当前内容，再按实际内容重写补丁。,,,,,services/device_capabilities.dart
+s0878,ui,"（不会""尽力猜""——猜错会静默改坏代码。）",,,,,services/device_capabilities.dart
+s0879,ui,  （空）,,,,,services/device_capabilities.dart
+s0880,ui,$shown\n  | …（共 ${lines.length} 行）,,,,YES,services/device_capabilities.dart
+s0881,ui,目录已存在：`${path.trim()}`,,,,YES,services/device_capabilities.dart
+s0882,ui,已创建目录 `${path.trim()}`,,,,YES,services/device_capabilities.dart
+s0883,ui,拒绝删除工作区根目录本身。要清理内容请指定具体的子目录或文件。,,,,,services/device_capabilities.dart
+s0884,ui,路径不存在：`${path.trim()}`（没有可删除的东西）。,,,,YES,services/device_capabilities.dart
+s0885,ui,"已删除 `${path.trim()}`${recursive ? ""（递归）"" : """"}。",,,,YES,services/device_capabilities.dart
+s0886,ui,（注意：$note）,,,,YES,services/device_capabilities.dart
+s0887,ui,已移动 `${from.trim()}` → `${to.trim()}`。$extra,,,,YES,services/device_capabilities.dart
+s0888,ui,已复制 `${from.trim()}` → `${to.trim()}`。,,,,YES,services/device_capabilities.dart
+s0889,ui,`pattern` 不能为空。例：`**/*.dart`。,,,,,services/device_capabilities.dart
+s0890,ui,glob `$pattern` 找到 ${hits.length} 个文件,,,,YES,services/device_capabilities.dart
+s0891,ui,"${truncated ? ""（已截断）"" : """"}：",,,,YES,services/device_capabilities.dart
+s0892,ui,（没有匹配。模式区分大小写；`**` 匹配任意层目录。）,,,,,services/device_capabilities.dart
+s0893,ui,⚠️ 结果被截断，可能还有更多：目录条目超过通道上限 ,,,,,services/device_capabilities.dart
+s0894,ui,${_Limits.channelHardMaxEntries} 项，工作区比这更大。,,,,YES,services/device_capabilities.dart
+s0895,ui,⚠️ 结果被截断，可能还有更多：最多返回 $maxResults 个文件。,,,,YES,services/device_capabilities.dart
+s0896,ui,请用更精确的模式缩小范围。,,,,,services/device_capabilities.dart
+s0897,ui,正则表达式无法编译：`$pattern`（${_humanize(e)}）。请检查括号/转义。,,,,YES,services/device_capabilities.dart
+s0898,ui,正则 `$pattern` 找到 ${out.length} 条匹配,,,,YES,services/device_capabilities.dart
+s0899,ui,"（搜索了 $searchedFiles 个文件${truncated ? ""，已截断"" : """"}）：",,,,YES,services/device_capabilities.dart
+s0900,ui,（没有匹配。）,,,,,services/device_capabilities.dart
+s0901,ui,${_Limits.channelHardMaxEntries} 项。,,,,YES,services/device_capabilities.dart
+s0902,ui,⚠️ 结果被截断，可能还有更多：,,,,,services/device_capabilities.dart
+s0903,ui,本次最多扫 ${_Limits.grepMaxFilesPerCall} 个文件 / 返回 $maxResults 条匹配。,,,,YES,services/device_capabilities.dart
+s0904,ui,请用更精确的正则或 path_filter 缩小范围。,,,,,services/device_capabilities.dart
+s0905,ui,（跳过 $skippedTooBig 个文件：超过通道 1MB 文本上限，,,,,YES,services/device_capabilities.dart
+s0906,ui,读不全所以不做内容判断。）,,,,,services/device_capabilities.dart
+s0907,ui,命令为空。,,,,,services/device_capabilities.dart
+s0908,ui,设备通道的 exec.run 没有返回退出码（code 字段缺失）—— ,,,,,services/device_capabilities.dart
+s0909,ui,这个响应形状不对，属原生侧 bug，请把这条报给开发者。,,,,,services/device_capabilities.dart
+s0910,ui,⚠️ 命令超时（${timeout.inSeconds} 秒），已终止**本命令自己启动的那个子进程**。,,,,YES,services/device_capabilities.dart
+s0911,ui,设备上其它应用一个都没有被动过（产品硬约束）。\n,,,,,services/device_capabilities.dart
+s0912,ui,下一步：确认设备温度是否过高（温度熔断是设计行为），,,,,,services/device_capabilities.dart
+s0913,ui,或把 timeout_seconds 调大后重试；长输出建议改成写文件再用 read_file 分段读。,,,,,services/device_capabilities.dart
+s0914,ui,⚠️ 设备上没有可用的 shell 通道（EXIT_NO_SHELL = ${_Limits.exitNoShell}），,,,,YES,services/device_capabilities.dart
+s0915,ui,命令**根本没有执行**。\n,,,,,services/device_capabilities.dart
+s0916,ui,这不是命令写错了，也不是超时：需要先在 App 里启动 Stellar 或 Shizuku 服务,,,,,services/device_capabilities.dart
+s0917,ui,（设备权限页可以看状态），然后重试。,,,,,services/device_capabilities.dart
+s0918,ui,（命令退出码：$code —— 命令执行了，但没有成功返回。）,,,,YES,services/device_capabilities.dart
+s0919,ui,（超时，无输出）,,,,,services/device_capabilities.dart
+s0920,ui,（无输出）,,,,,services/device_capabilities.dart
+s0921,ui,（通道说明：${channelError.trim()}）,,,,YES,services/device_capabilities.dart
+s0922,ui,⚠️ 输出已截断：stdout / stderr 各自上限 1MB。,,,,,services/device_capabilities.dart
+s0923,ui,需要看完整输出请把命令改成输出到文件，再用 read_file 分段读。,,,,,services/device_capabilities.dart
+s0924,ui,（耗时 ${durationMs}ms）,,,,YES,services/device_capabilities.dart
+s0925,ui,用户工作区（读写；$base；len=${p.length}）,,,,YES,services/device_capabilities.dart
+s0926,ui,挂载状态未知（未注册成功）,,,,,services/device_capabilities.dart
+s0927,ui,挂载注册失败（宿主未给出原因）,,,,,services/device_capabilities.dart
+s0928,ui,【执行面提示】用户工作区挂载失败（${m.failedReason}）——,,,,YES,services/device_capabilities.dart
+s0929,ui,本命令在沙箱 `/workspace` 执行，**看不到用户工作区文件**；,,,,,services/device_capabilities.dart
+s0930,ui,用户工作区请用 read_file / list_files / grep_files 等文件工具。,,,,,services/device_capabilities.dart
+s0931,ui,【执行面提示】当前工作区是 **SAF 授权目录（没有物理路径，无法 bind 进沙箱）**，,,,,,services/device_capabilities.dart
+s0932,ui,shell 在沙箱 `/workspace` 执行 —— 那是沙箱自己的文件系统，,,,,,services/device_capabilities.dart
+s0933,ui,**与用户工作区是两套 FS**；用户工作区文件请用 read_file / list_files 等文件工具，,,,,,services/device_capabilities.dart
+s0934,ui,不要在 shell 里找它们。,,,,,services/device_capabilities.dart
+s0935,ui,沙箱基础环境未能就绪（内置 rootfs 解包失败）。,,,,,services/device_capabilities.dart
+s0936,ui,请检查设备存储空间，或在设置里重置沙箱后重试。,,,,,services/device_capabilities.dart
+s0937,ui,沙箱拒绝了这次执行,,,,,services/device_capabilities.dart
+s0938,ui,沙箱命令超时（${timeout.inSeconds}s）—— 已在沙箱侧取消,,,,YES,services/device_capabilities.dart
+s0939,ui,沙箱执行失败（code=${e.error.code}）：${e.error.message},,,,YES,services/device_capabilities.dart
+s0940,ui,（命令无输出，退出码 ${result.exitCode}）,,,,YES,services/device_capabilities.dart
+s0941,ui,沙箱命令超时（${timeout.inSeconds}s）${body.isEmpty ? ,,,,YES,services/device_capabilities.dart
+s0942,ui,重置后沙箱未就绪（rootfs 摘要：${st.rootfsSummary}）—— 请重试或检查存储空间,,,,YES,services/device_capabilities.dart
+s0943,ui,已重置：清空并重装基础环境,,,,,services/device_capabilities.dart
+s0944,ui,已回滚到快照 `$snapshot`,,,,YES,services/device_capabilities.dart
+s0945,ui,可以在沙箱内直接编译 APK（装好后编译不再需要联网）,,,,,services/device_capabilities.dart
+s0946,ui,APK 构建/逆向能力在 Dart 后端尚未接线（旧 Kotlin 引擎已随 :toolchain 模块删除）。,,,,,services/device_capabilities.dart
+s0947,ui,见 docs/nextwork.md。,,,,,services/device_capabilities.dart
+s0948,ui,APK 构建：未接线,,,,,services/device_capabilities.dart
+s0949,ui,APK 重打包：未接线,,,,,services/device_capabilities.dart
+s0950,ui,尚未配置搜索服务：请在设置里填写搜索 endpoint 后重试,,,,,services/device_capabilities.dart
+s0951,ui,（当前版本仅支持免鉴权搜索服务，无需 API Key）。,,,,,services/device_capabilities.dart
+s0952,ui,搜索 endpoint 非法：`$ep`（${_humanize(e)}）,,,,YES,services/device_capabilities.dart
+s0953,ui,搜索请求失败：${fetched.error},,,,YES,services/device_capabilities.dart
+s0954,ui,搜索服务返回空结果（没有可用条目）。,,,,,services/device_capabilities.dart
+s0955,ui,${lines.length + 1}. $title\n   $snippet\n   来源：$url,,,,YES,services/device_capabilities.dart
+s0956,ui,搜索服务返回的条目缺少来源 URL（无法核对，已丢弃）。,,,,,services/device_capabilities.dart
+s0957,ui,搜索服务返回格式不合法（${_humanize(e)}）。,,,,YES,services/device_capabilities.dart
+s0958,ui,"这个地址不是文本内容（Content-Type: ${fetched.contentType.isEmpty ? ""未知"" : fetched.contentType}），",,,,YES,services/device_capabilities.dart
+s0959,ui,web_fetch 只能把文本页面转成可读文本，不解析二进制。,,,,,services/device_capabilities.dart
+s0960,ui,（页面抓到了，但抽不出文本内容 —— 可能是纯脚本页面或空页。）,,,,,services/device_capabilities.dart
+s0961,ui,"Content-Type：${fetched.contentType.isEmpty ? ""未知"" : fetched.contentType}",,,,YES,services/device_capabilities.dart
+s0962,ui,⚠️ 已截断：只返回前 $maxChars 个字符,,,,YES,services/device_capabilities.dart
+s0963,ui,（全文约 ${trimmed.length} 字符）。需要后面的内容请换更具体的页面。,,,,YES,services/device_capabilities.dart
+s0964,ui,⚠️ 下载被截断：响应体超过 ,,,,,services/device_capabilities.dart
+s0965,ui,${_formatSize(_Limits.webMaxResponseBytes)} 上限，只读了前面一部分。,,,,YES,services/device_capabilities.dart
+s0966,ui,只允许抓取 http / https 地址，收到的是 `${uri.scheme}`。,,,,YES,services/device_capabilities.dart
+s0967,ui,（`file:` / `content:` / `ftp:` 等一律拒绝 —— 那可能是读取本机文件的通道。）,,,,,services/device_capabilities.dart
+s0968,ui,URL 里没有主机名：`$uri`。,,,,YES,services/device_capabilities.dart
+s0969,ui,URL 里带了账号密码（user:pass@），出于安全一律拒绝。请改用不需要凭据的地址。,,,,,services/device_capabilities.dart
+s0970,ui,拒绝访问 `$host`：这是本机 / 内网域名，,,,,YES,services/device_capabilities.dart
+s0971,ui,web_fetch 不允许读内网与本机服务（防止网页内容诱导读取内网）。,,,,,services/device_capabilities.dart
+s0972,ui,解析不了主机名 `$host`（${_humanize(e)}）。请检查地址拼写或网络。,,,,YES,services/device_capabilities.dart
+s0973,ui,主机名 `$host` 没有解析出任何地址。,,,,YES,services/device_capabilities.dart
+s0974,ui,端口不合法：${uri.port}。,,,,YES,services/device_capabilities.dart
+s0975,ui,保留段 0.0.0.0/8,,,,,services/device_capabilities.dart
+s0976,ui,私有网段 10.0.0.0/8,,,,,services/device_capabilities.dart
+s0977,ui,回环地址 127.0.0.0/8,,,,,services/device_capabilities.dart
+s0978,ui,链路本地 / 云元数据段 169.254.0.0/16（含 169.254.169.254）,,,,,services/device_capabilities.dart
+s0979,ui,私有网段 172.16.0.0/12,,,,,services/device_capabilities.dart
+s0980,ui,私有网段 192.168.0.0/16,,,,,services/device_capabilities.dart
+s0981,ui,运营商 NAT 段 100.64.0.0/10,,,,,services/device_capabilities.dart
+s0982,ui,基准测试段 198.18.0.0/15,,,,,services/device_capabilities.dart
+s0983,ui,保留段 192.0.0.0/24,,,,,services/device_capabilities.dart
+s0984,ui,文档段 192.0.2.0/24,,,,,services/device_capabilities.dart
+s0985,ui,文档段 198.51.100.0/24,,,,,services/device_capabilities.dart
+s0986,ui,文档段 203.0.113.0/24,,,,,services/device_capabilities.dart
+s0987,ui,广播地址 255.255.255.255,,,,,services/device_capabilities.dart
+s0988,ui,组播 / 保留段 224.0.0.0/4,,,,,services/device_capabilities.dart
+s0989,ui,IPv6 回环地址 ::1,,,,,services/device_capabilities.dart
+s0990,ui,IPv6 唯一本地地址 fc00::/7,,,,,services/device_capabilities.dart
+s0991,ui,IPv6 链路本地地址 fe80::/10,,,,,services/device_capabilities.dart
+s0992,ui,IPv6 非全球单播地址（2000::/3 之外）,,,,,services/device_capabilities.dart
+s0993,ui,无法识别的地址长度（${bytes.length}B）,,,,YES,services/device_capabilities.dart
+s0994,ui,拒绝访问 `$what`：$why。\n,,,,YES,services/device_capabilities.dart
+s0995,ui,web_fetch 不允许访问本机 / 内网 / 云元数据地址 —— ,,,,,services/device_capabilities.dart
+s0996,ui,这是产品级安全要求（模型可能被网页内容诱导去读内网服务，提示注入）。,,,,,services/device_capabilities.dart
+s0997,ui,如果你确实需要抓公网内容，请给出公开可访问的 http(s) 地址。,,,,,services/device_capabilities.dart
+s0998,ui,重定向到被拒绝的地址：$why,,,,YES,services/device_capabilities.dart
+s0999,ui,重定向到了非 http(s) 地址（`${next.scheme}`），已拒绝。,,,,YES,services/device_capabilities.dart
+s1000,ui,重定向次数超过 $_maxRedirects 跳，已放弃（可能是循环重定向）。,,,,YES,services/device_capabilities.dart
+s1001,ui,抓取超时（${_Limits.webTimeoutSeconds} 秒）：`$uri`。,,,,YES,services/device_capabilities.dart
+s1002,ui,页面太大或网络太慢，可以换一个更轻的地址。,,,,,services/device_capabilities.dart
+s1003,ui,网络连接失败：${e.message}（`$uri`）。,,,,YES,services/device_capabilities.dart
+s1004,ui,抓取失败：${_humanize(e)}（`$uri`）。,,,,YES,services/device_capabilities.dart
+s1005,ui,通知通道无响应（未发送）,,,,,services/device_capabilities.dart
+s1006,ui,已发送通知,已发送通知,已发送通知,已发送通知,,services/device_capabilities.dart; widgets/v04_tool_card.dart
+s1007,ui,发送通知失败（原因未知）,,,,,services/device_capabilities.dart
+s1008,ui,当前环境不支持本地通知（通道缺失）,,,,,services/device_capabilities.dart
+s1009,ui,发送通知失败：${e.message ?? e.code},,,,YES,services/device_capabilities.dart
+s1010,ui,本会话私有,,,,,services/device_capabilities.dart
+s1011,ui,本工作区共享,,,,,services/device_capabilities.dart
+s1012,ui,要记住的内容是空的。请给一句具体的项目知识或用户偏好。,,,,,services/device_capabilities.dart
+s1013,ui,全局记忆只读：模型不能直接写入。若要建议用户长期记住（跨工作区），,,,,,services/device_capabilities.dart
+s1014,ui,请调用 propose_global_memory（进入待用户确认的候选列表）。,,,,,services/device_capabilities.dart
+s1015,ui,当前上下文没有会话 id，无法写会话私有记忆。,,,,,services/device_capabilities.dart
+s1016,ui,可改用 scope=workspace（本工作区所有会话共享），或先进入一个会话。,,,,,services/device_capabilities.dart
+s1017,ui,已记入${_scopeLabel(scope)}记忆（现在 ${out.entries} 条 / ${out.bytes} 字节）。,,,,YES,services/device_capabilities.dart
+s1018,ui,"${scope == MemoryScope.session ? ""只在当前会话可见。"" : ""本工作区所有会话共享。""}",,,,YES,services/device_capabilities.dart
+s1019,ui,"${evicted > 0 ? ""（为腾出空间淘汰了 $evicted 条旧记忆）"" : """"}",,,,YES,services/device_capabilities.dart
+s1020,ui,写入长期记忆失败：$e,,,,YES,services/device_capabilities.dart
+s1021,ui,要提议的内容是空的。,,,,,services/device_capabilities.dart
+s1022,ui,"已记录为候选（${out.id ?? ""待确认""}），",,,,YES,services/device_capabilities.dart
+s1023,ui,等待用户在记忆页确认后才会成为全局记忆。,,,,,services/device_capabilities.dart
+s1024,ui,提议全局记忆失败：$e,,,,YES,services/device_capabilities.dart
+s1025,ui,已清空（现在 ${out.entries} 条）。,,,,YES,services/device_capabilities.dart
+s1026,ui,（新建文件,（新建文件,（新建文件,（新建文件,,services/diff_stats.dart; widgets/tool_call_card.dart
+s1027,ui,（内容未变化,（内容未变化,（内容未变化,（内容未变化,,services/diff_stats.dart; widgets/tool_call_card.dart
+s1028,ui,分支：$branch\n,,,,YES,services/git_service.dart
+s1029,ui,工作区干净，没有未提交的改动。,,,,,services/git_service.dart
+s1030,ui,改动 ${raw.entries.length} 项：,,,,YES,services/git_service.dart
+s1031,ui,冲突,,,,,services/git_service.dart
+s1032,ui,未跟踪,,,,,services/git_service.dart
+s1033,ui,已暂存(${e.staged!.name}),,,,YES,services/git_service.dart
+s1034,ui,未暂存(${e.unstaged!.name}),,,,YES,services/git_service.dart
+s1035,ui,找不到分支或提交 `$branch`,,,,YES,services/git_service.dart
+s1036,ui,这个仓库还没有任何提交。,,,,,services/git_service.dart
+s1037,ui,最近 ${commits.length} 条提交（新 → 旧）：\n,,,,YES,services/git_service.dart
+s1038,ui,暂存区是空的。,,,,,services/git_service.dart
+s1039,ui,工作区没有未暂存的改动。,,,,,services/git_service.dart
+s1040,ui,${picked.length} 项改动：\n,,,,YES,services/git_service.dart
+s1041,ui,⚠️ 改动清单过长已截断。用 `file` 参数看单个文件。,,,,,services/git_service.dart
+s1042,ui,这个仓库还没有任何分支（还没有提交）。,,,,,services/git_service.dart
+s1043,ui,本地分支（${locals.length} 个）：\n,,,,YES,services/git_service.dart
+s1044,ui,找不到提交 `$id`（仓库里没有这个 id）,,,,YES,services/git_service.dart
+s1045,ui,`$id` 不是一次提交,,,,YES,services/git_service.dart
+s1046,ui,提交 ${obj.id.hex}\n,,,,YES,services/git_service.dart
+s1047,ui,作者 ${obj.author.name} <${obj.author.email}>\n,,,,YES,services/git_service.dart
+s1048,ui,时间 ${_fmtTime(obj.committer.seconds)}\n\n,,,,YES,services/git_service.dart
+s1049,ui,目录不存在：$path,,,,YES,services/git_service.dart
+s1050,ui,这个目录已经是一个 git 仓库了,,,,,services/git_service.dart
+s1051,ui,已初始化 git 仓库（默认分支 `$defaultBranch`）。,,,,YES,services/git_service.dart
+s1052,ui,接下来可以用 `git_stage` + `git_commit` 把现有文件提交进去。,,,,,services/git_service.dart
+s1053,ui,没有需要暂存的改动。,,,,,services/git_service.dart
+s1054,ui,已暂存，当前暂存区 $n 项改动，可以提交了。,,,,YES,services/git_service.dart
+s1055,ui,这个仓库还没有提交，暂存区没法取消（没有 HEAD 可回退）,,,,,services/git_service.dart
+s1056,ui,暂存区本来就是空的。,,,,,services/git_service.dart
+s1057,ui,已取消全部暂存（${staged.length} 项，工作区文件未变）。,,,,YES,services/git_service.dart
+s1058,ui,已取消暂存：${paths.join(,,,,YES,services/git_service.dart
+s1059,ui,"提交信息不能为空 —— 写一句""这次改了什么""",,,,,services/git_service.dart
+s1060,ui,暂存区是空的，没有东西可提交。先用 `git_stage` 把改动加上。,,,,,services/git_service.dart
+s1061,ui,\n（提示：首行 ${first.length} 字符，超过建议的 ,,,,YES,services/git_service.dart
+s1062,ui,${ContractGit.recommendedMessageChars}；`git log --oneline` 会折行）,,,,YES,services/git_service.dart
+s1063,ui,已提交 ${staged.length} 项改动。\n,,,,YES,services/git_service.dart
+s1064,ui,"提交 ${id.hex.substring(0, 7)}：$first$warn",,,,YES,services/git_service.dart
+s1065,ui,有未提交的改动（${raw.entries.length} 项），不能直接切换分支。,,,,YES,services/git_service.dart
+s1066,ui,先提交或取消这些改动，再切分支。,,,,,services/git_service.dart
+s1067,ui,分支名不合法：$problem,,,,YES,services/git_service.dart
+s1068,ui,已创建并切换到分支 `$branch`。,,,,YES,services/git_service.dart
+s1069,ui,已切换到分支 `$branch`。,,,,YES,services/git_service.dart
+s1070,ui,只支持 HTTPS 克隆。设备上没有 ssh，SSH 地址（git@github.com:...）用不了；,,,,,services/git_service.dart
+s1071,ui,目标目录已存在且非空：$destPath（克隆要求空目录）,,,,YES,services/git_service.dart
+s1072,ui,已克隆到 ${result.path}，收到 ${result.objectsReceived} 个对象。,,,,YES,services/git_service.dart
+s1073,ui,这个仓库没有配置 `origin` 远端。先加上远端地址再拉取。,,,,,services/git_service.dart
+s1074,ui,已从 origin 拉取远端更新（未合并到当前分支）。,,,,,services/git_service.dart
+s1075,ui,收到 ${r.objectsReceived} 个对象。,,,,YES,services/git_service.dart
+s1076,ui,这个仓库没有配置 `origin` 远端。,,,,,services/git_service.dart
+s1077,ui,当前是分离 HEAD 状态，无法拉取。,,,,,services/git_service.dart
+s1078,ui,远端没有 `origin/$branch` 分支（这个分支可能还没推过）。,,,,YES,services/git_service.dart
+s1079,ui,已经是最新的，没有需要合并的内容。,,,,,services/git_service.dart
+s1080,ui,本地有远端没有的提交（历史分叉），不能直接快进。,,,,,services/git_service.dart
+s1081,ui,需要你先决定怎么处理（合并/变基），我不擅自做 —— ,,,,,services/git_service.dart
+s1082,ui,手机上自动合并产生冲突很难收拾。,,,,,services/git_service.dart
+s1083,ui,已拉取并快进到 origin/$branch。,,,,YES,services/git_service.dart
+s1084,ui,当前是分离 HEAD 状态，无法推送。,,,,,services/git_service.dart
+s1085,ui,推送被拒绝：$rejected。通常是远端有你本地没有的提交 —— ,,,,YES,services/git_service.dart
+s1086,ui,先 `git_pull` 再推。,,,,,services/git_service.dart
+s1087,ui,已推送分支 `$branch`,,,,YES,services/git_service.dart
+s1088,ui,（空）,,,,,services/github_auth.dart
+s1089,ui,$head…(${token.length}字符),,,,YES,services/github_auth.dart
+s1090,ui,记忆迁移失败（未给出原因）,,,,,services/global_memory.dart
+s1091,ui,[heracles][memory] 迁移失败（不阻断运行）：${result.error},,,,YES,services/global_memory.dart
+s1092,ui,[heracles][memory] 旧记忆已迁移：${result.entries} 条，,,,,YES,services/global_memory.dart
+s1093,ui,"备份=${result.backup ?? ""(无)""}",,,,YES,services/global_memory.dart
+s1094,ui,调用记忆迁移失败：$e,,,,YES,services/global_memory.dart
+s1095,ui,用 storageSoftMaxBytes；256KB 写闸已随记忆三作用域重设计废除,,,,,services/global_memory.dart
+s1096,ui,memory.append 已永久只读；用 addEntry / ScopedMemoryService.userAdd,,,,,services/global_memory.dart
+s1097,ui,要记住的内容是空的,,,,,services/global_memory.dart
+s1098,ui,[一-鿿]{2},,,,,services/global_memory.dart
+s1099,ui,【与当前任务相关的记忆】,,,,,services/global_memory.dart
+s1100,ui,【其余记忆（摘要）】,,,,,services/global_memory.dart
+s1101,ui,内容疑似包含密钥/令牌，拒绝写入长期记忆（明文存储，泄露风险）,,,,,services/global_memory.dart
+s1102,ui,内容疑似包含密钥/令牌，拒绝写入,,,,,services/global_memory.dart
+s1103,ui,图片「${a.name}」读不出来或格式不支持，已跳过。,,,,YES,services/image_input.dart
+s1104,ui,图片「${a.name}」压缩后仍有 $mb MB，,,,,YES,services/image_input.dart
+s1105,ui,超过 ${(kMaxImageBytes / 1024 / 1024).toStringAsFixed(0)} MB 上限，已跳过。,,,,YES,services/image_input.dart
+s1106,ui,（建议先裁掉无关部分，或截图时只截关键区域）,,,,,services/image_input.dart
+s1107,ui,图片「${a.name}」处理失败：${e.runtimeType}。,,,,YES,services/image_input.dart
+s1108,ui,无图片附件,,,,,services/image_input.dart
+s1109,ui,当前模型「$modelName」不支持看图，未发送图片,,,,YES,services/image_input.dart
+s1110,ui,发送 ${r.images.length} 张图,,,,YES,services/image_input.dart
+s1111,ui,（${r.notes.length} 条被跳过）,,,,YES,services/image_input.dart
+s1112,ui,接口地址里的 query/fragment 已忽略 —— 密钥只放 ,,,,,services/jev_service.dart
+s1113,ui,Authorization 头，不要写进 URL。,,,,,services/jev_service.dart
+s1114,ui,接口地址是空的 —— 用户实测可用的填法是 ,,,,,services/jev_service.dart
+s1115,ui,保留了兼容端点 $seg —— 基元律动平台推荐地址填到 /v1 ,,,,YES,services/jev_service.dart
+s1116,ui,（模型固定 NeoHorse-Jev-4B），客户端会补 /decision。,,,,,services/jev_service.dart
+s1117,ui,地址填到 /v1，已按 $target 请求（用户实测可用的填法；,,,,YES,services/jev_service.dart
+s1118,ui,模型固定 NeoHorse-Jev-4B）。,,,,,services/jev_service.dart
+s1119,ui,保留了地址里的路径前缀（$path），在其后补 /decision —— ,,,,YES,services/jev_service.dart
+s1120,ui,已按 $target 请求。,,,,YES,services/jev_service.dart
+s1121,ui,地址只填了域名 —— 用户实测正确填法是填到 /v1,,,,,services/jev_service.dart
+s1122,ui,（模型固定 NeoHorse-Jev-4B）；已按 $target 请求。,,,,YES,services/jev_service.dart
+s1123,ui,已按 $target 请求；基元律动平台推荐把地址填到 /v1。,,,,YES,services/jev_service.dart
+s1124,ui,目录请求本身成功了，但返回里没有模型 ID —— 检查接口地址是不是,,,,,services/jev_service.dart
+s1125,ui,模型目录是空的 —— 检查接口地址与密钥。,,,,,services/jev_service.dart
+s1126,ui,还没填 JEV 的 API 密钥 —— 到「设置 → 模型 → JEV 决策」里,,,,,services/jev_service.dart
+s1127,ui,填上平台密钥（sk_ 开头）再试。,,,,,services/jev_service.dart
+s1128,ui,接口地址是空的 —— 先填 JEV 的接口地址。,,,,,services/jev_service.dart
+s1129,ui,首次 422 已用仍叫 recommend 的题精简重试成功（未改用文档,,,,,services/jev_service.dart
+s1130,ui,示例的 stop 键）。,,,,,services/jev_service.dart
+s1131,ui,决策服务返回了无法理解的内容。,,,,,services/jev_service.dart
+s1132,ui,响应不是 JSON 对象；看 rawBody 定位。,,,,,services/jev_service.dart
+s1133,ui,决策服务没有返回 answers 字段。,,,,,services/jev_service.dart
+s1134,ui,解析写死 answers[\'recommend\'].noul；平台文档示例的题键是 ,,,,,services/jev_service.dart
+s1135,ui,stop —— 照抄会把 200 误判成「没给 noul」（本客户端发出的题键,,,,,services/jev_service.dart
+s1136,ui,仍是 recommend）。,,,,,services/jev_service.dart
+s1137,ui,决策服务没有给出是非判断（noul）。$trap,,,,YES,services/jev_service.dart
+s1138,ui,模型名不是固定 ID NeoHorse-Jev-4B —— 平台只认这一个决策模型，,,,,,services/jev_service.dart
+s1139,ui,已强制改用固定模型 ID 发送。,,,,,services/jev_service.dart
+s1140,ui,推荐用户这样做吗？,,,,,services/jev_service.dart
+s1141,ui,401 = 密钥无效或没带 Authorization 头（无 Key 时鉴权,,,,,services/jev_service.dart
+s1142,ui,先于参数校验，三发全 401）。,,,,,services/jev_service.dart
+s1143,ui,403 = 账号没有该模型的权限/灰度。,,,,,services/jev_service.dart
+s1144,ui,404 = 端点不对 —— 推荐 ,,,,,services/jev_service.dart
+s1145,ui,413 = 请求体超限（平台 ≤1MiB）—— 问题太长，缩短后再试。,,,,,services/jev_service.dart
+s1146,ui,429 = 限流 —— 稍等再试。,,,,,services/jev_service.dart
+s1147,ui,鉴权通过、模型目录可读，422 多半是模型权限/参数/上游限制。,,,,,services/jev_service.dart
+s1148,ui,422 一般是参数/上游限制：1–16 道题、请求体 ≤1MiB、,,,,,services/jev_service.dart
+s1149,ui,模型固定 NeoHorse-Jev-4B。,,,,,services/jev_service.dart
+s1150,ui,首次 422 已用仍叫 recommend 的题精简重试一次,,,,,services/jev_service.dart
+s1151,ui,（未改用文档示例的 stop 键）。,,,,,services/jev_service.dart
+s1152,ui,（422 重试一次后仍失败）,,,,,services/jev_service.dart
+s1153,ui,决策服务出错（HTTP ${code ?? ,,,,YES,services/jev_service.dart
+s1154,ui,决策服务拒绝了密钥（$code$codeTag）—— 401 多为密钥无效，,,,,YES,services/jev_service.dart
+s1155,ui,403 多为账号还没拿到该模型的权限/灰度，检查 JEV 配置里的 API 密钥。$trace,,,,YES,services/jev_service.dart
+s1156,ui,接口地址不对（404$codeTag）—— 推荐地址是 ,,,,YES,services/jev_service.dart
+s1157,ui,请求体太大（413$codeTag）—— 平台限制 ≤1MiB，问题缩短后再试。$trace,,,,YES,services/jev_service.dart
+s1158,ui,决策服务拒绝了报文（422$codeTag）—— 参数/上游限制：1–16 道题、,,,,YES,services/jev_service.dart
+s1159,ui,请求体 ≤1MiB、模型固定 NeoHorse-Jev-4B；已自动重试一次。$trace,,,,YES,services/jev_service.dart
+s1160,ui,决策服务限流了（429$codeTag）—— 稍等再试。$trace,,,,YES,services/jev_service.dart
+s1161,ui,决策服务出错（HTTP $code$codeTag）。$trace,,,,YES,services/jev_service.dart
+s1162,ui,决策服务超时 —— 检查网络或换个接口地址。,,,,,services/jev_service.dart
+s1163,ui,连不上决策服务 —— 检查接口地址与网络。,,,,,services/jev_service.dart
+s1164,ui,决策服务证书校验失败 —— 检查网络代理或接口地址。,,,,,services/jev_service.dart
+s1165,ui,决策请求已取消。,,,,,services/jev_service.dart
+s1166,ui,决策请求失败。,,,,,services/jev_service.dart
+s1167,ui,决策请求失败：$t,,,,YES,services/jev_service.dart
+s1168,ui,用户在纠结一件事：「$question」\n,,,,YES,services/jev_service.dart
+s1169,ui,决策结论是：${recommended ? ,,,,YES,services/jev_service.dart
+s1170,ui,（置信度 ${(confidence * 100).round()}%）。\n,,,,YES,services/jev_service.dart
+s1171,ui,请用一到两句话给出理由，像朋友一样直接、具体，结合这件事本身；,,,,,services/jev_service.dart
+s1172,ui,不要重复结论，不要提「决策」或「模型」，只输出理由本身。,,,,,services/jev_service.dart
+s1173,ui,拿不到本机存储目录（宿主未返回 deviceProfile）。,,,,,services/jev_service.dart; services/voice_service.dart
+s1174,ui,正在下载权重,,,,,services/jev_service.dart
+s1175,ui,正在下载配置文件,,,,,services/jev_service.dart
+s1176,ui,下载失败：${e.message ?? e.type.name},,,,YES,services/jev_service.dart; services/voice_service.dart
+s1177,ui,下载失败：$e,,,,YES,services/jev_service.dart; services/voice_service.dart
+s1178,ui,配置清单格式不对,,,,,services/jev_service.dart
+s1179,ui,配置文件下载失败,,,,,services/jev_service.dart
+s1180,ui,用户取消,,,,,services/jev_service.dart; services/local_agent.dart; services/voice_service.dart
+s1181,ui,云端接口地址是空的：先去 JEV 配置里恢复预置地址，或填上接口地址。,,,,,services/jev_service.dart
+s1182,ui,云端 · ${r.model},,,,YES,services/jev_service.dart
+s1183,ui,本地模型已下载好，但本地推理引擎还没接入（决策模型需要,,,,,services/jev_service.dart
+s1184,ui,双向注意力＋选项读出的专用引擎，在后端接入中）。,,,,,services/jev_service.dart
+s1185,ui,先切到云端就能体验决策。,,,,,services/jev_service.dart
+s1186,ui,本地模型还没下载：先去 JEV 配置里下载 ${spec.displayName}。,,,,YES,services/jev_service.dart
+s1187,ui,决策失败：$e,,,,YES,services/jev_service.dart
+s1188,model_prompt,任务被用户取消,,,,,services/local_agent.dart
+s1189,model_prompt,已用 $tokensSpent / $tokenLimit token（到上限即停）,,,,YES,services/local_agent.dart
+s1190,model_prompt,连续 $noProgressStreak 轮没有进展（文件与错误都没变化）,,,,YES,services/local_agent.dart
+s1191,model_prompt,本轮结束（继续模式=每轮询问），等待确认后再跑一轮,,,,,services/local_agent.dart
+s1192,model_prompt,已到自动续跑上限 $maxRounds 轮，等待确认后再跑一轮,,,,YES,services/local_agent.dart
+s1193,model_prompt,[heracles][ask] 提问超时（${answerTimeout.inMinutes} 分钟）未回答,,,,YES,services/local_agent.dart
+s1194,model_prompt,审批超时（${approvalTimeout.inMinutes} 分钟）未决定，,,,,YES,services/local_agent.dart
+s1195,model_prompt,按拒绝处理（fail-closed）。,,,,,services/local_agent.dart
+s1196,model_prompt,[heracles][approval] 审批超时未决定，按拒绝处理,,,,,services/local_agent.dart
+s1197,model_prompt,按契约默认值,,,,,services/local_agent.dart
+s1198,model_prompt,"${text.substring(0, cap)}\n\n……（原文共 ${text.length} 字符，",,,,YES,services/local_agent.dart
+s1199,model_prompt,已截断到前 $cap 字符）,,,,YES,services/local_agent.dart
+s1200,model_prompt,## 工作区说明（来自 `$name`，项目自己的约定）\n\n,,,,YES,services/local_agent.dart
+s1201,model_prompt,（以上是项目在工作区里写的说明：构建命令、目录结构、约束等。,,,,,services/local_agent.dart
+s1202,model_prompt,若与用户当前指令冲突，以用户当前指令为准。）,,,,,services/local_agent.dart
+s1203,model_prompt,## 工作区文件树（相对路径，共 ${lines.length} 项,,,,YES,services/local_agent.dart
+s1204,model_prompt,## 工作区相关片段（词法检索，带出处）\n,,,,,services/local_agent.dart
+s1205,model_prompt,当前模型「${provider.model}」是纯文本模型，$imageCount 张图片没有发送。,,,,YES,services/local_agent.dart
+s1206,model_prompt,（可切换到支持视觉的模型后再发一次）,,,,,services/local_agent.dart
+s1207,model_prompt,图片处理失败：${e.runtimeType}。本轮按纯文本发送。,,,,YES,services/local_agent.dart
+s1208,model_prompt,[附件处理提示（系统生成，请在回答里如实告知用户，不要复述本段原文）],,,,,services/local_agent.dart
+s1209,model_prompt,运行失败,,,,,services/local_agent.dart
+s1210,model_prompt,已给出最终回答,,,,,services/local_agent.dart
+s1211,model_prompt,未执行,,,,,services/local_agent.dart
+s1212,model_prompt,任务已取消。,,,,,services/local_agent.dart
+s1213,model_prompt,已取消,,,,,services/local_agent.dart
+s1214,model_prompt,【自动续跑第 $round 轮】上一轮的输出还没完成任务。请接着上一轮的历史继续，,,,,YES,services/local_agent.dart
+s1215,model_prompt,不要重复已完成的工作；先确认当前进展（看计划/文件/测试），再继续下一步。,,,,,services/local_agent.dart
+s1216,model_prompt,如果你判断任务已经完成，请直接给出最终回答。,,,,,services/local_agent.dart
+s1217,model_prompt,上次任务被系统停止（不是出错），可从上次进度继续,,,,,services/local_agent.dart
+s1218,model_prompt,本轮无输出,,,,,services/local_agent.dart
+s1219,model_prompt,给出回答,,,,,services/local_agent.dart
+s1220,model_prompt,工具成功,,,,,services/local_agent.dart
+s1221,model_prompt,工具失败,,,,,services/local_agent.dart
+s1222,model_prompt,分析需求,,,,,services/local_agent.dart
+s1223,model_prompt,本轮输出,,,,,services/local_agent.dart
+s1224,model_prompt,我先看看工作区里有什么$name。,,,,YES,services/local_agent.dart
+s1225,model_prompt,我先找一下符合条件的文件$name。,,,,YES,services/local_agent.dart
+s1226,model_prompt,我先搜一下关键词，定位到具体位置。,,,,,services/local_agent.dart
+s1227,model_prompt,我读一下$name 的内容，确认清楚再动手。,,,,YES,services/local_agent.dart
+s1228,model_prompt,我把内容写进$name。,,,,YES,services/local_agent.dart
+s1229,model_prompt,我把$name 里对应的那几行改掉。,,,,YES,services/local_agent.dart
+s1230,model_prompt,我按补丁把$name 改好。,,,,YES,services/local_agent.dart
+s1231,model_prompt,我先把目录建出来$name。,,,,YES,services/local_agent.dart
+s1232,model_prompt,我把$name 删掉。,,,,YES,services/local_agent.dart
+s1233,model_prompt,我把$name 挪到新位置。,,,,YES,services/local_agent.dart
+s1234,model_prompt,我把$name 复制一份。,,,,YES,services/local_agent.dart
+s1235,model_prompt,我跑一条命令确认一下。,,,,,services/local_agent.dart
+s1236,model_prompt,我抓一下这个网页看内容。,,,,,services/local_agent.dart
+s1237,model_prompt,我先看下设备电量与温度。,,,,,services/local_agent.dart
+s1238,model_prompt,我先把待办列出来，理一下步骤。,,,,,services/local_agent.dart
+s1239,model_prompt,我需要先跟你确认一件事。,,,,,services/local_agent.dart
+s1240,model_prompt,我把这条记到长期记忆里。,,,,,services/local_agent.dart
+s1241,model_prompt,我试着把 APK 构建出来。,,,,,services/local_agent.dart
+s1242,model_prompt,我先把 APK 解开来看看。,,,,,services/local_agent.dart
+s1243,model_prompt,我调用 `$toolName` 处理这一步。,,,,YES,services/local_agent.dart
+s1244,model_prompt,模型 $from 失败，已自动切换到 $to 继续任务。,,,,YES,services/local_agent.dart
+s1245,model_prompt,（原因：$reason）,,,,YES,services/local_agent.dart
+s1246,model_prompt,⚠️ 工具调用预算已用 $used/$limit 次 —— 接近熔断线，,,,,YES,services/local_agent.dart
+s1247,model_prompt,任务可能做不完。可以点停止把需求拆小，或让它先收尾汇报。,,,,,services/local_agent.dart
+s1248,model_prompt,（插话未送达：本轮已结束，未发送 —— 请重新发送：,,,,,services/local_agent.dart
+s1249,model_prompt,当前客户端版本没有 MCP 能力（宿主未实现 ,,,,,services/mcp_service.dart
+s1250,model_prompt,"`${ContractMcp.listMethod}` 等方法）。这不等于""没有配置服务器""，请更新 App 后重试。",,,,YES,services/mcp_service.dart
+s1251,model_prompt,连接测试未接入（本实例显式关闭了探活）：本次**没有**真正连接，也不提供工具数。,,,,,services/mcp_service.dart
+s1252,model_prompt,连接测试失败（探活没有给出原因）。,,,,,services/mcp_service.dart
+s1253,model_prompt,读取 MCP 配置失败：${_errorOf(map)},,,,YES,services/mcp_service.dart
+s1254,model_prompt,宿主返回的 MCP 配置形状不对（缺 servers 数组），无法判断是否已配置。,,,,,services/mcp_service.dart
+s1255,model_prompt,list: ${out.length} 项${skipped > 0 ? ,,,,YES,services/mcp_service.dart
+s1256,model_prompt,不要把密钥写进 MCP 环境变量（${secretKeys.join(,,,,YES,services/mcp_service.dart
+s1257,model_prompt,)}）：MCP 配置会明文保存，,,,,,services/mcp_service.dart
+s1258,model_prompt,密钥请放宿主的安全存储。,,,,,services/mcp_service.dart
+s1259,model_prompt,要删除的 MCP 服务器名是空的。,,,,,services/mcp_service.dart
+s1260,model_prompt,没有指定要测试的 MCP 服务器名。,,,,,services/mcp_service.dart
+s1261,model_prompt,未找到名为「$trimmed」的 MCP 配置（可能已被删除）：请先在配置页添加。,,,,YES,services/mcp_service.dart
+s1262,model_prompt,"连接测试返回了成功，但没有给出工具数（不接受""大概连上了""）。",,,,,services/mcp_service.dart
+s1263,model_prompt,连接失败（未给出原因）。,,,,,services/mcp_service.dart
+s1264,model_prompt,连接超时（${connectTimeout.inSeconds} 秒）：服务器没有响应。,,,,YES,services/mcp_service.dart
+s1265,model_prompt,连接失败：$e,,,,YES,services/mcp_service.dart
+s1266,model_prompt,调用宿主 `$method` 超时（${timeout.inSeconds} 秒）：没有拿到回包。,,,,YES,services/mcp_service.dart
+s1267,model_prompt,通道 `$method` 异常：${e.code},,,,YES,services/mcp_service.dart
+s1268,model_prompt,"宿主返回的不是一个对象（与 §N16.2 的 {ok,...} 形状不符）。",,,,,services/mcp_service.dart
+s1269,model_prompt,宿主没有给出失败原因。,,,,,services/mcp_service.dart
+s1270,ui,"ScopedMemoryEntry(${scope.wireName}, $source, ${text.length} 字)",,,,YES,services/memory_service.dart
+s1271,ui,全局记忆只读：模型不能直接写入；请改用 propose_global_memory 提议，,,,,,services/memory_service.dart
+s1272,ui,由用户确认后晋升。,,,,,services/memory_service.dart
+s1273,ui,全局记忆只读：agent 不能删除全局条目（用户可在记忆页操作）。,,,,,services/memory_service.dart
+s1274,ui,要删除的 id 列表是空的。,,,,,services/memory_service.dart
+s1275,ui,要删除的条目都不存在（可能已被删除）。,,,,,services/memory_service.dart
+s1276,ui,全局记忆只读：agent 不能清空全局记忆（用户可在记忆页操作）。,,,,,services/memory_service.dart
+s1277,ui,提议全局记忆失败：$err,,,,YES,services/memory_service.dart
+s1278,ui,读取记忆提议失败：$err,,,,YES,services/memory_service.dart
+s1279,ui,处理记忆提议失败：$err,,,,YES,services/memory_service.dart
+s1280,ui,未知方法,未知方法,未知方法,未知方法,,services/memory_service.dart; services/session_store.dart; widgets/sandbox_env_section.dart
+s1281,ui,检索全局记忆失败：$err,,,,YES,services/memory_service.dart
+s1282,ui,读取全局记忆统计失败：$err,,,,YES,services/memory_service.dart
+s1283,ui,global 记忆的 compact 由设备桥（Kotlin）负责，Dart 侧不重写。,,,,,services/memory_service.dart
+s1284,ui,sessionId 形状必须是 s<10~16 位数字>（收到 $sessionId）；删除记忆不会回落到别的路径。,,,,YES,services/memory_service.dart
+s1285,ui,工作区路径不是设备上的绝对路径。,,,,,services/memory_service.dart
+s1286,ui,工作区未登记：$ws（删除记忆不会猜别的工作区）。,,,,YES,services/memory_service.dart
+s1287,ui,解析出的目标路径与规范路径不一致，已拒绝删除。,,,,,services/memory_service.dart
+s1288,ui,不存在,不存在,不存在,不存在,,services/memory_service.dart; services/session_store.dart; widgets/sandbox_env_section.dart
+s1289,ui,删除会话记忆文件失败：$err,,,,YES,services/memory_service.dart
+s1290,ui,"session 记忆必须带 sessionId（会话私有记忆不接受""只给工作区""）。",,,,,services/memory_service.dart
+s1291,ui,工作区路径不是设备上的绝对路径（收到 ${address.workspacePath}）。,,,,YES,services/memory_service.dart
+s1292,ui,找不到会话 $sid（工作区 $ws）；记忆不会回落到全局/工作区。,,,,YES,services/memory_service.dart
+s1293,ui,工作区未登记：$ws（记忆不会猜别的工作区）。,,,,YES,services/memory_service.dart
+s1294,ui,解析出的目标路径与规范路径不一致（期望 $canonical，实际 $resolvedPath），,,,,YES,services/memory_service.dart
+s1295,ui,已拒绝本次操作。,,,,,services/memory_service.dart
+s1296,ui,条目不存在：$id（可能已被删除）。,,,,YES,services/memory_service.dart
+s1297,ui,存储软预算放不下这条记忆，且已无条目可淘汰（单条 ${incoming.text.length} ,,,,YES,services/memory_service.dart
+s1298,ui,字符 / 预算 $softMaxBytes 字节、$softMaxEntries 条）；,,,,YES,services/memory_service.dart
+s1299,ui,**未写入任何内容**。请精简正文或先清理旧记忆。,,,,,services/memory_service.dart
+s1300,ui,读取记忆文件失败：$err,,,,YES,services/memory_service.dart
+s1301,ui,父目录不存在,,,,,services/memory_service.dart
+s1302,ui,写入记忆文件失败（目录建不出来）：$retryErr,,,,YES,services/memory_service.dart
+s1303,ui,文件不存在,,,,,services/memory_service.dart; services/session_store.dart
+s1304,ui,不支持追加,,,,,services/memory_service.dart; services/session_store.dart
+s1305,ui,"追加断言失败：拼接结果不是""旧内容 + 新行""，已放弃写入。",,,,,services/memory_service.dart
+s1306,ui,写入记忆文件失败：$werr,,,,YES,services/memory_service.dart
+s1307,ui,写入记忆文件失败：$err,,,,YES,services/memory_service.dart
+s1308,ui,compact 跳过：${e.code},,,,YES,services/memory_service.dart
+s1309,ui,compact 写入临时文件失败（原文件未动）：$werr,,,,YES,services/memory_service.dart
+s1310,ui,compact 覆盖原文件失败（原文件未动）：$rerr,,,,YES,services/memory_service.dart
+s1311,ui,compact 完成：${scan.totalLines} 行 → ${scan.entries.length} 条,,,,YES,services/memory_service.dart
+s1312,ui,读取全局记忆失败：$readErr,,,,YES,services/memory_service.dart
+s1313,ui,读取全局记忆失败：$err,,,,YES,services/memory_service.dart
+s1314,ui,写入全局记忆失败：$err,,,,YES,services/memory_service.dart
+s1315,ui,要记住的内容是空的。,,,,,services/memory_service.dart
+s1316,ui,单条记忆最长 ${budget.entryMaxChars} 字符（这条 ${t.length} 字符），,,,,YES,services/memory_service.dart
+s1317,ui,没有写入。请精简，或改用 write_file 记成文件。,,,,,services/memory_service.dart
+s1318,ui,内容疑似包含密钥/令牌，拒绝写入长期记忆（明文存储，泄露风险）。,,,,,services/memory_service.dart
+s1319,ui,"$name(${available ? ""可用"" : ""不可用""}/风险$risk)",,,,YES,services/sandbox_service.dart
+s1320,ui,沙箱通道 `$channelName` 不可用（App 没挂上原生实现，,,,,YES,services/sandbox_service.dart
+s1321,ui,或当前跑在纯 Dart 环境里）。,,,,,services/sandbox_service.dart
+s1322,ui,沙箱通道抛出异常（本不该发生）：${e.code},,,,YES,services/sandbox_service.dart
+s1323,ui,调用沙箱通道 $method 时出错：$e,,,,YES,services/sandbox_service.dart
+s1324,ui,沙箱通道 $method 返回了意料之外的形状（${raw.runtimeType}），预期是 Map。,,,,YES,services/sandbox_service.dart
+s1325,ui,创建快照失败,,,,,services/sandbox_service.dart
+s1326,ui,提交失败,,,,,services/sandbox_service.dart
+s1327,ui,查询失败,,,,,services/sandbox_service.dart
+s1328,ui,强制力为策略级（代理环境变量 + 包管理器配置 + DNS 约束），非硬隔离,,,,,services/sandbox_service.dart
+s1329,ui,读取搜索服务配置失败（存储不可用）：${_reasonOf(e)}。,,,,YES,services/search_config_service.dart
+s1330,ui,"这不是""未配置""——请检查系统安全存储/权限，或重装应用。",,,,,services/search_config_service.dart
+s1331,ui,保存搜索服务配置失败（存储不可用）：${_reasonOf(e)}。,,,,YES,services/search_config_service.dart
+s1332,ui,配置未生效，请稍后重试。,,,,,services/search_config_service.dart
+s1333,ui,清除搜索服务配置失败：${_reasonOf(e)}。,,,,YES,services/search_config_service.dart
+s1334,ui,搜索服务地址不能为空。,,,,,services/search_config_service.dart
+s1335,ui,搜索服务地址不是合法的 URL（无法解析）。,,,,,services/search_config_service.dart
+s1336,ui,空,,,,,services/search_config_service.dart
+s1337,ui,（当前 scheme 是「$shown」）。,,,,YES,services/search_config_service.dart
+s1338,ui,搜索服务地址的主机名不合法（不能含空格或转义字符）。,,,,,services/search_config_service.dart
+s1339,ui,不要把账号密码写进 URL（当前版本仅支持免鉴权搜索服务）。,,,,,services/search_config_service.dart
+s1340,ui,会话 id 非法（空串 / 含路径分隔符 / 含 `..` / NUL / 绝对路径）：,,,,,services/session_store.dart
+s1341,ui,`$sessionId` —— 拒绝拼文件路径（防目录穿越）。,,,,YES,services/session_store.dart
+s1342,ui,会话 ${list.length} 个：,,,,YES,services/session_store.dart
+s1343,ui,（还没有会话）,,,,,services/session_store.dart
+s1344,ui,"${m.starred ? "" [收藏]"" : """"}${m.archived ? "" [归档]"" : """"}",,,,YES,services/session_store.dart
+s1345,ui,会话不存在：$sessionId,,,,YES,services/session_store.dart
+s1346,ui,会话索引已更新，但会话 id 非法，消息文件未删除：$e,,,,YES,services/session_store.dart
+s1347,ui,会话索引已更新，但消息文件删不掉：$delErr ,,,,YES,services/session_store.dart
+s1348,ui,（残留文件：$messagesFile）,,,,YES,services/session_store.dart
+s1349,ui,会话记忆文件删不掉：$err（残留：$path）,,,,YES,services/session_store.dart
+s1350,ui,会话记忆文件删除异常：$e,,,,YES,services/session_store.dart
+s1351,ui,读取会话索引失败：$err,,,,YES,services/session_store.dart
+s1352,ui,会话索引超过通道 1MB 文本上限，无法完整读取,,,,,services/session_store.dart
+s1353,ui,（读回 $chars 字符）。,,,,YES,services/session_store.dart
+s1354,ui,这通常意味着会话数量异常多，请手动清理 sessions.json。,,,,,services/session_store.dart
+s1355,ui,会话索引格式不对（期望 JSON 数组，实际是 ,,,,,services/session_store.dart
+s1356,ui,${decoded.runtimeType}）。文件：$indexPath,,,,YES,services/session_store.dart
+s1357,ui,会话索引不是合法 JSON：${_humanize(e)}。文件：$indexPath,,,,YES,services/session_store.dart
+s1358,ui,写入会话索引失败：$err,,,,YES,services/session_store.dart
+s1359,ui,会话 id 非法，拒绝读取会话记录：$e,,,,YES,services/session_store.dart
+s1360,ui,（会话记录超过通道 1MB 上限：仅为省内存加载了最近 ,,,,,services/session_store.dart
+s1361,ui,${ContractSession.tailLoadLines} 条；更早的消息仍在磁盘上，可继续加载。）,,,,YES,services/session_store.dart
+s1362,ui,通道不支持尾部读取（旧宿主），且会话超过通道 1MB 上限：,,,,,services/session_store.dart
+s1363,ui,当前只拿到前 1MB，**最新消息可能未显示**。请升级 App 后重新打开会话。,,,,,services/session_store.dart
+s1364,ui,通道不支持尾部读取（旧宿主）：仅为省内存加载了最近 ,,,,,services/session_store.dart
+s1365,ui,${ContractSession.tailLoadLines} 条；更早的消息仍在磁盘上。,,,,YES,services/session_store.dart
+s1366,ui,（通道不支持尾部读取且记录超过 1MB：当前显示的是前 1MB 的末尾，,,,,,services/session_store.dart
+s1367,ui,**最新消息可能未显示**；请升级 App。）,,,,,services/session_store.dart
+s1368,ui,（通道不支持尾部读取（旧宿主）：仅为省内存加载了最近 ,,,,,services/session_store.dart
+s1369,ui,${ContractSession.tailLoadLines} 条；更早的消息仍在磁盘上。）,,,,YES,services/session_store.dart
+s1370,ui,（更早的消息未加载：只为省内存加载了最近 $want 条。,,,,YES,services/session_store.dart
+s1371,ui,完整记录仍在磁盘上。）,,,,,services/session_store.dart
+s1372,ui,${lastError!}后面的消息没有显示。,,,,YES,services/session_store.dart
+s1373,ui,会话 id 非法，拒绝写入会话记录：$e,,,,YES,services/session_store.dart
+s1374,ui,同一个会话的上一次追加还没写完（并发调用 appendMessage）。,,,,,services/session_store.dart
+s1375,ui,会话是 append-only 的，并发读改写会丢行 ⇒ 已拒绝本次写入。,,,,,services/session_store.dart
+s1376,ui,调用方必须把同一会话的 append 串行化。,,,,,services/session_store.dart
+s1377,ui,这一行消息缺少 role（或含不可编码对象），未写入。,,,,,services/session_store.dart
+s1378,ui,`.jsonl` 每行都必须有 role，否则读方不知道该怎么画。,,,,,services/session_store.dart
+s1379,ui,这一行消息无法编码成 JSON（可能含 NaN/Infinity 或循环引用），未写入。,,,,,services/session_store.dart
+s1380,ui,[heracles][session] 消息落盘失败（$sessionId）：$lastError,,,,YES,services/session_store.dart
+s1381,ui,读取会话记录失败，未追加：$err,,,,YES,services/session_store.dart
+s1382,ui,会话记录已超过通道 1 MB 文本上限，读不全,,,,,services/session_store.dart
+s1383,ui,（当前 APK 还没有 fs.appendText 快速追加）。,,,,,services/session_store.dart
+s1384,ui,"**本次没有写入** —— 在""只读到前半截""的状态下拼新行再写回，",,,,,services/session_store.dart
+s1385,ui,会把没读到的那部分永久删掉。\n,,,,,services/session_store.dart
+s1386,ui,请升级 App，或先把旧会话归档/裁短。\n,,,,,services/session_store.dart
+s1387,ui,文件：$path,,,,YES,services/session_store.dart
+s1388,ui,"内部断言失败：拼接结果不是""旧内容 + 新行""，已放弃写入（会丢用户数据）。",,,,,services/session_store.dart
+s1389,ui,写入会话记录失败（${_humanize(werr)}）。会话文件位置：$path,,,,YES,services/session_store.dart
+s1390,ui,会话 id 非法，拒绝创建分支：$e,,,,YES,services/session_store.dart
+s1391,ui,分支会话的消息写入失败：$err,,,,YES,services/session_store.dart
+s1392,model_prompt,还没有选择工作区，读不到（也装不了、删不了）工作区里的技能。请先选择工作区。,,,,,services/skills_service.dart
+s1393,model_prompt,宿主没有返回技能清单（通道返回 null）。,,,,,services/skills_service.dart
+s1394,model_prompt,宿主未能列出工作区里的技能。,,,,,services/skills_service.dart
+s1395,model_prompt,宿主返回了一条无法识别的技能条目（已跳过）。,,,,,services/skills_service.dart
+s1396,model_prompt,宿主返回的技能条目缺少 path/raw（已跳过）。,,,,,services/skills_service.dart
+s1397,model_prompt,宿主返回的 entries 不是列表（已按空清单处理）。,,,,,services/skills_service.dart
+s1398,model_prompt,技能名不能为空。,,,,,services/skills_service.dart
+s1399,model_prompt,宿主没有返回结果（通道返回 null）。,,,,,services/skills_service.dart
+s1400,model_prompt,宿主未能保存「$trimmed」的启停状态。,,,,YES,services/skills_service.dart
+s1401,model_prompt,当前版本的应用没有提供技能通道，无法安装技能。请升级 App。,,,,,services/skills_service.dart
+s1402,model_prompt,安装技能失败。,,,,,services/skills_service.dart
+s1403,model_prompt,宿主返回了一条无法识别的安装结果（已跳过）。,,,,,services/skills_service.dart
+s1404,model_prompt,宿主返回的安装结果缺少 path/raw（已跳过）。,,,,,services/skills_service.dart
+s1405,model_prompt,${bad.path}: ${bad.error}（已回滚删除）,,,,YES,services/skills_service.dart
+s1406,model_prompt,${bad.path}: ${bad.error}（回滚失败，文件可能仍在磁盘上，请手动删除）,,,,YES,services/skills_service.dart
+s1407,model_prompt,内置技能随 App 一起发布，不能卸载；如果想让它不生效，请关闭开关。,,,,,services/skills_service.dart
+s1408,model_prompt,当前版本的应用没有提供技能通道，无法卸载技能。请升级 App。,,,,,services/skills_service.dart
+s1409,model_prompt,宿主未能卸载「$trimmed」。,,,,YES,services/skills_service.dart
+s1410,model_prompt,宿主没有找到要卸载的技能（可能已经被删除或改名）。,,,,,services/skills_service.dart
+s1411,model_prompt,技能通道调用失败（${e.code}）。,,,,YES,services/skills_service.dart
+s1412,model_prompt,当前版本的应用没有提供技能通道（旧版本宿主），读不到工作区里的用户技能；内置技能仍可查看。升级 App 后可管理自定义技能。,,,,,services/skills_service.dart
+s1413,ui,语音模型还没准备好,,,,,services/voice_asr.dart
+s1414,ui,录音是空的,,,,,services/voice_asr.dart
+s1415,ui,不是 WAV 文件,,,,,services/voice_asr.dart
+s1416,ui,WAV 里没有 data 块,,,,,services/voice_asr.dart
+s1417,ui,"只支持 PCM16 WAV（format=$audioFormat, bits=$bitsPerSample）",,,,YES,services/voice_asr.dart
+s1418,ui,语音模型已卸载：设置 → 语音识别 里可重新安装,,,,,services/voice_input.dart
+s1419,ui,先下载语音模型：设置 → 语音识别,,,,,services/voice_input.dart
+s1420,ui,语音模型正在准备，稍候再点麦克风,,,,,services/voice_input.dart
+s1421,ui,请先允许麦克风权限，再点一次麦克风,,,,,services/voice_input.dart
+s1422,ui,录音不可用：宿主未实现录音桥,,,,,services/voice_input.dart
+s1423,ui,录音失败：${started[,,,,YES,services/voice_input.dart
+s1424,ui,录音中，再点一次麦克风结束,,,,,services/voice_input.dart
+s1425,ui,录音中（流式不可用，用整段识别），再点一次麦克风结束,,,,,services/voice_input.dart
+s1426,ui,流式不可用，用整段识别,,,,,services/voice_input.dart
+s1427,ui,没听清，请再试一次,,,,,services/voice_input.dart
+s1428,ui,流式不可用，且整段识别模型未准备,,,,,services/voice_input.dart
+s1429,ui,录音失败：没拿到录音文件,,,,,services/voice_input.dart
+s1430,ui,识别失败：$e,,,,YES,services/voice_input.dart
+s1431,ui,内置流式模型解压失败,,,,,services/voice_service.dart
+s1432,ui,${f.name} 内置资产字节数不对（应为 ${f.bytes}，实际 ${bytes.length}）,,,,YES,services/voice_service.dart
+s1433,ui,am.mvn 的 LearnRateCoef 行格式不对,,,,,services/voice_service.dart
+s1434,ui,am.mvn 应有 2 行 LearnRateCoef，实际 ${rows.length} 行,,,,YES,services/voice_service.dart
+s1435,ui,am.mvn 的 CMVN 维度应为 560，实际 ${rows[0].length}/${rows[1].length},,,,YES,services/voice_service.dart
+s1436,ui,tokens.json 不是数组,,,,,services/voice_service.dart
+s1437,ui,tokens.json 第 $i 项不是可用的 token 字符串,,,,YES,services/voice_service.dart
+s1438,ui,内置 14M 中文流式模型,,,,,services/voice_service.dart
+s1439,ui,可选下载的中英双语流式模型,,,,,services/voice_service.dart
+s1440,ui,语音模型已卸载（$kVoiceUninstalledError）,,,,YES,services/voice_service.dart
+s1441,ui,语音模型已卸载，请先在设置里重新安装,,,,,services/voice_service.dart
+s1442,ui,拿不到本机存储目录（宿主未返回 deviceProfile）,,,,,services/voice_service.dart
+s1443,ui,内置流式模型解压后字节校验不通过,,,,,services/voice_service.dart
+s1444,ui,$kBundledExtractErrorMessage（尝试 $attempt/2）：$lastError,,,,YES,services/voice_service.dart
+s1445,ui,内置流式模型校验不通过，正在自动重试一次…,,,,,services/voice_service.dart
+s1446,ui,内置流式模型启动校验失败：${result.message ?? ,,,,YES,services/voice_service.dart
+s1447,ui,补元数据后的模型大小对不上，已丢弃，请重试,,,,,services/voice_service.dart
+s1448,ui,模型准备失败：$e,,,,YES,services/voice_service.dart
+s1449,ui,正在下载模型文件,,,,,services/voice_service.dart
+s1450,ui,正在下载 ${f.name},,,,YES,services/voice_service.dart
+s1451,ui,${f.name} 下载不完整（大小对不上），已删除，请重试,,,,YES,services/voice_service.dart
+s1452,ui,删除 $dir 失败：$e,,,,YES,services/voice_service.dart
+s1453,ui,释放识别引擎失败：$e,,,,YES,services/voice_service.dart
+s1454,ui,解码器已释放,,,,,services/voice_stream.dart
+s1455,ui,流式解码失败,,,,,services/voice_stream.dart
+s1456,ui,流式事件通道不可用：$e,,,,YES,services/voice_stream.dart
+s1457,ui,流式解码出错：$e,,,,YES,services/voice_stream.dart
+s1458,ui,拿不到音频分片（旧包或事件通道未实现）,,,,,services/voice_stream.dart
+s1459,ui,HueScope 未挂载 —— 检查 main.dart 是否包了 HueScope,,,,,theme/app_theme.dart
+s1460,ui,MIUI：设置→应用设置→应用管理→本应用→自启动；,MIUI：设置→应用设置→应用管理→本应用→自启动；,MIUI：设置→应用设置→应用管理→本应用→自启动；,MIUI：设置→应用设置→应用管理→本应用→自启动；,,widgets/background_keepalive_card.dart
+s1461,ui,EMUI：手机管家→应用启动管理；ColorOS：设置→应用→自启动,EMUI：手机管家→应用启动管理；ColorOS：设置→应用→自启动,EMUI：手机管家→应用启动管理；ColorOS：设置→应用→自启动,EMUI：手机管家→应用启动管理；ColorOS：设置→应用→自启动,,widgets/background_keepalive_card.dart
+s1462,ui,已复制自启动路径,已复制自启动路径,已复制自启动路径,已复制自启动路径,,widgets/background_keepalive_card.dart
+s1463,ui,什么是前台服务？,什么是前台服务？,什么是前台服务？,什么是前台服务？,,widgets/background_keepalive_card.dart
+s1464,ui,前台服务 = 在通知栏挂着一条常驻通知的后台进程。,前台服务 = 在通知栏挂着一条常驻通知的后台进程。,前台服务 = 在通知栏挂着一条常驻通知的后台进程。,前台服务 = 在通知栏挂着一条常驻通知的后台进程。,,widgets/background_keepalive_card.dart
+s1465,ui,"它是 Android 里唯一被系统""承认""的长期运行方式：","它是 Android 里唯一被系统""承认""的长期运行方式：","它是 Android 里唯一被系统""承认""的长期运行方式：","它是 Android 里唯一被系统""承认""的长期运行方式：",,widgets/background_keepalive_card.dart
+s1466,ui,没有它，长时间任务在锁屏/切走后很快会被系统冻结或杀掉。\n\n,没有它，长时间任务在锁屏/切走后很快会被系统冻结或杀掉。\n\n,没有它，长时间任务在锁屏/切走后很快会被系统冻结或杀掉。\n\n,没有它，长时间任务在锁屏/切走后很快会被系统冻结或杀掉。\n\n,,widgets/background_keepalive_card.dart
+s1467,ui,为什么需要：构建、长对话这类任务一跑几分钟，,为什么需要：构建、长对话这类任务一跑几分钟，,为什么需要：构建、长对话这类任务一跑几分钟，,为什么需要：构建、长对话这类任务一跑几分钟，,,widgets/background_keepalive_card.dart
+s1468,ui,必须靠前台服务保住进程，同时让你随时能看到它还活着。\n\n,必须靠前台服务保住进程，同时让你随时能看到它还活着。\n\n,必须靠前台服务保住进程，同时让你随时能看到它还活着。\n\n,必须靠前台服务保住进程，同时让你随时能看到它还活着。\n\n,,widgets/background_keepalive_card.dart
+s1469,ui,当前版本的状态读数等后端 keepaliveStatus 落地后显示，,当前版本的状态读数等后端 keepaliveStatus 落地后显示，,当前版本的状态读数等后端 keepaliveStatus 落地后显示，,当前版本的状态读数等后端 keepaliveStatus 落地后显示，,,widgets/background_keepalive_card.dart
+s1470,ui,届时这里会显示真实运行状态。,届时这里会显示真实运行状态。,届时这里会显示真实运行状态。,届时这里会显示真实运行状态。,,widgets/background_keepalive_card.dart
+s1471,ui,当前版本不支持,当前版本不支持,当前版本不支持,当前版本不支持,,widgets/background_keepalive_card.dart
+s1472,ui,打开中…,打开中…,打开中…,打开中…,,widgets/background_keepalive_card.dart
+s1473,ui,去授权,去授权,去授权,去授权,,widgets/background_keepalive_card.dart
+s1474,ui,前台服务,前台服务,前台服务,前台服务,,widgets/background_keepalive_card.dart
+s1475,ui,未检测到（等后端读数）,未检测到（等后端读数）,未检测到（等后端读数）,未检测到（等后端读数）,,widgets/background_keepalive_card.dart
+s1476,ui,查看说明,查看说明,查看说明,查看说明,,widgets/background_keepalive_card.dart
+s1477,ui,忽略电池优化,忽略电池优化,忽略电池优化,忽略电池优化,,widgets/background_keepalive_card.dart
+s1478,ui,未检测到,未检测到,未检测到,未检测到,,widgets/background_keepalive_card.dart
+s1479,ui,已忽略（允许后台）,已忽略（允许后台）,已忽略（允许后台）,已忽略（允许后台）,,widgets/background_keepalive_card.dart
+s1480,ui,未开启（可能被限流）,未开启（可能被限流）,未开启（可能被限流）,未开启（可能被限流）,,widgets/background_keepalive_card.dart
+s1481,ui,当前版本不支持「忽略电池优化」授权入口；,当前版本不支持「忽略电池优化」授权入口；,当前版本不支持「忽略电池优化」授权入口；,当前版本不支持「忽略电池优化」授权入口；,,widgets/background_keepalive_card.dart
+s1482,ui,后台保活仍可用，可在系统设置里手动配置。,后台保活仍可用，可在系统设置里手动配置。,后台保活仍可用，可在系统设置里手动配置。,后台保活仍可用，可在系统设置里手动配置。,,widgets/background_keepalive_card.dart
+s1483,ui,没有生效：已在授权页取消或被系统拒绝。可再试一次。,没有生效：已在授权页取消或被系统拒绝。可再试一次。,没有生效：已在授权页取消或被系统拒绝。可再试一次。,没有生效：已在授权页取消或被系统拒绝。可再试一次。,,widgets/background_keepalive_card.dart
+s1484,ui,自启动,自启动,自启动,自启动,,widgets/background_keepalive_card.dart
+s1485,ui,复制,复制,复制,复制,,widgets/background_keepalive_card.dart; widgets/tool_call_card.dart
+s1486,ui,上次任务在后台被系统停止（$_lastKilled）,上次任务在后台被系统停止（__VAR_0__）,上次任务在后台被系统停止（__VAR_0__）,上次任务在后台被系统停止（__VAR_0__）,YES,widgets/background_keepalive_card.dart
+s1487,ui,Android 不保证永不被杀：系统在内存紧张/省电策略下仍可能停止后台任务。,Android 不保证永不被杀：系统在内存紧张/省电策略下仍可能停止后台任务。,Android 不保证永不被杀：系统在内存紧张/省电策略下仍可能停止后台任务。,Android 不保证永不被杀：系统在内存紧张/省电策略下仍可能停止后台任务。,,widgets/background_keepalive_card.dart
+s1488,ui,被停止后下次打开会如实提示，不会假装还在跑。,被停止后下次打开会如实提示，不会假装还在跑。,被停止后下次打开会如实提示，不会假装还在跑。,被停止后下次打开会如实提示，不会假装还在跑。,,widgets/background_keepalive_card.dart
+s1489,ui,之后调用 ${widget.tool}（不论参数）都会直接执行、不再询问你。,之后调用 __VAR_0__（不论参数）都会直接执行、不再询问你。,之后调用 __VAR_0__（不论参数）都会直接执行、不再询问你。,之后调用 __VAR_0__（不论参数）都会直接执行、不再询问你。,YES,widgets/bw_approval.dart
+s1490,ui,本次参数：${widget.argsPreview},本次参数：__VAR_0__,本次参数：__VAR_0__,本次参数：__VAR_0__,YES,widgets/bw_approval.dart
+s1491,ui,切换后对新消息生效,切换后对新消息生效,切换后对新消息生效,切换后对新消息生效,,widgets/bw_model_sheet.dart
+s1492,ui,模型目录 · ${visible[i].modelCatalog.length} 个,模型目录 · __VAR_0__ 个,模型目录 · __VAR_0__ 个,模型目录 · __VAR_0__ 个,YES,widgets/bw_model_sheet.dart
+s1493,ui,端侧运行,端侧运行,端侧运行,端侧运行,,widgets/bw_model_sheet.dart
+s1494,ui,当前,当前,当前,当前,,widgets/bw_model_sheet.dart; widgets/git_panel.dart
+s1495,ui,端侧,端侧,端侧,端侧,,widgets/bw_model_sheet.dart
+s1496,ui,思考等级,思考等级,思考等级,思考等级,,widgets/bw_model_sheet.dart
+s1497,ui,当前协议不区分思考档位（低 / 高 / 最大不生效），只有开和关。,当前协议不区分思考档位（低 / 高 / 最大不生效），只有开和关。,当前协议不区分思考档位（低 / 高 / 最大不生效），只有开和关。,当前协议不区分思考档位（低 / 高 / 最大不生效），只有开和关。,,widgets/bw_model_sheet.dart
+s1498,ui,调整计划,调整计划,调整计划,调整计划,,widgets/bw_topbar.dart
+s1499,ui,上下文占用,上下文占用,上下文占用,上下文占用,,widgets/bw_usage_sheet.dart
+s1500,ui,缓存命中,缓存命中,缓存命中,缓存命中,,widgets/bw_usage_sheet.dart
+s1501,ui,左滑查看缓存命中,左滑查看缓存命中,左滑查看缓存命中,左滑查看缓存命中,,widgets/bw_usage_sheet.dart
+s1502,ui,右滑返回上下文占用,右滑返回上下文占用,右滑返回上下文占用,右滑返回上下文占用,,widgets/bw_usage_sheet.dart
+s1503,ui,系统提示,系统提示,系统提示,系统提示,,widgets/bw_usage_sheet.dart
+s1504,ui,工具定义,工具定义,工具定义,工具定义,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1505,ui,工具结果,工具结果,工具结果,工具结果,,widgets/bw_usage_sheet.dart
+s1506,ui,思考,思考,思考,思考,,widgets/bw_usage_sheet.dart
+s1507,ui,助手回复,助手回复,助手回复,助手回复,,widgets/bw_usage_sheet.dart
+s1508,ui,用户消息,用户消息,用户消息,用户消息,,widgets/bw_usage_sheet.dart
+s1509,ui,历史摘要,历史摘要,历史摘要,历史摘要,,widgets/bw_usage_sheet.dart
+s1510,ui,已用,已用,已用,已用,,widgets/bw_usage_sheet.dart
+s1511,ui,冻结内容,冻结内容,冻结内容,冻结内容,,widgets/bw_usage_sheet.dart
+s1512,ui,对话内容,对话内容,对话内容,对话内容,,widgets/bw_usage_sheet.dart
+s1513,ui,剩余,剩余,剩余,剩余,,widgets/bw_usage_sheet.dart
+s1514,ui,已超出上下文上限 —— 下一轮可能被截断,已超出上下文上限 —— 下一轮可能被截断,已超出上下文上限 —— 下一轮可能被截断,已超出上下文上限 —— 下一轮可能被截断,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1515,ui,未上报,未上报,未上报,未上报,,widgets/bw_usage_sheet.dart
+s1516,ui,缓存命中（累计·加权）,缓存命中（累计·加权）,缓存命中（累计·加权）,缓存命中（累计·加权）,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1517,ui,当前后端未上报缓存字段 —— 不是 0%,当前后端未上报缓存字段 —— 不是 0%,当前后端未上报缓存字段 —— 不是 0%,当前后端未上报缓存字段 —— 不是 0%,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1518,ui,稳态命中率（轮次平均）,稳态命中率（轮次平均）,稳态命中率（轮次平均）,稳态命中率（轮次平均）,,widgets/bw_usage_sheet.dart
+s1519,ui,输入（含缓存）,输入（含缓存）,输入（含缓存）,输入（含缓存）,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1520,ui,· 命中缓存,· 命中缓存,· 命中缓存,· 命中缓存,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1521,ui,· 未命中,· 未命中,· 未命中,· 未命中,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1522,ui,输出,输出,输出,输出,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1523,ui,Token 用量,Token 用量,Token 用量,Token 用量,,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1524,ui,共 ${usage.turns} 轮，其中 ${usage.unreportedTurns} 轮未上报缓存。,共 __VAR_0__ 轮，其中 __VAR_1__ 轮未上报缓存。,共 __VAR_0__ 轮，其中 __VAR_1__ 轮未上报缓存。,共 __VAR_0__ 轮，其中 __VAR_1__ 轮未上报缓存。,YES,widgets/bw_usage_sheet.dart; widgets/usage_sidebar.dart
+s1525,ui,命中率只统计已上报的 ${usage.reportedTurns} 轮 —— 未上报不等于 0。,命中率只统计已上报的 __VAR_0__ 轮 —— 未上报不等于 0。,命中率只统计已上报的 __VAR_0__ 轮 —— 未上报不等于 0。,命中率只统计已上报的 __VAR_0__ 轮 —— 未上报不等于 0。,YES,widgets/bw_usage_sheet.dart
+s1526,ui,引擎来源,引擎来源,引擎来源,引擎来源,,widgets/decision_panel.dart
+s1527,ui,点选即生效；接口地址、密钥与本地模型在「设置 · 模型」里编辑,点选即生效；接口地址、密钥与本地模型在「设置 · 模型」里编辑,点选即生效；接口地址、密钥与本地模型在「设置 · 模型」里编辑,点选即生效；接口地址、密钥与本地模型在「设置 · 模型」里编辑,,widgets/decision_panel.dart
+s1528,ui,决策历史,决策历史,决策历史,决策历史,,widgets/decision_panel.dart
+s1529,ui,清空决策历史？,清空决策历史？,清空决策历史？,清空决策历史？,,widgets/decision_panel.dart
+s1530,ui,所有问答记录都会删掉，不可恢复。,所有问答记录都会删掉，不可恢复。,所有问答记录都会删掉，不可恢复。,所有问答记录都会删掉，不可恢复。,,widgets/decision_panel.dart
+s1531,ui,今晚要不要熬夜把这个功能做完,今晚要不要熬夜把这个功能做完,今晚要不要熬夜把这个功能做完,今晚要不要熬夜把这个功能做完,,widgets/decision_panel.dart
+s1532,ui,周末要不要去参加线下活动,周末要不要去参加线下活动,周末要不要去参加线下活动,周末要不要去参加线下活动,,widgets/decision_panel.dart
+s1533,ui,现在换新手机划算吗,现在换新手机划算吗,现在换新手机划算吗,现在换新手机划算吗,,widgets/decision_panel.dart
+s1534,ui,有什么拿不准的？\n交给决策引擎判断,有什么拿不准的？\n交给决策引擎判断,有什么拿不准的？\n交给决策引擎判断,有什么拿不准的？\n交给决策引擎判断,,widgets/decision_panel.dart
+s1535,ui,它只做判断：亮绿灯是推荐、红灯是不推荐，并给出置信度。,它只做判断：亮绿灯是推荐、红灯是不推荐，并给出置信度。,它只做判断：亮绿灯是推荐、红灯是不推荐，并给出置信度。,它只做判断：亮绿灯是推荐、红灯是不推荐，并给出置信度。,,widgets/decision_panel.dart
+s1536,ui,说一件你拿不准的事…,说一件你拿不准的事…,说一件你拿不准的事…,说一件你拿不准的事…,,widgets/decision_panel.dart
+s1537,ui,经云端接口出决策,经云端接口出决策,经云端接口出决策,经云端接口出决策,,widgets/decision_panel.dart
+s1538,ui,本地模型在本机出决策 · 不联网,本地模型在本机出决策 · 不联网,本地模型在本机出决策 · 不联网,本地模型在本机出决策 · 不联网,,widgets/decision_panel.dart
+s1539,ui,历史保存在本机,历史保存在本机,历史保存在本机,历史保存在本机,,widgets/decision_panel.dart
+s1540,ui,置信度（${yes ? ,置信度（${yes ? ,置信度（${yes ? ,置信度（${yes ? ,YES,widgets/decision_panel.dart
+s1541,ui,把握不大，当个参考,把握不大，当个参考,把握不大，当个参考,把握不大，当个参考,,widgets/decision_panel.dart
+s1542,ui,推荐 $yesPct%,推荐 __VAR_0__%,推荐 __VAR_0__%,推荐 __VAR_0__%,YES,widgets/decision_panel.dart
+s1543,ui,不推荐 ${100 - yesPct}%,不推荐 __VAR_0__%,不推荐 __VAR_0__%,不推荐 __VAR_0__%,YES,widgets/decision_panel.dart
+s1544,ui,理由,理由,理由,理由,,widgets/decision_panel.dart
+s1545,ui,推荐,推荐,推荐,推荐,,widgets/decision_panel.dart
+s1546,ui,不推荐,不推荐,不推荐,不推荐,,widgets/decision_panel.dart
+s1547,ui,耗时 ${(ms / 1000).toStringAsFixed(1)} 秒,耗时 __VAR_0__ 秒,耗时 __VAR_0__ 秒,耗时 __VAR_0__ 秒,YES,widgets/decision_panel.dart
+s1548,ui,耗时 $ms 毫秒,耗时 __VAR_0__ 毫秒,耗时 __VAR_0__ 毫秒,耗时 __VAR_0__ 毫秒,YES,widgets/decision_panel.dart
+s1549,ui,} · 置信度 ,} · 置信度 ,} · 置信度 ,} · 置信度 ,,widgets/decision_panel.dart
+s1550,ui,今天 $hm,今天 __VAR_0__,今天 __VAR_0__,今天 __VAR_0__,YES,widgets/decision_panel.dart
+s1551,ui,昨天 $hm,昨天 __VAR_0__,昨天 __VAR_0__,昨天 __VAR_0__,YES,widgets/decision_panel.dart
+s1552,ui,一,一,一,一,,widgets/decision_panel.dart
+s1553,ui,二,二,二,二,,widgets/decision_panel.dart
+s1554,ui,三,三,三,三,,widgets/decision_panel.dart
+s1555,ui,四,四,四,四,,widgets/decision_panel.dart
+s1556,ui,五,五,五,五,,widgets/decision_panel.dart
+s1557,ui,六,六,六,六,,widgets/decision_panel.dart
+s1558,ui,日,日,日,日,,widgets/decision_panel.dart
+s1559,ui,周${names[t.weekday - 1]} $hm,周__VAR_0__ __VAR_1__,周__VAR_0__ __VAR_1__,周__VAR_0__ __VAR_1__,YES,widgets/decision_panel.dart
+s1560,ui,${t.month}月${t.day}日 $hm,__VAR_0__月__VAR_1__日 __VAR_2__,__VAR_0__月__VAR_1__日 __VAR_2__,__VAR_0__月__VAR_1__日 __VAR_2__,YES,widgets/decision_panel.dart
+s1561,ui,正在判断…,正在判断…,正在判断…,正在判断…,,widgets/decision_panel.dart
+s1562,ui,去配置,去配置,去配置,去配置,,widgets/decision_panel.dart
+s1563,ui,选择分支,选择分支,选择分支,选择分支,,widgets/git_branch_sheet.dart
+s1564,ui,搜索,搜索,搜索,搜索,,widgets/git_branch_sheet.dart
+s1565,ui,读取分支…,读取分支…,读取分支…,读取分支…,,widgets/git_branch_sheet.dart
+s1566,ui,这个仓库还没有分支,这个仓库还没有分支,这个仓库还没有分支,这个仓库还没有分支,,widgets/git_branch_sheet.dart
+s1567,ui,没有匹配「$_query」的分支,没有匹配「__VAR_0__」的分支,没有匹配「__VAR_0__」的分支,没有匹配「__VAR_0__」的分支,YES,widgets/git_branch_sheet.dart
+s1568,ui,提交与推送,提交与推送,提交与推送,提交与推送,,widgets/git_branch_sheet.dart
+s1569,ui,本地还没有这个仓库。,本地还没有这个仓库。,本地还没有这个仓库。,本地还没有这个仓库。,,widgets/git_panel.dart
+s1570,ui,这个工作区还不是 git 仓库。,这个工作区还不是 git 仓库。,这个工作区还不是 git 仓库。,这个工作区还不是 git 仓库。,,widgets/git_panel.dart
+s1571,ui,读取状态失败,读取状态失败,读取状态失败,读取状态失败,,widgets/git_panel.dart
+s1572,ui,读取状态出错：$e,读取状态出错：__VAR_0__,读取状态出错：__VAR_0__,读取状态出错：__VAR_0__,YES,widgets/git_panel.dart
+s1573,ui,完成,完成,完成,完成,,widgets/git_panel.dart
+s1574,ui,已初始化仓库,已初始化仓库,已初始化仓库,已初始化仓库,,widgets/git_panel.dart
+s1575,ui,已切换到 $name,已切换到 __VAR_0__,已切换到 __VAR_0__,已切换到 __VAR_0__,YES,widgets/git_panel.dart
+s1576,ui,先写一句提交信息,先写一句提交信息,先写一句提交信息,先写一句提交信息,,widgets/git_panel.dart
+s1577,ui,已提交,已提交,已提交,已提交,,widgets/git_panel.dart
+s1578,ui,先连接 Github 才能拉取,先连接 Github 才能拉取,先连接 Github 才能拉取,先连接 Github 才能拉取,,widgets/git_panel.dart
+s1579,ui,已拉取,已拉取,已拉取,已拉取,,widgets/git_panel.dart
+s1580,ui,先连接 Github 才能推送,先连接 Github 才能推送,先连接 Github 才能推送,先连接 Github 才能推送,,widgets/git_panel.dart
+s1581,ui,已推送,已推送,已推送,已推送,,widgets/git_panel.dart
+s1582,ui,版本控制,版本控制,版本控制,版本控制,,widgets/git_panel.dart
+s1583,ui,版本控制 · $_branch,版本控制 · __VAR_0__,版本控制 · __VAR_0__,版本控制 · __VAR_0__,YES,widgets/git_panel.dart
+s1584,ui,刷新,刷新,刷新,刷新,,widgets/git_panel.dart
+s1585,ui,读取中…,读取中…,读取中…,读取中…,,widgets/git_panel.dart
+s1586,ui,下面是它在 GitHub 上的分支（只读）。下载到手机之后才能切换、提交、推送。,下面是它在 GitHub 上的分支（只读）。下载到手机之后才能切换、提交、推送。,下面是它在 GitHub 上的分支（只读）。下载到手机之后才能切换、提交、推送。,下面是它在 GitHub 上的分支（只读）。下载到手机之后才能切换、提交、推送。,,widgets/git_panel.dart
+s1587,ui,正在读取远端分支…,正在读取远端分支…,正在读取远端分支…,正在读取远端分支…,,widgets/git_panel.dart
+s1588,ui,（没有仓库信息，无法列出远端分支）,（没有仓库信息，无法列出远端分支）,（没有仓库信息，无法列出远端分支）,（没有仓库信息，无法列出远端分支）,,widgets/git_panel.dart
+s1589,ui,没读到远端分支（可能没有分支，或网络/限流）,没读到远端分支（可能没有分支，或网络/限流）,没读到远端分支（可能没有分支，或网络/限流）,没读到远端分支（可能没有分支，或网络/限流）,,widgets/git_panel.dart
+s1590,ui,远端,远端,远端,远端,,widgets/git_panel.dart
+s1591,ui,正在下载…,正在下载…,正在下载…,正在下载…,,widgets/git_panel.dart
+s1592,ui,下载到手机,下载到手机,下载到手机,下载到手机,,widgets/git_panel.dart
+s1593,ui,git 必须在手机上的真实文件上操作，所以要先下载一次。,git 必须在手机上的真实文件上操作，所以要先下载一次。,git 必须在手机上的真实文件上操作，所以要先下载一次。,git 必须在手机上的真实文件上操作，所以要先下载一次。,,widgets/git_panel.dart
+s1594,ui,这个工作区还不是 git 仓库。初始化之后，你就能把每次改动提交成,这个工作区还不是 git 仓库。初始化之后，你就能把每次改动提交成,这个工作区还不是 git 仓库。初始化之后，你就能把每次改动提交成,这个工作区还不是 git 仓库。初始化之后，你就能把每次改动提交成,,widgets/git_panel.dart
+s1595,ui,可回滚的检查点。,可回滚的检查点。,可回滚的检查点。,可回滚的检查点。,,widgets/git_panel.dart
+s1596,ui,初始化 git 仓库,初始化 git 仓库,初始化 git 仓库,初始化 git 仓库,,widgets/git_panel.dart
+s1597,ui,这次改了什么？（提交信息）,这次改了什么？（提交信息）,这次改了什么？（提交信息）,这次改了什么？（提交信息）,,widgets/git_panel.dart
+s1598,ui,提交全部改动,提交全部改动,提交全部改动,提交全部改动,,widgets/git_panel.dart
+s1599,ui,没有未提交的改动。,没有未提交的改动。,没有未提交的改动。,没有未提交的改动。,,widgets/git_panel.dart
+s1600,ui,收起分支,收起分支,收起分支,收起分支,,widgets/git_panel.dart
+s1601,ui,切换分支（${_branches.length} 个）,切换分支（__VAR_0__ 个）,切换分支（__VAR_0__ 个）,切换分支（__VAR_0__ 个）,YES,widgets/git_panel.dart
+s1602,ui,还没有分支（仓库还没有提交）,还没有分支（仓库还没有提交）,还没有分支（仓库还没有提交）,还没有分支（仓库还没有提交）,,widgets/git_panel.dart
+s1603,ui,切换分支会覆盖工作区文件。有未提交改动时会被拒绝 —— 先提交再切。,切换分支会覆盖工作区文件。有未提交改动时会被拒绝 —— 先提交再切。,切换分支会覆盖工作区文件。有未提交改动时会被拒绝 —— 先提交再切。,切换分支会覆盖工作区文件。有未提交改动时会被拒绝 —— 先提交再切。,,widgets/git_panel.dart
+s1604,ui,拉取,拉取,拉取,拉取,,widgets/git_panel.dart
+s1605,ui,推送,推送,推送,推送,,widgets/git_panel.dart
+s1606,ui,推送会把本地提交发到远端仓库。首次推送会自动把当前分支设为上游。,推送会把本地提交发到远端仓库。首次推送会自动把当前分支设为上游。,推送会把本地提交发到远端仓库。首次推送会自动把当前分支设为上游。,推送会把本地提交发到远端仓库。首次推送会自动把当前分支设为上游。,,widgets/git_panel.dart
+s1607,ui,打不开浏览器，请手动访问 ${info.verificationUri},打不开浏览器，请手动访问 __VAR_0__,打不开浏览器，请手动访问 __VAR_0__,打不开浏览器，请手动访问 __VAR_0__,YES,widgets/github_connect_sheet.dart
+s1608,ui,连接 Github,连接 Github,连接 Github,连接 Github,,widgets/github_connect_sheet.dart
+s1609,ui,已连接 Github,已连接 Github,已连接 Github,已连接 Github,,widgets/github_connect_sheet.dart
+s1610,ui,先在浏览器输入这个码，再回来这里（会自动连上）：,先在浏览器输入这个码，再回来这里（会自动连上）：,先在浏览器输入这个码，再回来这里（会自动连上）：,先在浏览器输入这个码，再回来这里（会自动连上）：,,widgets/github_connect_sheet.dart
+s1611,ui,正在向 GitHub 申请验证码…,正在向 GitHub 申请验证码…,正在向 GitHub 申请验证码…,正在向 GitHub 申请验证码…,,widgets/github_connect_sheet.dart
+s1612,ui,已复制验证码,已复制验证码,已复制验证码,已复制验证码,,widgets/github_connect_sheet.dart
+s1613,ui,稍等…,稍等…,稍等…,稍等…,,widgets/github_connect_sheet.dart
+s1614,ui,已自动复制 · 点码可再复制,已自动复制 · 点码可再复制,已自动复制 · 点码可再复制,已自动复制 · 点码可再复制,,widgets/github_connect_sheet.dart
+s1615,ui,点码可复制,点码可复制,点码可复制,点码可复制,,widgets/github_connect_sheet.dart
+s1616,ui,打开 GitHub 授权页,打开 GitHub 授权页,打开 GitHub 授权页,打开 GitHub 授权页,,widgets/github_connect_sheet.dart
+s1617,ui,等待授权 · 剩余 $mm:$ss,等待授权 · 剩余 __VAR_0__:__VAR_1__,等待授权 · 剩余 __VAR_0__:__VAR_1__,等待授权 · 剩余 __VAR_0__:__VAR_1__,YES,widgets/github_connect_sheet.dart
+s1618,ui,准备中…,准备中…,准备中…,准备中…,,widgets/github_connect_sheet.dart
+s1619,ui,授权范围：读写你的仓库 + 读用户名。,授权范围：读写你的仓库 + 读用户名。,授权范围：读写你的仓库 + 读用户名。,授权范围：读写你的仓库 + 读用户名。,,widgets/github_connect_sheet.dart
+s1620,ui,从 GitHub 获取的数据只用来帮你完成当前工作，,从 GitHub 获取的数据只用来帮你完成当前工作，,从 GitHub 获取的数据只用来帮你完成当前工作，,从 GitHub 获取的数据只用来帮你完成当前工作，,,widgets/github_connect_sheet.dart
+s1621,ui,可以随时在 GitHub 设置里撤销访问权限。,可以随时在 GitHub 设置里撤销访问权限。,可以随时在 GitHub 设置里撤销访问权限。,可以随时在 GitHub 设置里撤销访问权限。,,widgets/github_connect_sheet.dart
+s1622,ui,去 GitHub 管理授权,去 GitHub 管理授权,去 GitHub 管理授权,去 GitHub 管理授权,,widgets/github_connect_sheet.dart
+s1623,ui,还没有连接 GitHub,还没有连接 GitHub,还没有连接 GitHub,还没有连接 GitHub,,widgets/github_repo_sheet.dart
+s1624,ui,没有拉到仓库。可能是网络问题，或者这个账号还没有仓库。,没有拉到仓库。可能是网络问题，或者这个账号还没有仓库。,没有拉到仓库。可能是网络问题，或者这个账号还没有仓库。,没有拉到仓库。可能是网络问题，或者这个账号还没有仓库。,,widgets/github_repo_sheet.dart
+s1625,ui,已下载 `${repo.name},已下载 `__VAR_0__,已下载 `__VAR_0__,已下载 `__VAR_0__,YES,widgets/github_repo_sheet.dart
+s1626,ui,选择仓库,选择仓库,选择仓库,选择仓库,,widgets/github_repo_sheet.dart
+s1627,ui,正在读取你的仓库…,正在读取你的仓库…,正在读取你的仓库…,正在读取你的仓库…,,widgets/github_repo_sheet.dart
+s1628,ui,没有匹配「$_query」的仓库,没有匹配「__VAR_0__」的仓库,没有匹配「__VAR_0__」的仓库,没有匹配「__VAR_0__」的仓库,YES,widgets/github_repo_sheet.dart
+s1629,ui,共 ${_all.length} 个仓库,共 __VAR_0__ 个仓库,共 __VAR_0__ 个仓库,共 __VAR_0__ 个仓库,YES,widgets/github_repo_sheet.dart
+s1630,ui,搜索你的仓库…,搜索你的仓库…,搜索你的仓库…,搜索你的仓库…,,widgets/github_repo_sheet.dart
+s1631,ui,本地已有,本地已有,本地已有,本地已有,,widgets/github_repo_sheet.dart
+s1632,ui,默认分支 ${r.defaultBranch},默认分支 __VAR_0__,默认分支 __VAR_0__,默认分支 __VAR_0__,YES,widgets/github_repo_sheet.dart
+s1633,ui,图片文件已不存在,图片文件已不存在,图片文件已不存在,图片文件已不存在,,widgets/image_viewer.dart
+s1634,ui,图片文件已不存在\n$name,图片文件已不存在\n__VAR_0__,图片文件已不存在\n__VAR_0__,图片文件已不存在\n__VAR_0__,YES,widgets/image_viewer.dart
+s1635,ui,已编辑 ${files.length} 个文件,已编辑 __VAR_0__ 个文件,已编辑 __VAR_0__ 个文件,已编辑 __VAR_0__ 个文件,YES,widgets/message_row.dart
+s1636,ui,第 ${b.index} 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,YES,widgets/message_row.dart
+s1637,ui,第 ${o.index} 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,YES,widgets/message_row.dart
+s1638,ui,${(m.wallMs / 1000).toStringAsFixed(1)} 秒,__VAR_0__ 秒,__VAR_0__ 秒,__VAR_0__ 秒,YES,widgets/message_row.dart
+s1639,ui,任务计划,任务计划,任务计划,任务计划,,widgets/plan_checklist.dart
+s1640,ui,已中断,已中断,已中断,已中断,,widgets/plan_checklist.dart
+s1641,ui,进行中,进行中,进行中,进行中,,widgets/plan_checklist.dart
+s1642,ui,已用 ${info.tokensSpent} / 上限 ${info.tokensLimit},已用 __VAR_0__ / 上限 __VAR_1__,已用 __VAR_0__ / 上限 __VAR_1__,已用 __VAR_0__ / 上限 __VAR_1__,YES,widgets/run_stop_banner.dart
+s1643,ui,已用 ${info.tokensSpent} tokens,已用 __VAR_0__ tokens,已用 __VAR_0__ tokens,已用 __VAR_0__ tokens,YES,widgets/run_stop_banner.dart
+s1644,ui,第 ${info.round} / ${info.maxRounds} 轮,第 __VAR_0__ / __VAR_1__ 轮,第 __VAR_0__ / __VAR_1__ 轮,第 __VAR_0__ / __VAR_1__ 轮,YES,widgets/run_stop_banner.dart
+s1645,ui,第 ${info.round} 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,第 __VAR_0__ 轮,YES,widgets/run_stop_banner.dart
+s1646,ui,预计下一轮约 ${info.nextEstimate} tokens,预计下一轮约 __VAR_0__ tokens,预计下一轮约 __VAR_0__ tokens,预计下一轮约 __VAR_0__ tokens,YES,widgets/run_stop_banner.dart
+s1647,ui,从第 ${info.resumedFromRound} 轮继续,从第 __VAR_0__ 轮继续,从第 __VAR_0__ 轮继续,从第 __VAR_0__ 轮继续,YES,widgets/run_stop_banner.dart
+s1648,ui,任务被中断：${info.reasonText},任务被中断：__VAR_0__,任务被中断：__VAR_0__,任务被中断：__VAR_0__,YES,widgets/run_stop_banner.dart
+s1649,ui,已改文件：${info.changedFiles.take(3).join(,已改文件：${info.changedFiles.take(3).join(,已改文件：${info.changedFiles.take(3).join(,已改文件：${info.changedFiles.take(3).join(,YES,widgets/run_stop_banner.dart
+s1650,ui,错误摘要：${info.errorSummary},错误摘要：__VAR_0__,错误摘要：__VAR_0__,错误摘要：__VAR_0__,YES,widgets/run_stop_banner.dart
+s1651,ui,2026-11-02: 续跑固定自动 3 轮，不再弹自动确认,2026-11-02: 续跑固定自动 3 轮，不再弹自动确认,2026-11-02: 续跑固定自动 3 轮，不再弹自动确认,2026-11-02: 续跑固定自动 3 轮，不再弹自动确认,,widgets/run_stop_banner.dart
+s1652,ui,已用 $tokensSpent / 上限 $tokensLimit tokens,已用 __VAR_0__ / 上限 __VAR_1__ tokens,已用 __VAR_0__ / 上限 __VAR_1__ tokens,已用 __VAR_0__ / 上限 __VAR_1__ tokens,YES,widgets/run_stop_banner.dart
+s1653,ui,预计下一轮约 $nextEstimate tokens,预计下一轮约 __VAR_0__ tokens,预计下一轮约 __VAR_0__ tokens,预计下一轮约 __VAR_0__ tokens,YES,widgets/run_stop_banner.dart
+s1654,ui,未给出原因,未给出原因,未给出原因,未给出原因,,widgets/sandbox_env_section.dart; widgets/v04_tool_card.dart
+s1655,ui,}失败：$why,}失败：__VAR_0__,}失败：__VAR_0__,}失败：__VAR_0__,YES,widgets/sandbox_env_section.dart
+s1656,ui,版本未校验,版本未校验,版本未校验,版本未校验,,widgets/sandbox_env_section.dart
+s1657,ui,版本 ${r.verifiedVersion},版本 __VAR_0__,版本 __VAR_0__,版本 __VAR_0__,YES,widgets/sandbox_env_section.dart
+s1658,ui, · 约 ${(r.approxBytes / (1024 * 1024)).toStringAsFixed(0)} MB, · 约 __VAR_0__ MB, · 约 __VAR_0__ MB, · 约 __VAR_0__ MB,YES,widgets/sandbox_env_section.dart
+s1659,ui,当前版本不支持环境管理（通道未实现 envProfile）,当前版本不支持环境管理（通道未实现 envProfile）,当前版本不支持环境管理（通道未实现 envProfile）,当前版本不支持环境管理（通道未实现 envProfile）,,widgets/sandbox_env_section.dart
+s1660,ui,环境服务不可用：$s,环境服务不可用：__VAR_0__,环境服务不可用：__VAR_0__,环境服务不可用：__VAR_0__,YES,widgets/sandbox_env_section.dart
+s1661,ui,读取环境信息失败：$s,读取环境信息失败：__VAR_0__,读取环境信息失败：__VAR_0__,读取环境信息失败：__VAR_0__,YES,widgets/sandbox_env_section.dart
+s1662,ui,当前版本不支持环境管理,当前版本不支持环境管理,当前版本不支持环境管理,当前版本不支持环境管理,,widgets/sandbox_env_section.dart
+s1663,ui,已安装环境,已安装环境,已安装环境,已安装环境,,widgets/sandbox_env_section.dart
+s1664,ui,已实现（L1 进程级）,已实现（L1 进程级）,已实现（L1 进程级）,已实现（L1 进程级）,,widgets/sandbox_env_section.dart
+s1665,ui,未实现（${p.isolationTier}）,未实现（__VAR_0__）,未实现（__VAR_0__）,未实现（__VAR_0__）,YES,widgets/sandbox_env_section.dart
+s1666,ui,隔离档位,隔离档位,隔离档位,隔离档位,,widgets/sandbox_env_section.dart
+s1667,ui,自由出网（已开启）,自由出网（已开启）,自由出网（已开启）,自由出网（已开启）,,widgets/sandbox_env_section.dart
+s1668,ui,仅白名单,仅白名单,仅白名单,仅白名单,,widgets/sandbox_env_section.dart
+s1669,ui,未限制,未限制,未限制,未限制,,widgets/sandbox_env_section.dart
+s1670,ui,网络策略,网络策略,网络策略,网络策略,,widgets/sandbox_env_section.dart
+s1671,ui,高风险,高风险,高风险,高风险,,widgets/sandbox_env_section.dart
+s1672,ui,白名单：${p.hosts.take(6).join(,白名单：${p.hosts.take(6).join(,白名单：${p.hosts.take(6).join(,白名单：${p.hosts.take(6).join(,YES,widgets/sandbox_env_section.dart
+s1673,ui,代理：${p.proxy},代理：__VAR_0__,代理：__VAR_0__,代理：__VAR_0__,YES,widgets/sandbox_env_section.dart
+s1674,ui,认不出项目类型（未检测到可识别的项目文件）,认不出项目类型（未检测到可识别的项目文件）,认不出项目类型（未检测到可识别的项目文件）,认不出项目类型（未检测到可识别的项目文件）,,widgets/sandbox_env_section.dart
+s1675,ui,检测到：${_projectEnvs.join(,检测到：${_projectEnvs.join(,检测到：${_projectEnvs.join(,检测到：${_projectEnvs.join(,YES,widgets/sandbox_env_section.dart
+s1676,ui,项目识别,项目识别,项目识别,项目识别,,widgets/sandbox_env_section.dart
+s1677,ui,已安装,已安装,已安装,已安装,,widgets/sandbox_env_section.dart
+s1678,ui,未安装,未安装,未安装,未安装,,widgets/sandbox_env_section.dart
+s1679,ui,安装,安装,安装,安装,,widgets/sandbox_env_section.dart
+s1680,ui,已生成 ${t.length} 字符（仍在写入）,已生成 __VAR_0__ 字符（仍在写入）,已生成 __VAR_0__ 字符（仍在写入）,已生成 __VAR_0__ 字符（仍在写入）,YES,widgets/stream_step.dart
+s1681,ui,工具：$tool,工具：__VAR_0__,工具：__VAR_0__,工具：__VAR_0__,YES,widgets/stream_step.dart
+s1682,ui,工具：$tool → $target${contentLen > 0 ? ,工具：__VAR_0__ → __VAR_1__${contentLen > 0 ? ,工具：__VAR_0__ → __VAR_1__${contentLen > 0 ? ,工具：__VAR_0__ → __VAR_1__${contentLen > 0 ? ,YES,widgets/stream_step.dart
+s1683,ui,已写入 $target,已写入 __VAR_0__,已写入 __VAR_0__,已写入 __VAR_0__,YES,widgets/stream_step.dart
+s1684,ui,已执行 $tool,已执行 __VAR_0__,已执行 __VAR_0__,已执行 __VAR_0__,YES,widgets/stream_step.dart
+s1685,ui,已生成 ${t.length} 字符（未完成）,已生成 __VAR_0__ 字符（未完成）,已生成 __VAR_0__ 字符（未完成）,已生成 __VAR_0__ 字符（未完成）,YES,widgets/stream_step.dart
+s1686,ui,正在读取,正在读取,正在读取,正在读取,,widgets/tool_call_card.dart
+s1687,ui,读取了,读取了,读取了,读取了,,widgets/tool_call_card.dart
+s1688,ui,读取了文件,读取了文件,读取了文件,读取了文件,,widgets/tool_call_card.dart
+s1689,ui,正在查看目录,正在查看目录,正在查看目录,正在查看目录,,widgets/tool_call_card.dart
+s1690,ui,查看了目录,查看了目录,查看了目录,查看了目录,,widgets/tool_call_card.dart
+s1691,ui,正在查找,正在查找,正在查找,正在查找,,widgets/tool_call_card.dart
+s1692,ui,查找了,查找了,查找了,查找了,,widgets/tool_call_card.dart
+s1693,ui,查找了文件,查找了文件,查找了文件,查找了文件,,widgets/tool_call_card.dart
+s1694,ui,正在搜索,正在搜索,正在搜索,正在搜索,,widgets/tool_call_card.dart
+s1695,ui,搜索了,搜索了,搜索了,搜索了,,widgets/tool_call_card.dart
+s1696,ui,搜索了内容,搜索了内容,搜索了内容,搜索了内容,,widgets/tool_call_card.dart
+s1697,ui,正在写入,正在写入,正在写入,正在写入,,widgets/tool_call_card.dart
+s1698,ui,写入了,写入了,写入了,写入了,,widgets/tool_call_card.dart
+s1699,ui,写入了文件,写入了文件,写入了文件,写入了文件,,widgets/tool_call_card.dart
+s1700,ui,正在编辑,正在编辑,正在编辑,正在编辑,,widgets/tool_call_card.dart
+s1701,ui,编辑了,编辑了,编辑了,编辑了,,widgets/tool_call_card.dart
+s1702,ui,编辑了文件,编辑了文件,编辑了文件,编辑了文件,,widgets/tool_call_card.dart
+s1703,ui,正在按补丁修改,正在按补丁修改,正在按补丁修改,正在按补丁修改,,widgets/tool_call_card.dart
+s1704,ui,按补丁修改了,按补丁修改了,按补丁修改了,按补丁修改了,,widgets/tool_call_card.dart
+s1705,ui,按补丁修改了文件,按补丁修改了文件,按补丁修改了文件,按补丁修改了文件,,widgets/tool_call_card.dart
+s1706,ui,正在创建目录,正在创建目录,正在创建目录,正在创建目录,,widgets/tool_call_card.dart
+s1707,ui,创建了目录,创建了目录,创建了目录,创建了目录,,widgets/tool_call_card.dart
+s1708,ui,正在删除,正在删除,正在删除,正在删除,,widgets/tool_call_card.dart
+s1709,ui,删除了,删除了,删除了,删除了,,widgets/tool_call_card.dart
+s1710,ui,删除了文件,删除了文件,删除了文件,删除了文件,,widgets/tool_call_card.dart
+s1711,ui,正在移动,正在移动,正在移动,正在移动,,widgets/tool_call_card.dart
+s1712,ui,移动了,移动了,移动了,移动了,,widgets/tool_call_card.dart
+s1713,ui,移动了文件,移动了文件,移动了文件,移动了文件,,widgets/tool_call_card.dart
+s1714,ui,正在复制,正在复制,正在复制,正在复制,,widgets/tool_call_card.dart
+s1715,ui,复制了,复制了,复制了,复制了,,widgets/tool_call_card.dart
+s1716,ui,复制了文件,复制了文件,复制了文件,复制了文件,,widgets/tool_call_card.dart
+s1717,ui,正在执行命令,正在执行命令,正在执行命令,正在执行命令,,widgets/tool_call_card.dart
+s1718,ui,执行了命令,执行了命令,执行了命令,执行了命令,,widgets/tool_call_card.dart
+s1719,ui,正在抓取网页,正在抓取网页,正在抓取网页,正在抓取网页,,widgets/tool_call_card.dart
+s1720,ui,抓取了网页,抓取了网页,抓取了网页,抓取了网页,,widgets/tool_call_card.dart
+s1721,ui,正在联网搜索,正在联网搜索,正在联网搜索,正在联网搜索,,widgets/tool_call_card.dart
+s1722,ui,联网搜索了,联网搜索了,联网搜索了,联网搜索了,,widgets/tool_call_card.dart
+s1723,ui,正在读取文档,正在读取文档,正在读取文档,正在读取文档,,widgets/tool_call_card.dart
+s1724,ui,读取了文档,读取了文档,读取了文档,读取了文档,,widgets/tool_call_card.dart
+s1725,ui,正在发送通知,正在发送通知,正在发送通知,正在发送通知,,widgets/tool_call_card.dart
+s1726,ui,发送了通知,发送了通知,发送了通知,发送了通知,,widgets/tool_call_card.dart
+s1727,ui,正在读取设备状态,正在读取设备状态,正在读取设备状态,正在读取设备状态,,widgets/tool_call_card.dart
+s1728,ui,读取了设备状态,读取了设备状态,读取了设备状态,读取了设备状态,,widgets/tool_call_card.dart
+s1729,ui,正在更新待办,正在更新待办,正在更新待办,正在更新待办,,widgets/tool_call_card.dart
+s1730,ui,更新了待办,更新了待办,更新了待办,更新了待办,,widgets/tool_call_card.dart
+s1731,ui,正在向你提问,正在向你提问,正在向你提问,正在向你提问,,widgets/tool_call_card.dart
+s1732,ui,向你提了问,向你提了问,向你提了问,向你提了问,,widgets/tool_call_card.dart
+s1733,ui,正在记录,正在记录,正在记录,正在记录,,widgets/tool_call_card.dart
+s1734,ui,记录了,记录了,记录了,记录了,,widgets/tool_call_card.dart
+s1735,ui,记录了要点,记录了要点,记录了要点,记录了要点,,widgets/tool_call_card.dart
+s1736,ui,正在构建 APK,正在构建 APK,正在构建 APK,正在构建 APK,,widgets/tool_call_card.dart
+s1737,ui,构建了 APK,构建了 APK,构建了 APK,构建了 APK,,widgets/tool_call_card.dart
+s1738,ui,正在反编译,正在反编译,正在反编译,正在反编译,,widgets/tool_call_card.dart
+s1739,ui,反编译了,反编译了,反编译了,反编译了,,widgets/tool_call_card.dart
+s1740,ui,反编译了 APK,反编译了 APK,反编译了 APK,反编译了 APK,,widgets/tool_call_card.dart
+s1741,ui,正在重打包,正在重打包,正在重打包,正在重打包,,widgets/tool_call_card.dart
+s1742,ui,重打包了,重打包了,重打包了,重打包了,,widgets/tool_call_card.dart
+s1743,ui,重打包了 APK,重打包了 APK,重打包了 APK,重打包了 APK,,widgets/tool_call_card.dart
+s1744,ui,正在签名,正在签名,正在签名,正在签名,,widgets/tool_call_card.dart
+s1745,ui,签名了,签名了,签名了,签名了,,widgets/tool_call_card.dart
+s1746,ui,签名了 APK,签名了 APK,签名了 APK,签名了 APK,,widgets/tool_call_card.dart
+s1747,ui,正在安装,正在安装,正在安装,正在安装,,widgets/tool_call_card.dart
+s1748,ui,安装了,安装了,安装了,安装了,,widgets/tool_call_card.dart
+s1749,ui,安装了 APK,安装了 APK,安装了 APK,安装了 APK,,widgets/tool_call_card.dart
+s1750,ui,正在读取图片,正在读取图片,正在读取图片,正在读取图片,,widgets/tool_call_card.dart
+s1751,ui,读取了图片,读取了图片,读取了图片,读取了图片,,widgets/tool_call_card.dart
+s1752,ui,正在调用 $tool,正在调用 __VAR_0__,正在调用 __VAR_0__,正在调用 __VAR_0__,YES,widgets/tool_call_card.dart
+s1753,ui,调用了 $tool,调用了 __VAR_0__,调用了 __VAR_0__,调用了 __VAR_0__,YES,widgets/tool_call_card.dart
+s1754,ui,没有工具调用,没有工具调用,没有工具调用,没有工具调用,,widgets/tool_call_card.dart
+s1755,ui,${phrases[0]}并${phrases[1]},__VAR_0__并__VAR_1__,__VAR_0__并__VAR_1__,__VAR_0__并__VAR_1__,YES,widgets/tool_call_card.dart
+s1756,ui,${phrases[0]}、${phrases[1]} 等 ${tools.length} 项,__VAR_0__、__VAR_1__ 等 __VAR_2__ 项,__VAR_0__、__VAR_1__ 等 __VAR_2__ 项,__VAR_0__、__VAR_1__ 等 __VAR_2__ 项,YES,widgets/tool_call_card.dart
+s1757,ui,$summary（含失败）,__VAR_0__（含失败）,__VAR_0__（含失败）,__VAR_0__（含失败）,YES,widgets/tool_call_card.dart
+s1758,ui,$head（失败）,__VAR_0__（失败）,__VAR_0__（失败）,__VAR_0__（失败）,YES,widgets/tool_call_card.dart
+s1759,ui,修改文件代码,修改文件代码,修改文件代码,修改文件代码,,widgets/tool_call_card.dart
+s1760,ui,读取文件,读取文件,读取文件,读取文件,,widgets/tool_call_card.dart
+s1761,ui,查看目录文件,查看目录文件,查看目录文件,查看目录文件,,widgets/tool_call_card.dart
+s1762,ui,更新任务计划,更新任务计划,更新任务计划,更新任务计划,,widgets/tool_call_card.dart
+s1763,ui,局部修改代码,局部修改代码,局部修改代码,局部修改代码,,widgets/tool_call_card.dart
+s1764,ui,恢复文件到快照,恢复文件到快照,恢复文件到快照,恢复文件到快照,,widgets/tool_call_card.dart
+s1765,ui,查找文件,查找文件,查找文件,查找文件,,widgets/tool_call_card.dart
+s1766,ui,搜索代码,搜索代码,搜索代码,搜索代码,,widgets/tool_call_card.dart
+s1767,ui,执行命令,执行命令,执行命令,执行命令,,widgets/tool_call_card.dart
+s1768,ui,创建目录,创建目录,创建目录,创建目录,,widgets/tool_call_card.dart
+s1769,ui,记住项目信息,记住项目信息,记住项目信息,记住项目信息,,widgets/tool_call_card.dart
+s1770,ui,向你提问,向你提问,向你提问,向你提问,,widgets/tool_call_card.dart
+s1771,ui,删除文件,删除文件,删除文件,删除文件,,widgets/tool_call_card.dart
+s1772,ui,移动文件,移动文件,移动文件,移动文件,,widgets/tool_call_card.dart
+s1773,ui,复制文件,复制文件,复制文件,复制文件,,widgets/tool_call_card.dart
+s1774,ui,查找可用工具,查找可用工具,查找可用工具,查找可用工具,,widgets/tool_call_card.dart
+s1775,ui,联网搜索,联网搜索,联网搜索,联网搜索,,widgets/tool_call_card.dart
+s1776,ui,读取文档,读取文档,读取文档,读取文档,,widgets/tool_call_card.dart
+s1777,ui,发送通知,发送通知,发送通知,发送通知,,widgets/tool_call_card.dart
+s1778,ui,生成 Android 工程,生成 Android 工程,生成 Android 工程,生成 Android 工程,,widgets/tool_call_card.dart
+s1779,ui,构建 APK,构建 APK,构建 APK,构建 APK,,widgets/tool_call_card.dart
+s1780,ui,反编译 APK,反编译 APK,反编译 APK,反编译 APK,,widgets/tool_call_card.dart
+s1781,ui,重打包 APK,重打包 APK,重打包 APK,重打包 APK,,widgets/tool_call_card.dart
+s1782,ui,签名 APK,签名 APK,签名 APK,签名 APK,,widgets/tool_call_card.dart
+s1783,ui,转换 DEX,转换 DEX,转换 DEX,转换 DEX,,widgets/tool_call_card.dart
+s1784,ui,解压,解压,解压,解压,,widgets/tool_call_card.dart
+s1785,ui,压缩,压缩,压缩,压缩,,widgets/tool_call_card.dart
+s1786,ui,搜索内容,搜索内容,搜索内容,搜索内容,,widgets/tool_call_card.dart
+s1787,ui,正在修改文件代码,正在修改文件代码,正在修改文件代码,正在修改文件代码,,widgets/tool_call_card.dart
+s1788,ui,正在读取文件,正在读取文件,正在读取文件,正在读取文件,,widgets/tool_call_card.dart
+s1789,ui,正在查看目录文件,正在查看目录文件,正在查看目录文件,正在查看目录文件,,widgets/tool_call_card.dart
+s1790,ui,正在更新任务计划,正在更新任务计划,正在更新任务计划,正在更新任务计划,,widgets/tool_call_card.dart
+s1791,ui,正在局部修改代码,正在局部修改代码,正在局部修改代码,正在局部修改代码,,widgets/tool_call_card.dart
+s1792,ui,正在恢复文件,正在恢复文件,正在恢复文件,正在恢复文件,,widgets/tool_call_card.dart
+s1793,ui,正在查找文件,正在查找文件,正在查找文件,正在查找文件,,widgets/tool_call_card.dart
+s1794,ui,正在搜索代码,正在搜索代码,正在搜索代码,正在搜索代码,,widgets/tool_call_card.dart
+s1795,ui,正在记录项目信息,正在记录项目信息,正在记录项目信息,正在记录项目信息,,widgets/tool_call_card.dart
+s1796,ui,正在删除文件,正在删除文件,正在删除文件,正在删除文件,,widgets/tool_call_card.dart
+s1797,ui,正在移动文件,正在移动文件,正在移动文件,正在移动文件,,widgets/tool_call_card.dart
+s1798,ui,正在复制文件,正在复制文件,正在复制文件,正在复制文件,,widgets/tool_call_card.dart
+s1799,ui,正在查找可用工具,正在查找可用工具,正在查找可用工具,正在查找可用工具,,widgets/tool_call_card.dart
+s1800,ui,正在生成 Android 工程,正在生成 Android 工程,正在生成 Android 工程,正在生成 Android 工程,,widgets/tool_call_card.dart
+s1801,ui,正在反编译 APK,正在反编译 APK,正在反编译 APK,正在反编译 APK,,widgets/tool_call_card.dart
+s1802,ui,正在重打包 APK,正在重打包 APK,正在重打包 APK,正在重打包 APK,,widgets/tool_call_card.dart
+s1803,ui,正在签名 APK,正在签名 APK,正在签名 APK,正在签名 APK,,widgets/tool_call_card.dart
+s1804,ui,正在转换 DEX,正在转换 DEX,正在转换 DEX,正在转换 DEX,,widgets/tool_call_card.dart
+s1805,ui,正在解压,正在解压,正在解压,正在解压,,widgets/tool_call_card.dart
+s1806,ui,正在压缩,正在压缩,正在压缩,正在压缩,,widgets/tool_call_card.dart
+s1807,ui,正在搜索内容,正在搜索内容,正在搜索内容,正在搜索内容,,widgets/tool_call_card.dart
+s1808,ui,正在执行 $tool,正在执行 __VAR_0__,正在执行 __VAR_0__,正在执行 __VAR_0__,YES,widgets/tool_call_card.dart
+s1809,ui,手机,手机,手机,手机,,widgets/tool_call_card.dart
+s1810,ui,正在${surface.zhName}执行命令,正在__VAR_0__执行命令,正在__VAR_0__执行命令,正在__VAR_0__执行命令,YES,widgets/tool_call_card.dart
+s1811,ui,在${surface.zhName}执行了命令,在__VAR_0__执行了命令,在__VAR_0__执行了命令,在__VAR_0__执行了命令,YES,widgets/tool_call_card.dart
+s1812,ui,$base（失败）,__VAR_0__（失败）,__VAR_0__（失败）,__VAR_0__（失败）,YES,widgets/tool_call_card.dart
+s1813,ui,命令退出码：\s*(-?\d+),命令退出码：\s*(-?\d+),命令退出码：\s*(-?\d+),命令退出码：\s*(-?\d+),,widgets/tool_call_card.dart
+s1814,ui,【命令输出开始】,【命令输出开始】,【命令输出开始】,【命令输出开始】,,widgets/tool_call_card.dart
+s1815,ui,【命令输出结束】,【命令输出结束】,【命令输出结束】,【命令输出结束】,,widgets/tool_call_card.dart
+s1816,ui,^\s*（执行面：\s*(sandbox|device|shell)\s*）\s*,^\s*（执行面：\s*(sandbox|device|shell)\s*）\s*,^\s*（执行面：\s*(sandbox|device|shell)\s*）\s*,^\s*（执行面：\s*(sandbox|device|shell)\s*）\s*,,widgets/tool_call_card.dart
+s1817,ui,^\s*（耗时\s*-?\d+(?:\.\d+)?\s*ms）\s*$,^\s*（耗时\s*-?\d+(?:\.\d+)?\s*ms）\s*$,^\s*（耗时\s*-?\d+(?:\.\d+)?\s*ms）\s*$,^\s*（耗时\s*-?\d+(?:\.\d+)?\s*ms）\s*$,YES,widgets/tool_call_card.dart
+s1818,ui,结果,结果,结果,结果,,widgets/tool_call_card.dart; widgets/v04_tool_card.dart
+s1819,ui,（已截断，共 ${call.result!.length} 字符）,（已截断，共 __VAR_0__ 字符）,（已截断，共 __VAR_0__ 字符）,（已截断，共 __VAR_0__ 字符）,YES,widgets/tool_call_card.dart
+s1820,ui,执行中… 结果将在完成后出现,执行中… 结果将在完成后出现,执行中… 结果将在完成后出现,执行中… 结果将在完成后出现,,widgets/tool_call_card.dart
+s1821,ui,退出码 $exitCode,退出码 __VAR_0__,退出码 __VAR_0__,退出码 __VAR_0__,YES,widgets/tool_call_card.dart
+s1822,ui,已复制,已复制,已复制,已复制,,widgets/tool_call_card.dart
+s1823,ui,文件改动,文件改动,文件改动,文件改动,,widgets/tool_call_card.dart
+s1824,ui,点击查看改动,点击查看改动,点击查看改动,点击查看改动,,widgets/tool_call_card.dart
+s1825,ui,模型原始输出,模型原始输出,模型原始输出,模型原始输出,,widgets/tool_call_card.dart
+s1826,ui,用量与上下文,用量与上下文,用量与上下文,用量与上下文,,widgets/usage_sidebar.dart
+s1827,ui,稳态命中率（最近一次·轮次平均）,稳态命中率（最近一次·轮次平均）,稳态命中率（最近一次·轮次平均）,稳态命中率（最近一次·轮次平均）,,widgets/usage_sidebar.dart
+s1828,ui,命中率**只统计已上报的 ${usage.reportedTurns} 轮** —— ,命中率**只统计已上报的 __VAR_0__ 轮** —— ,命中率**只统计已上报的 __VAR_0__ 轮** —— ,命中率**只统计已上报的 __VAR_0__ 轮** —— ,YES,widgets/usage_sidebar.dart
+s1829,ui,未上报不等于 0。,未上报不等于 0。,未上报不等于 0。,未上报不等于 0。,,widgets/usage_sidebar.dart
+s1830,ui,上下文已用,上下文已用,上下文已用,上下文已用,,widgets/usage_sidebar.dart
+s1831,ui,系统提示与记忆,系统提示与记忆,系统提示与记忆,系统提示与记忆,,widgets/usage_sidebar.dart
+s1832,ui,对话历史,对话历史,对话历史,对话历史,,widgets/usage_sidebar.dart
+s1833,ui,系统提示与工具定义,系统提示与工具定义,系统提示与工具定义,系统提示与工具定义,,widgets/usage_sidebar.dart
+s1834,ui,对话消息,对话消息,对话消息,对话消息,,widgets/usage_sidebar.dart
+s1835,ui,会话统计,会话统计,会话统计,会话统计,,widgets/usage_sidebar.dart
+s1836,ui,运行次数,运行次数,运行次数,运行次数,,widgets/usage_sidebar.dart
+s1837,ui,轮次,轮次,轮次,轮次,,widgets/usage_sidebar.dart
+s1838,ui,工具调用,工具调用,工具调用,工具调用,,widgets/usage_sidebar.dart
+s1839,ui,模型用时（不含工具）,模型用时（不含工具）,模型用时（不含工具）,模型用时（不含工具）,,widgets/usage_sidebar.dart
+s1840,ui,任务总耗时,任务总耗时,任务总耗时,任务总耗时,,widgets/usage_sidebar.dart
+s1841,ui,输出速度,输出速度,输出速度,输出速度,,widgets/usage_sidebar.dart
+s1842,ui,不到 1 秒,不到 1 秒,不到 1 秒,不到 1 秒,,widgets/usage_sidebar.dart
+s1843,ui,$h0小时$m分,__VAR_0____VAR_1__,__VAR_0____VAR_1__,__VAR_0____VAR_1__,YES,widgets/usage_sidebar.dart
+s1844,ui,$m分$s秒,__VAR_0____VAR_1__,__VAR_0____VAR_1__,__VAR_0____VAR_1__,YES,widgets/usage_sidebar.dart
+s1845,ui,$s秒,__VAR_0__,__VAR_0__,__VAR_0__,YES,widgets/usage_sidebar.dart
+s1846,ui,用量与上下文\n缓存命中（累计·加权） $rateLabel · 上下文已用 $ctxLabel,用量与上下文\n缓存命中（累计·加权） __VAR_0__ · 上下文已用 __VAR_1__,用量与上下文\n缓存命中（累计·加权） __VAR_0__ · 上下文已用 __VAR_1__,用量与上下文\n缓存命中（累计·加权） __VAR_0__ · 上下文已用 __VAR_1__,YES,widgets/usage_sidebar.dart
+s1847,ui,来源：,来源：,来源：,来源：,,widgets/v04_tool_card.dart
+s1848,ui,查询,查询,查询,查询,,widgets/v04_tool_card.dart
+s1849,ui,失败：${_reason(call)},失败：__VAR_0__,失败：__VAR_0__,失败：__VAR_0__,YES,widgets/v04_tool_card.dart
+s1850,ui,来源,来源,来源,来源,,widgets/v04_tool_card.dart
+s1851,ui,未返回来源（结果里没有「来源：」行）,未返回来源（结果里没有「来源：」行）,未返回来源（结果里没有「来源：」行）,未返回来源（结果里没有「来源：」行）,,widgets/v04_tool_card.dart
+s1852,ui,Word 文档,Word 文档,Word 文档,Word 文档,,widgets/v04_tool_card.dart
+s1853,ui,Excel 表格,Excel 表格,Excel 表格,Excel 表格,,widgets/v04_tool_card.dart
+s1854,ui,演示文稿,演示文稿,演示文稿,演示文稿,,widgets/v04_tool_card.dart
+s1855,ui,^文档：(.+)$,^文档：(.+)$,^文档：(.+)$,^文档：(.+)$,YES,widgets/v04_tool_card.dart
+s1856,ui,页数：\s*(\d+),页数：\s*(\d+),页数：\s*(\d+),页数：\s*(\d+),,widgets/v04_tool_card.dart
+s1857,ui,表数：\s*(\d+),表数：\s*(\d+),表数：\s*(\d+),表数：\s*(\d+),,widgets/v04_tool_card.dart
+s1858,ui,页数,页数,页数,页数,,widgets/v04_tool_card.dart
+s1859,ui,工作表数,工作表数,工作表数,工作表数,,widgets/v04_tool_card.dart
+s1860,ui,读取失败：${_reason(call)},读取失败：__VAR_0__,读取失败：__VAR_0__,读取失败：__VAR_0__,YES,widgets/v04_tool_card.dart
+s1861,ui,已读取（未返回类型/页数）,已读取（未返回类型/页数）,已读取（未返回类型/页数）,已读取（未返回类型/页数）,,widgets/v04_tool_card.dart
+s1862,ui,正文,正文,正文,正文,,widgets/v04_tool_card.dart
+s1863,ui,未送达：${_reason(call)},未送达：__VAR_0__,未送达：__VAR_0__,未送达：__VAR_0__,YES,widgets/v04_tool_card.dart
+s1864,ui,已选 $n 个会话,已选 __VAR_0__ 个会话,已选 __VAR_0__ 个会话,已选 __VAR_0__ 个会话,YES,widgets/workspace_drawer.dart
+s1865,ui,已选 ${selectedKeys.length} 个,已选 __VAR_0__ 个,已选 __VAR_0__ 个,已选 __VAR_0__ 个,YES,widgets/workspace_drawer.dart
+s1866,ui,没有匹配「$searchQuery」的会话,没有匹配「__VAR_0__」的会话,没有匹配「__VAR_0__」的会话,没有匹配「__VAR_0__」的会话,YES,widgets/workspace_drawer.dart
+s1867,ui,搜索：$searchQuery,搜索：__VAR_0__,搜索：__VAR_0__,搜索：__VAR_0__,YES,widgets/workspace_drawer.dart

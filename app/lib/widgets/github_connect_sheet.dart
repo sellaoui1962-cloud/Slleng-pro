@@ -434,7 +434,7 @@ class _GitHubConnectSheetState extends State<_GitHubConnectSheet> {
     }
   }
 
-  Widget _cancelButton(Hue h, {String label = '取消'}) => TextButton(
+  Widget _cancelButton(Hue h, {String label = 's0105'.tr()}) => TextButton(
         onPressed: () => Navigator.of(context).pop(false),
         child: Text(label,
             style: TextStyle(color: h.textDim, fontSize: 14)),

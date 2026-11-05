@@ -1,29 +1,46 @@
-/// Reverse Engineering Toolkit（阶段 3）—— 只负责**生成命令字符串**。
+/// Reverse Engineering Toolkit —— 只负责**生成命令字符串**。
 ///
-/// 本文件不执行任何东西。执行只能经由 `TermuxService.run`，而且调用方
-/// 必须先把命令完整展示给用户并得到明确确认（见 `engineering_screen.dart`）。
+/// 本文件不执行任何东西。执行有两条路，都必须先把完整命令展示给用户并得到确认：
+///  · 反编译 / 重打包 / 签名：交给内置终端（PRoot + Alpine，见 `terminal_screen.dart`），
+///    不再依赖 Termux；
+///  · Frida：需要真机 root，沙箱里跑不了，所以仍走 Termux（可选）。
 ///
 /// ## 路径约定
-/// Termux 读不到本 App 的私有目录，所以所有输入/输出都放在共享存储：
-/// `/storage/emulated/0/Download/HeraclesRE/`。用户需要先在 Termux 里运行
-/// `termux-setup-storage` 授予存储权限。
+/// 沙箱里看不到手机存储（沙箱不 bind 宿主系统目录），所以输入/输出都放在沙箱内的
+/// `/workspace/re`。把文件弄进去的办法：在终端里 `wget -O /workspace/re/app.apk <URL>`。
 class ReToolkit {
   ReToolkit._();
 
-  static const baseDir = '/storage/emulated/0/Download/HeraclesRE';
+  /// 沙箱内的工作目录。
+  static const baseDir = '/workspace/re';
+
+  /// 仅 Frida（Termux 路线）使用：Termux 能读到的共享存储目录。
+  static const termuxBaseDir = '/storage/emulated/0/Download/HeraclesRE';
+
   static const defaultApk = '$baseDir/app.apk';
   static const defaultSrcDir = '$baseDir/app_src';
   static const defaultOutApk = '$baseDir/app_patched.apk';
   static const defaultKeystore = '$baseDir/heracles.jks';
-  static const defaultScript = '$baseDir/hook.js';
+  static const defaultScript = '$termuxBaseDir/hook.js';
 
   /// 为 shell 单引号包裹转义：`it's` -> `'it'\''s'`。
-  /// 所有来自用户输入的路径都必须经过这里，不能直接拼接。
+  /// 所有来自用户输入的路径与口令都必须经过这里，不能直接拼接。
   static String q(String s) => "'${s.replaceAll("'", "'\\''")}'";
 
-  static String setupStorage() => 'termux-setup-storage';
+  static String _dirOf(String p) {
+    final i = p.lastIndexOf('/');
+    return i <= 0 ? '.' : p.substring(0, i);
+  }
 
-  static String installFrida() => 'pip install frida-tools';
+  // ---- 0. 准备 ----
+  static String prepareFolder() =>
+      'mkdir -p ${q(baseDir)} && ls -la ${q(baseDir)}';
+
+  /// 逐个装、逐个报错：某个包不在仓库里时只影响它自己，并打印 [FAILED]。
+  /// ⚠️ apktool / jadx 是否在 Alpine 仓库里未经真机验证。
+  static String installTools() =>
+      'apk update ; for p in openjdk17-jre-headless zip unzip apktool jadx ; '
+      'do apk add --no-cache \$p || echo "[FAILED] \$p" ; done';
 
   // ---- 1. 反编译 ----
   static String apktoolDecode(String apk, String outDir) =>
@@ -40,22 +57,29 @@ class ReToolkit {
   static String zipalign(String inApk, String outApk) =>
       'zipalign -f -v 4 ${q(inApk)} ${q(outApk)}';
 
-  /// 用 `--out` 另存，不覆盖原文件。密码由 apksigner 交互式询问，
-  /// 不写进命令行（否则会出现在 shell 历史和进程列表里）。
-  static String apksign(String alignedApk, String keystore, String outApk) =>
-      'apksigner sign --ks ${q(keystore)} --out ${q(outApk)} ${q(alignedApk)}';
+  /// 内置终端没有 stdin，apksigner 不能交互式问口令，所以走环境变量 `KSPASS`。
+  /// ⚠️ 口令会出现在命令回显里，只适合本地测试用的临时 keystore。
+  static String apksign(
+          String alignedApk, String keystore, String outApk, String pass) =>
+      'KSPASS=${q(pass)} apksigner sign --ks ${q(keystore)} '
+      '--ks-pass env:KSPASS --out ${q(outApk)} ${q(alignedApk)}';
 
-  /// 同样交互式输入密码，不带 -storepass / -keypass。
-  static String keystore(String path) =>
-      'keytool -genkeypair -v -keystore ${q(path)} -alias heracles '
-      '-keyalg RSA -keysize 2048 -validity 10000';
+  /// 同理：`-dname` 避免交互式问姓名，口令走 `-storepass:env`。
+  static String keystore(String path, String pass) =>
+      'mkdir -p ${q(_dirOf(path))} && KSPASS=${q(pass)} keytool -genkeypair -v '
+      '-keystore ${q(path)} -alias heracles -keyalg RSA -keysize 2048 '
+      '-validity 10000 -storepass:env KSPASS -keypass:env KSPASS '
+      '-dname "CN=Heracles RE"';
 
-  // ---- 3. Frida（需要 root）----
+  // ---- 3. Frida（需要 root，走 Termux）----
+  static String setupStorage() => 'termux-setup-storage';
+
+  static String installFrida() => 'pip install frida-tools';
+
   static const fridaServerPath = '/data/local/tmp/frida-server';
 
   /// 在设备上以 root 启动 frida-server，监听本机 27042 端口。
-  static String fridaServerStart() =>
-      "su -c '$fridaServerPath -D' &";
+  static String fridaServerStart() => "su -c '$fridaServerPath -D' &";
 
   /// 通过本机端口连接已运行的 frida-server，并加载脚本。
   static String fridaLoad(String package, String script) =>

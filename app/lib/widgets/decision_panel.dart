@@ -190,7 +190,7 @@ class _DecisionPanelState extends State<DecisionPanel> {
       title: '清空决策历史？',
       message: '所有问答记录都会删掉，不可恢复。',
       confirmLabel: '清空',
-      cancelLabel: '取消',
+      cancelLabel: 's0105'.tr(),
     );
     if (ok) {
       setState(() => _displayId = null);

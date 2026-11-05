@@ -261,19 +261,22 @@ class SandboxService {
   final SandboxChannelClient _client;
 
   /// 流式输出回调（由原生侧主动 push）。
-  final StreamController<SandboxOutputChunk> _outputs =
+  // ★ 以下 5 个字段是 static：全 App 只有一个流式输出通道处理器，
+  //   多个 SandboxService 实例必须共享同一组流，否则后创建的实例会抢走处理器，
+  //   Agent 的沙箱能力就再也收不到输出（内置终端页就是第二个使用者）。
+  static final StreamController<SandboxOutputChunk> _outputs =
       StreamController<SandboxOutputChunk>.broadcast();
 
   /// 执行完成事件。
-  final StreamController<SandboxExecDone> _dones =
+  static final StreamController<SandboxExecDone> _dones =
       StreamController<SandboxExecDone>.broadcast();
 
   /// 执行出错事件。
-  final StreamController<SandboxExecError> _errors =
+  static final StreamController<SandboxExecError> _errors =
       StreamController<SandboxExecError>.broadcast();
 
-  MethodChannel? _outputChannel;
-  bool _listening = false;
+  static MethodChannel? _outputChannel;
+  static bool _listening = false;
 
   Stream<SandboxOutputChunk> get outputStream => _outputs.stream;
   Stream<SandboxExecDone> get doneStream => _dones.stream;
@@ -575,13 +578,10 @@ class SandboxService {
     return _channelsFrom(raw);
   }
 
-  void dispose() {
-    _outputChannel?.setMethodCallHandler(null);
-    _listening = false;
-    _outputs.close();
-    _dones.close();
-    _errors.close();
-  }
+  /// 流是全 App 共享的（见上方 static 字段），单个实例不能关掉它们，
+  /// 否则其它实例会在 add 时抛 `Bad state: Cannot add event after closing`。
+  /// 方法保留只是为了兼容旧调用方。
+  void dispose() {}
 
   // -------------------------------------------------------------- 内部
 
