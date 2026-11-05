@@ -268,7 +268,7 @@ class _AutomationScreenState extends State<AutomationScreen> {
               title: Text((t['title'] as String?) ?? 's0113'.tr(),
                   style: TextStyle(fontSize: 14, color: h.text)),
               subtitle: Text(
-                '每 ${t['intervalMinutes'] ?? '?'s0115'.tr()
+                '每 ${t['intervalMinutes'] ?? '?'} 分钟 · '
                 '${(t['enabled'] as bool?) == true ? '已启用' : '已停用'}',
                 style: TextStyle(fontSize: 11.5, color: h.textFaint),
               ),

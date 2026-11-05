@@ -3104,7 +3104,7 @@ class _ChatScreenState extends State<ChatScreen> {
         setState(() {
           final id = _progressId ?? _nextId();
           _progressId = id;
-          _upsertProgress(id, '正在生成…（第 ${e.index ?? '?'s0172'.tr());
+          _upsertProgress(id, '正在生成…（第 ${e.index ?? '?'} 轮）');
         });
 
       // ---- 模型原始输出 ----
