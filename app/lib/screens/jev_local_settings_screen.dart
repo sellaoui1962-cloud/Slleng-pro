@@ -7,6 +7,7 @@ import '../services/jev_service.dart';
 import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../theme/pressable.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **JEV 本地配置页**（2026-10-29 从 JEV 编辑页拆出，用户定：
 /// 本地有关的内容全部收进一个入口页）。

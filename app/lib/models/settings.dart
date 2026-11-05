@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 /// 应用设置 —— **每一项都要真的起作用**，不是装饰。
 ///
 /// 用户明确要求"我要的是功能，不是界面"。因此每个字段都必须
@@ -9,42 +10,46 @@ library;
 /// **行为落点**：工具执行前的判定。危险操作是否需要用户确认。
 enum PermissionMode {
   /// 手动审批：每个会修改状态的操作都要确认
-  manual('s0032'.tr(), 's0033'.tr()),
+  manual('s0032', 's0033'),
 
   /// 自动审批：工作区内自动放行，越界仍要确认
-  workspaceAuto('s0034'.tr(), 's0035'.tr()),
+  workspaceAuto('s0034', 's0035'),
 
   /// 完全访问：不再询问
   ///
   /// **需要 Shizuku 或 root** —— 否则应用沙箱根本拿不到那些权限。
-  fullAccess('s0036'.tr(), 's0037'.tr());
+  fullAccess('s0036', 's0037');
 
-  const PermissionMode(this.label, this.description);
+  const PermissionMode(this._label, this._description);
 
-  final String label;
-  final String description;
+  final String _label;
+  final String _description;
 
   /// 该档位是否要求 Shizuku / root 才能成立
   bool get requiresElevation => this == PermissionMode.fullAccess;
+  String get label => _label.tr();
+  String get description => _description.tr();
 }
 
 /// 界面语言
 enum AppLanguage {
-  zh('s0038'.tr()),
+  zh('s0038'),
   en('English');
 
-  const AppLanguage(this.label);
-  final String label;
+  const AppLanguage(this._label);
+  final String _label;
+  String get label => _label.tr();
 }
 
 /// 外观
 enum AppAppearance {
-  light('s0039'.tr()),
-  dark('s0040'.tr()),
-  system('s0041'.tr());
+  light('s0039'),
+  dark('s0040'),
+  system('s0041');
 
-  const AppAppearance(this.label);
-  final String label;
+  const AppAppearance(this._label);
+  final String _label;
+  String get label => _label.tr();
 }
 
 /// 主题风格（2026-10-24，用户拍板：外观页用主题选择代替强调色选择）。
@@ -52,14 +57,16 @@ enum AppAppearance {
 /// 只改颜色与背景，不改布局结构。默认黑白；柔雾是 2026-10-23 定过的
 /// 方向；极光、活力来自概念图里的两套配色。
 enum AppThemeStyle {
-  bw('s0042'.tr(), 's0043'.tr()),
-  mist('s0044'.tr(), 's0045'.tr()),
-  aurora('s0046'.tr(), 's0047'.tr()),
-  vitality('s0048'.tr(), 's0049'.tr());
+  bw('s0042', 's0043'),
+  mist('s0044', 's0045'),
+  aurora('s0046', 's0047'),
+  vitality('s0048', 's0049');
 
-  const AppThemeStyle(this.label, this.description);
-  final String label;
-  final String description;
+  const AppThemeStyle(this._label, this._description);
+  final String _label;
+  final String _description;
+  String get label => _label.tr();
+  String get description => _description.tr();
 }
 
 /// 工作步骤展示详细度 —— 用户设置截图里的四档。
@@ -90,14 +97,14 @@ enum AppThemeStyle {
 /// 认不出的名字 → 回退到 `standard`。所以加档位**不会**让旧数据解析失败
 /// （老版本读到 `fullyExpanded` 只是回退，不会崩）。
 enum StepDetail {
-  minimal('s0050'.tr(), 's0051'.tr()),
-  standard('s0052'.tr(), 's0053'.tr()),
-  detailed('s0054'.tr(), 's0055'.tr()),
-  fullyExpanded('s0056'.tr(), 's0057'.tr());
+  minimal('s0050', 's0051'),
+  standard('s0052', 's0053'),
+  detailed('s0054', 's0055'),
+  fullyExpanded('s0056', 's0057');
 
-  const StepDetail(this.label, this.description);
-  final String label;
-  final String description;
+  const StepDetail(this._label, this._description);
+  final String _label;
+  final String _description;
 
   /// 是否显示参数（精简档只看"干了什么"，不看"用什么参数"）
   bool get showArgs => this != StepDetail.minimal;
@@ -122,18 +129,22 @@ enum StepDetail {
 
   /// 参数/结果的**摘要**截断长度（非完整档用）。
   static const summaryChars = 80;
+  String get label => _label.tr();
+  String get description => _description.tr();
 }
 
 /// 智能体运行时的发送行为
 ///
 /// **行为落点**：`InputBar` 在 busy 状态下按下发送时的处理。
 enum BusySendBehavior {
-  queue('s0058'.tr(), 's0059'.tr()),
-  interrupt('s0060'.tr(), 's0061'.tr());
+  queue('s0058', 's0059'),
+  interrupt('s0060', 's0061');
 
-  const BusySendBehavior(this.label, this.description);
-  final String label;
-  final String description;
+  const BusySendBehavior(this._label, this._description);
+  final String _label;
+  final String _description;
+  String get label => _label.tr();
+  String get description => _description.tr();
 }
 
 /// **推理等级**（2026-10-12，S4/S5）—— 与 Kotlin 侧 `ReasoningLevel` 五档对应。
@@ -537,12 +548,13 @@ class ModelProviderConfig {
 
 /// 强调色预设（对应参考图的色板）
 class AccentPreset {
-  const AccentPreset(this.name, this.hex);
-  final String name;
+  const AccentPreset(this._name, this.hex);
+  final String _name;
   final int hex;
+  String get name => _name.tr();
 }
 
-const kAccentPresets = <AccentPreset>[
+final kAccentPresets = <AccentPreset>[
   AccentPreset('s0067'.tr(), 0xFFFF7A45),
   AccentPreset('s0068'.tr(), 0xFF3B82F6),
   AccentPreset('s0069'.tr(), 0xFF22C55E),

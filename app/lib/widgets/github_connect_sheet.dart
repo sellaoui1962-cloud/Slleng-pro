@@ -55,6 +55,7 @@ import '../services/github_config.dart';
 import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../widgets/bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 弹出「连接 Github」抽屉。
 ///

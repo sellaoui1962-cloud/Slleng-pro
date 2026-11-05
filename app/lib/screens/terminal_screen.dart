@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui' as ui;
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -367,7 +368,7 @@ class _TerminalScreenState extends State<TerminalScreen> {
       );
 
   Widget _output() => Directionality(
-        textDirection: TextDirection.ltr,
+        textDirection: ui.TextDirection.ltr,
         child: ListView.builder(
           controller: _scroll,
           padding: const EdgeInsets.all(10),
@@ -384,7 +385,7 @@ class _TerminalScreenState extends State<TerminalScreen> {
       );
 
   Widget _inputBar() => Directionality(
-        textDirection: TextDirection.ltr,
+        textDirection: ui.TextDirection.ltr,
         child: Container(
           color: const Color(0xFF15151F),
           padding: const EdgeInsets.fromLTRB(4, 4, 4, 4),

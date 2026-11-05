@@ -10,6 +10,7 @@ import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../theme/pressable.dart';
 import 'jev_local_settings_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 // ---------------------------------------------------------------------------
 // 决策请求诊断展示（消费后端 B8 的 JevDiagnostics / JevDecisionResult）

@@ -5,6 +5,7 @@ import '../models/workspace.dart';
 import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../widgets/bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **已归档对话**（设置二级页，2026-10-27 用户定）。
 ///

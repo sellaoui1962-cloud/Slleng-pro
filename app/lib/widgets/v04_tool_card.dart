@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 
 import '../models/message.dart' show HToolCall, ToolStatus;
 import '../theme/app_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 这三个工具的自定义明细区；其它工具返回 null（走原有渲染）。
 Widget? v04ToolDetail(Hue h, HToolCall call) {

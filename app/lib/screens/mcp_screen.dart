@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class McpScreen extends StatefulWidget {
   const McpScreen({super.key});

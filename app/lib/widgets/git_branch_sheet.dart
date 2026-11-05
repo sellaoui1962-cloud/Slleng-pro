@@ -39,6 +39,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
 import '../widgets/bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 「提交与推送」被点中时，`showGitBranchSheet` 返回这个哨兵值。
 ///

@@ -5,6 +5,7 @@
 library;
 
 import 'attachment.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 后端类型 —— 与 Kotlin 侧 `ProviderKind` 对应。
 enum BackendKind {

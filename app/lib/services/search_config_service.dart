@@ -29,6 +29,7 @@ library;
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:heracles_backend/heracles_backend.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **凭据存储抽象**（三个动作：读、写、删）。
 ///

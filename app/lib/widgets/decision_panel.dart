@@ -11,6 +11,7 @@ import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../theme/pressable.dart';
 import 'bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **决策模式的正文区**（2026-10-27 用户定）—— 与工作模式共用
 /// 一个主界面，点顶栏 H 图标切换进来。

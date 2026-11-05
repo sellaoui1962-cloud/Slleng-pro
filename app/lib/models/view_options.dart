@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 /// 侧边栏的视图选项 —— 对应「视图选项」菜单（2026-10-10）。
 ///
 /// ## 为什么做成独立模型而不是几个 bool
@@ -11,52 +12,55 @@ library;
 /// 分组方式
 enum SessionGrouping {
   /// 按工作区分组（每个工作区一个可折叠的组）—— 默认
-  byWorkspace('s0077'.tr()),
+  byWorkspace('s0077'),
 
   /// 单列表（所有会话平铺，不分组）
-  flatList('s0078'.tr());
+  flatList('s0078');
 
-  const SessionGrouping(this.label);
-  final String label;
+  const SessionGrouping(this._label);
+  final String _label;
 
   static SessionGrouping fromName(String? n) =>
       values.firstWhere((e) => e.name == n, orElse: () => byWorkspace);
+  String get label => _label.tr();
 }
 
 /// 排序方式
 enum SessionSorting {
   /// 最近更新（默认 —— 最常用的排最前）
-  recent('s0079'.tr()),
+  recent('s0079'),
 
   /// 手动排序（2026-10-29 用户点名要回来的 —— 2026-10-19 曾因
   /// 「没有拖拽实现」作为假选项删掉过；这次连拖拽一起实现：
   /// 排序选它时会话行尾出现拖拽手柄，拖完的顺序存
   /// [ViewOptions.manualOrder] 持久化，选了就真按它排）
-  manual('s0080'.tr());
+  manual('s0080');
 
-  const SessionSorting(this.label);
-  final String label;
+  const SessionSorting(this._label);
+  final String _label;
 
   static SessionSorting fromName(String? n) =>
       values.firstWhere((e) => e.name == n, orElse: () => recent);
+  String get label => _label.tr();
 }
 
 /// 会话筛选
 enum SessionFilter {
   /// 隐藏已归档
-  hideArchived('s0081'.tr()),
+  hideArchived('s0081'),
 
   /// 全部对话（显示已归档）
-  all('s0082'.tr()),
+  all('s0082'),
 
   /// 仅显示已归档
-  onlyArchived('s0083'.tr());
+  onlyArchived('s0083');
 
-  const SessionFilter(this.label);
-  final String label;
+  const SessionFilter(this._label);
+  final String _label;
 
   static SessionFilter fromName(String? n) =>
       values.firstWhere((e) => e.name == n, orElse: () => hideArchived);
+  String get label => _label.tr();
 }
 
 /// 视图选项的组合

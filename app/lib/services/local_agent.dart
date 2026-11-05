@@ -69,6 +69,7 @@ import 'session_store.dart';
 import 'search_config_service.dart';
 import 'skill_gating.dart';
 import 'skills_service.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **执行面 → 历史命令卡口径**（D6，2026-10-29）。**纯函数**，便于单测。
 ///

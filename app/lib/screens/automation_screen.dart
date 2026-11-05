@@ -20,6 +20,7 @@ import 'package:flutter/material.dart';
 import '../services/agent_bridge.dart';
 import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class AutomationScreen extends StatefulWidget {
   const AutomationScreen({super.key, this.load, this.save});

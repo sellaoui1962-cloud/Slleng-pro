@@ -55,6 +55,7 @@ import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter/services.dart'
     show MethodChannel, MissingPluginException, PlatformException;
 import 'package:heracles_backend/heracles_backend.dart'
+import 'package:easy_localization/easy_localization.dart';
     show
         ContractMcp,
         McpServerConfig,

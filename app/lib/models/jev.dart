@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 /// **JEV 决策引擎的数据模型**（2026-10-27 用户定）。
 ///
 /// ## 这是什么
@@ -24,22 +25,23 @@ library;
 /// 决策来源。**持久化用 `name`，只许往后加、不许改名/重排**
 /// （与全仓枚举落盘铁律一致）。
 enum JevSource {
-  cloud('s0012'.tr()),
-  local08('s0013'.tr()),
-  local2b('s0014'.tr());
+  cloud('s0012'),
+  local08('s0013'),
+  local2b('s0014');
 
-  const JevSource(this.label);
-  final String label;
+  const JevSource(this._label);
+  final String _label;
 
   /// 顶栏状态行的短标签（宽度有限）。
   String get shortLabel => switch (this) {
-    JevSource.cloud => 's0012'.tr(),
-    JevSource.local08 => 's0013'.tr(),
-    JevSource.local2b => 's0014'.tr(),
+    JevSource.cloud => 's0012',
+    JevSource.local08 => 's0013',
+    JevSource.local2b => 's0014',
   };
 
   static JevSource parse(String? name) =>
       values.firstWhere((e) => e.name == name, orElse: () => JevSource.cloud);
+  String get label => _label.tr();
 }
 
 /// 理由的来源 —— 决策模型本身**不写文字理由**，界面必须如实区分。
@@ -48,18 +50,19 @@ enum JevReasonSource {
   none(''),
 
   /// 云端 AutoThink 模型在不确定时生成的思考（`return_thought`）。
-  modelThought('s0015'.tr()),
+  modelThought('s0015'),
 
   /// 由当前对话模型补写的一两句。
-  llm('s0016'.tr());
+  llm('s0016');
 
-  const JevReasonSource(this.caption);
-  final String caption;
+  const JevReasonSource(this._caption);
+  final String _caption;
 
   static JevReasonSource parse(String? name) => values.firstWhere(
     (e) => e.name == name,
     orElse: () => JevReasonSource.none,
   );
+  String get caption => _caption.tr();
 }
 
 /// JEV 云端预置（2026-10-29，用户实际接入的平台 = 基元律动
@@ -325,7 +328,7 @@ class JevModelSpec {
 }
 
 /// 本地两档的下载规格（文件大小为 Hugging Face 仓库实测值）。
-const kJevModelSpecs = <JevModelSpec>[
+final kJevModelSpecs = <JevModelSpec>[
   JevModelSpec(
     source: JevSource.local08,
     displayName: 'StartLux-Decision 0.8B',

@@ -34,6 +34,7 @@ import '../services/github_auth.dart';
 import '../services/github_config.dart';
 import '../theme/app_theme.dart';
 import '../widgets/bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 弹出 git 面板。
 ///

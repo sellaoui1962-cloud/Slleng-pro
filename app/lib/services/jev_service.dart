@@ -10,6 +10,7 @@ import '../models/jev.dart';
 import '../models/settings.dart';
 import 'agent_bridge.dart';
 import 'settings_controller.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// **JEV 决策引擎的前端服务层**（2026-10-27）。
 ///

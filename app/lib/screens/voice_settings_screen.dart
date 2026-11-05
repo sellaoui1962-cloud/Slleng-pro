@@ -7,6 +7,7 @@ import '../theme/app_theme.dart';
 import '../theme/cupertino_kit.dart';
 import '../theme/pressable.dart';
 import '../widgets/bw_approval.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 语音识别说明（T1-2：从页面底部搬进 AppBar「?」抽屉，**文案保持原文三段**）。
 ///

@@ -59,6 +59,7 @@ import 'dart:convert';
 import 'package:heracles_backend/heracles_backend.dart';
 
 import 'device_capabilities.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 // ============================================================================
 // 数据模型

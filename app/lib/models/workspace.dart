@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 /// 工作区与会话模型 —— 对应「电脑上 Agent 的项目结构」。
 ///
 /// ## 概念层级（与桌面版 Agent 一致）

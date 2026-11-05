@@ -58,6 +58,7 @@ import '../widgets/tool_call_card.dart'
         kStepRowStatusSize,
         kStepRowVPad;
 import '../widgets/workspace_drawer.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 /// 会话主屏 —— 默认首屏（`06-UI界面设计.md` §6.1）。
 ///
@@ -4823,7 +4824,7 @@ class _ChatScreenState extends State<ChatScreen> {
         _error = 's0189'.tr();
         _messages.add(HAssistantMessage(
           id: _nextId(),
-          text: 's0192'.tr()
+          text: 's0192'.tr() +
               's0193'.tr()
               's0194'.tr(),
         ));
@@ -5219,7 +5220,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void _logDroppedRun(_RunOrigin origin) {
     // ignore: avoid_print
     print(
-      's0196'.tr()
+      's0196'.tr() +
       '（发起时 session=${origin.sessionId ?? '(自动新建)'} / '
       'ws=${origin.workspaceId} / gen=${origin.ctxGen}；'
       '当前 session=$_activeSessionId / gen=$_ctxGen）'

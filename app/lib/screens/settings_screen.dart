@@ -459,7 +459,7 @@ class _DevicePermissionPageState extends State<DevicePermissionPage>
   /// · `shizuku` 的 unknown = Shizuku **没启动**（探测不了），与
   ///   denied（启动了没授权）是两回事，文案分开。
   Widget _permOverview(Hue h) {
-    const rows = [
+    rows = [
       ('shizuku', 'Shizuku', '执行系统级命令与设备操作'),
       ('allFiles', '所有文件访问', '按设计不申请，文件经授权目录访问'),
       ('media', '图片与视频', '读取相册，用于发送图片、视频附件'),
